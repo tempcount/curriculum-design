@@ -36,6 +36,9 @@
     <ClCompile Include="admin.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Enviroment-SET.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -56,6 +59,9 @@
     <ClInclude Include="Form1.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Enviroment-SET.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -66,5 +72,19 @@
     <Image Include="app.ico">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="admin.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resX">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="save.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transfer.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

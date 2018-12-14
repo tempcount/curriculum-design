@@ -87,6 +87,7 @@
   <ItemGroup>
     <ClCompile Include="admin.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Enviroment-SET.cpp" />
     <ClCompile Include="save.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -97,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="admin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Enviroment-SET.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Form1.h">
@@ -120,6 +124,9 @@
   <ItemGroup>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enviroment-SET.resx">
+      <DependentUpon>Enviroment-SET.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resX">
       <DependentUpon>Form1.h</DependentUpon>
