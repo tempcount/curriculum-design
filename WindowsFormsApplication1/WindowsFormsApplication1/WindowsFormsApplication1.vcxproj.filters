@@ -45,6 +45,9 @@
     <ClCompile Include="EnvHistory.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SerialForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -74,6 +77,9 @@
     <ClInclude Include="EnvHistory.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SerialForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -99,6 +105,12 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Enviroment-SET.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvDetail.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvHistory.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>
