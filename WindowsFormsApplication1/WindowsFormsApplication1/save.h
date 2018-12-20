@@ -1,5 +1,6 @@
 #pragma once
-
+#include"EnvDetail.h"
+#include"transfer.h"
 namespace WindowsFormsApplication1 {
 
 	using namespace System;
@@ -122,27 +123,27 @@ namespace WindowsFormsApplication1 {
 			this->warehouse3ToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->menuStrip1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
-			this->groupBox2->SuspendLayout();
 			this->groupBox3->SuspendLayout();
+			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -153,7 +154,7 @@ namespace WindowsFormsApplication1 {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1207, 25);
+			this->menuStrip1->Size = System::Drawing::Size(1207, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -164,7 +165,7 @@ namespace WindowsFormsApplication1 {
 					this->nowToolStripMenuItem
 			});
 			this->beginToolStripMenuItem->Name = L"beginToolStripMenuItem";
-			this->beginToolStripMenuItem->Size = System::Drawing::Size(53, 21);
+			this->beginToolStripMenuItem->Size = System::Drawing::Size(63, 24);
 			this->beginToolStripMenuItem->Text = L"begin";
 			// 
 			// environmentToolStripMenuItem
@@ -174,31 +175,31 @@ namespace WindowsFormsApplication1 {
 					this->warehouse1ToolStripMenuItem3, this->warehouse2ToolStripMenuItem3, this->warehouse3ToolStripMenuItem3
 			});
 			this->environmentToolStripMenuItem->Name = L"environmentToolStripMenuItem";
-			this->environmentToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->environmentToolStripMenuItem->Size = System::Drawing::Size(171, 24);
 			this->environmentToolStripMenuItem->Text = L"environment";
 			// 
 			// overviewToolStripMenuItem2
 			// 
 			this->overviewToolStripMenuItem2->Name = L"overviewToolStripMenuItem2";
-			this->overviewToolStripMenuItem2->Size = System::Drawing::Size(152, 22);
+			this->overviewToolStripMenuItem2->Size = System::Drawing::Size(166, 24);
 			this->overviewToolStripMenuItem2->Text = L"overview";
 			// 
 			// warehouse1ToolStripMenuItem3
 			// 
 			this->warehouse1ToolStripMenuItem3->Name = L"warehouse1ToolStripMenuItem3";
-			this->warehouse1ToolStripMenuItem3->Size = System::Drawing::Size(152, 22);
+			this->warehouse1ToolStripMenuItem3->Size = System::Drawing::Size(166, 24);
 			this->warehouse1ToolStripMenuItem3->Text = L"warehouse1";
 			// 
 			// warehouse2ToolStripMenuItem3
 			// 
 			this->warehouse2ToolStripMenuItem3->Name = L"warehouse2ToolStripMenuItem3";
-			this->warehouse2ToolStripMenuItem3->Size = System::Drawing::Size(152, 22);
+			this->warehouse2ToolStripMenuItem3->Size = System::Drawing::Size(166, 24);
 			this->warehouse2ToolStripMenuItem3->Text = L"warehouse2";
 			// 
 			// warehouse3ToolStripMenuItem3
 			// 
 			this->warehouse3ToolStripMenuItem3->Name = L"warehouse3ToolStripMenuItem3";
-			this->warehouse3ToolStripMenuItem3->Size = System::Drawing::Size(152, 22);
+			this->warehouse3ToolStripMenuItem3->Size = System::Drawing::Size(166, 24);
 			this->warehouse3ToolStripMenuItem3->Text = L"warehouse3";
 			// 
 			// nowToolStripMenuItem
@@ -208,37 +209,37 @@ namespace WindowsFormsApplication1 {
 					this->warehouse1ToolStripMenuItem, this->warehouse2ToolStripMenuItem, this->warehouse3ToolStripMenuItem
 			});
 			this->nowToolStripMenuItem->Name = L"nowToolStripMenuItem";
-			this->nowToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->nowToolStripMenuItem->Size = System::Drawing::Size(171, 24);
 			this->nowToolStripMenuItem->Text = L"now ";
 			// 
 			// overviewToolStripMenuItem3
 			// 
 			this->overviewToolStripMenuItem3->Name = L"overviewToolStripMenuItem3";
-			this->overviewToolStripMenuItem3->Size = System::Drawing::Size(146, 22);
+			this->overviewToolStripMenuItem3->Size = System::Drawing::Size(166, 24);
 			this->overviewToolStripMenuItem3->Text = L"overview";
 			// 
 			// warehouse1ToolStripMenuItem
 			// 
 			this->warehouse1ToolStripMenuItem->Name = L"warehouse1ToolStripMenuItem";
-			this->warehouse1ToolStripMenuItem->Size = System::Drawing::Size(146, 22);
+			this->warehouse1ToolStripMenuItem->Size = System::Drawing::Size(166, 24);
 			this->warehouse1ToolStripMenuItem->Text = L"warehouse1";
 			// 
 			// warehouse2ToolStripMenuItem
 			// 
 			this->warehouse2ToolStripMenuItem->Name = L"warehouse2ToolStripMenuItem";
-			this->warehouse2ToolStripMenuItem->Size = System::Drawing::Size(146, 22);
+			this->warehouse2ToolStripMenuItem->Size = System::Drawing::Size(166, 24);
 			this->warehouse2ToolStripMenuItem->Text = L"warehouse2";
 			// 
 			// warehouse3ToolStripMenuItem
 			// 
 			this->warehouse3ToolStripMenuItem->Name = L"warehouse3ToolStripMenuItem";
-			this->warehouse3ToolStripMenuItem->Size = System::Drawing::Size(146, 22);
+			this->warehouse3ToolStripMenuItem->Size = System::Drawing::Size(166, 24);
 			this->warehouse3ToolStripMenuItem->Text = L"warehouse3";
 			// 
 			// comToolStripMenuItem
 			// 
 			this->comToolStripMenuItem->Name = L"comToolStripMenuItem";
-			this->comToolStripMenuItem->Size = System::Drawing::Size(45, 21);
+			this->comToolStripMenuItem->Size = System::Drawing::Size(53, 24);
 			this->comToolStripMenuItem->Text = L"com";
 			this->comToolStripMenuItem->Click += gcnew System::EventHandler(this, &save::comToolStripMenuItem_Click);
 			// 
@@ -249,7 +250,7 @@ namespace WindowsFormsApplication1 {
 					this->sendToolStripMenuItem
 			});
 			this->analyseToolStripMenuItem->Name = L"analyseToolStripMenuItem";
-			this->analyseToolStripMenuItem->Size = System::Drawing::Size(59, 21);
+			this->analyseToolStripMenuItem->Size = System::Drawing::Size(71, 24);
 			this->analyseToolStripMenuItem->Text = L"history";
 			// 
 			// recieveToolStripMenuItem
@@ -259,31 +260,31 @@ namespace WindowsFormsApplication1 {
 					this->warehouse1ToolStripMenuItem1, this->warehouse2ToolStripMenuItem1, this->warehouse3ToolStripMenuItem1
 			});
 			this->recieveToolStripMenuItem->Name = L"recieveToolStripMenuItem";
-			this->recieveToolStripMenuItem->Size = System::Drawing::Size(117, 22);
+			this->recieveToolStripMenuItem->Size = System::Drawing::Size(131, 24);
 			this->recieveToolStripMenuItem->Text = L"recieve";
 			// 
 			// overviewToolStripMenuItem
 			// 
 			this->overviewToolStripMenuItem->Name = L"overviewToolStripMenuItem";
-			this->overviewToolStripMenuItem->Size = System::Drawing::Size(146, 22);
+			this->overviewToolStripMenuItem->Size = System::Drawing::Size(166, 24);
 			this->overviewToolStripMenuItem->Text = L"overview";
 			// 
 			// warehouse1ToolStripMenuItem1
 			// 
 			this->warehouse1ToolStripMenuItem1->Name = L"warehouse1ToolStripMenuItem1";
-			this->warehouse1ToolStripMenuItem1->Size = System::Drawing::Size(146, 22);
+			this->warehouse1ToolStripMenuItem1->Size = System::Drawing::Size(166, 24);
 			this->warehouse1ToolStripMenuItem1->Text = L"warehouse1";
 			// 
 			// warehouse2ToolStripMenuItem1
 			// 
 			this->warehouse2ToolStripMenuItem1->Name = L"warehouse2ToolStripMenuItem1";
-			this->warehouse2ToolStripMenuItem1->Size = System::Drawing::Size(146, 22);
+			this->warehouse2ToolStripMenuItem1->Size = System::Drawing::Size(166, 24);
 			this->warehouse2ToolStripMenuItem1->Text = L"warehouse2";
 			// 
 			// warehouse3ToolStripMenuItem1
 			// 
 			this->warehouse3ToolStripMenuItem1->Name = L"warehouse3ToolStripMenuItem1";
-			this->warehouse3ToolStripMenuItem1->Size = System::Drawing::Size(146, 22);
+			this->warehouse3ToolStripMenuItem1->Size = System::Drawing::Size(166, 24);
 			this->warehouse3ToolStripMenuItem1->Text = L"warehouse3";
 			// 
 			// sendToolStripMenuItem
@@ -293,37 +294,37 @@ namespace WindowsFormsApplication1 {
 					this->warehouse1ToolStripMenuItem2, this->warehouse2ToolStripMenuItem2, this->warehouse3ToolStripMenuItem2
 			});
 			this->sendToolStripMenuItem->Name = L"sendToolStripMenuItem";
-			this->sendToolStripMenuItem->Size = System::Drawing::Size(117, 22);
+			this->sendToolStripMenuItem->Size = System::Drawing::Size(131, 24);
 			this->sendToolStripMenuItem->Text = L"sell";
 			// 
 			// overviewToolStripMenuItem1
 			// 
 			this->overviewToolStripMenuItem1->Name = L"overviewToolStripMenuItem1";
-			this->overviewToolStripMenuItem1->Size = System::Drawing::Size(146, 22);
+			this->overviewToolStripMenuItem1->Size = System::Drawing::Size(166, 24);
 			this->overviewToolStripMenuItem1->Text = L"overview";
 			// 
 			// warehouse1ToolStripMenuItem2
 			// 
 			this->warehouse1ToolStripMenuItem2->Name = L"warehouse1ToolStripMenuItem2";
-			this->warehouse1ToolStripMenuItem2->Size = System::Drawing::Size(146, 22);
+			this->warehouse1ToolStripMenuItem2->Size = System::Drawing::Size(166, 24);
 			this->warehouse1ToolStripMenuItem2->Text = L"warehouse1";
 			// 
 			// warehouse2ToolStripMenuItem2
 			// 
 			this->warehouse2ToolStripMenuItem2->Name = L"warehouse2ToolStripMenuItem2";
-			this->warehouse2ToolStripMenuItem2->Size = System::Drawing::Size(146, 22);
+			this->warehouse2ToolStripMenuItem2->Size = System::Drawing::Size(166, 24);
 			this->warehouse2ToolStripMenuItem2->Text = L"warehouse2";
 			// 
 			// warehouse3ToolStripMenuItem2
 			// 
 			this->warehouse3ToolStripMenuItem2->Name = L"warehouse3ToolStripMenuItem2";
-			this->warehouse3ToolStripMenuItem2->Size = System::Drawing::Size(146, 22);
+			this->warehouse3ToolStripMenuItem2->Size = System::Drawing::Size(166, 24);
 			this->warehouse3ToolStripMenuItem2->Text = L"warehouse3";
 			// 
 			// helpToolStripMenuItem
 			// 
 			this->helpToolStripMenuItem->Name = L"helpToolStripMenuItem";
-			this->helpToolStripMenuItem->Size = System::Drawing::Size(45, 21);
+			this->helpToolStripMenuItem->Size = System::Drawing::Size(53, 24);
 			this->helpToolStripMenuItem->Text = L"help";
 			// 
 			// groupBox1
@@ -339,87 +340,60 @@ namespace WindowsFormsApplication1 {
 			this->groupBox1->Text = L"groupBox1";
 			this->groupBox1->Enter += gcnew System::EventHandler(this, &save::groupBox1_Enter);
 			// 
-			// textBox1
+			// button5
 			// 
-			this->textBox1->Location = System::Drawing::Point(39, 69);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(66, 26);
-			this->textBox1->TabIndex = 0;
+			this->button5->Location = System::Drawing::Point(138, 15);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(75, 23);
+			this->button5->TabIndex = 15;
+			this->button5->Text = L"button5";
+			this->button5->UseVisualStyleBackColor = true;
 			// 
-			// textBox2
+			// groupBox3
 			// 
-			this->textBox2->Location = System::Drawing::Point(136, 69);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(66, 26);
-			this->textBox2->TabIndex = 1;
+			this->groupBox3->Controls->Add(this->button4);
+			this->groupBox3->Controls->Add(this->button3);
+			this->groupBox3->Controls->Add(this->textBox6);
+			this->groupBox3->Controls->Add(this->textBox5);
+			this->groupBox3->Location = System::Drawing::Point(681, 52);
+			this->groupBox3->Name = L"groupBox3";
+			this->groupBox3->Size = System::Drawing::Size(372, 122);
+			this->groupBox3->TabIndex = 14;
+			this->groupBox3->TabStop = false;
+			this->groupBox3->Text = L"出入库";
 			// 
-			// textBox3
+			// button4
 			// 
-			this->textBox3->Location = System::Drawing::Point(239, 69);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(66, 26);
-			this->textBox3->TabIndex = 2;
+			this->button4->Location = System::Drawing::Point(293, 46);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(52, 41);
+			this->button4->TabIndex = 14;
+			this->button4->Text = L"detail";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &save::button4_Click);
 			// 
-			// textBox4
+			// button3
 			// 
-			this->textBox4->Location = System::Drawing::Point(334, 69);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(66, 26);
-			this->textBox4->TabIndex = 3;
+			this->button3->Location = System::Drawing::Point(215, 46);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(52, 41);
+			this->button3->TabIndex = 13;
+			this->button3->Text = L"alarm";
+			this->button3->UseVisualStyleBackColor = true;
 			// 
-			// label1
+			// textBox6
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(36, 38);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(56, 16);
-			this->label1->TabIndex = 4;
-			this->label1->Text = L"label1";
+			this->textBox6->Location = System::Drawing::Point(122, 50);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(66, 30);
+			this->textBox6->TabIndex = 12;
 			// 
-			// label2
+			// textBox5
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(133, 38);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(56, 16);
-			this->label2->TabIndex = 5;
-			this->label2->Text = L"label2";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(236, 38);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(56, 16);
-			this->label3->TabIndex = 6;
-			this->label3->Text = L"label3";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(331, 38);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(56, 16);
-			this->label4->TabIndex = 7;
-			this->label4->Text = L"label4";
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(431, 54);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(53, 52);
-			this->button1->TabIndex = 8;
-			this->button1->Text = L"alarm";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(510, 54);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(62, 56);
-			this->button2->TabIndex = 9;
-			this->button2->Text = L"detail";
-			this->button2->UseVisualStyleBackColor = true;
+			this->textBox5->Location = System::Drawing::Point(21, 52);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(66, 30);
+			this->textBox5->TabIndex = 11;
 			// 
 			// groupBox2
 			// 
@@ -438,65 +412,94 @@ namespace WindowsFormsApplication1 {
 			this->groupBox2->Size = System::Drawing::Size(614, 131);
 			this->groupBox2->TabIndex = 10;
 			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"groupBox2";
+			this->groupBox2->Text = L"环境";
 			// 
-			// textBox5
+			// button2
 			// 
-			this->textBox5->Location = System::Drawing::Point(21, 52);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(66, 26);
-			this->textBox5->TabIndex = 11;
+			this->button2->Location = System::Drawing::Point(510, 54);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(62, 56);
+			this->button2->TabIndex = 9;
+			this->button2->Text = L"detail";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &save::button2_Click);
 			// 
-			// textBox6
+			// button1
 			// 
-			this->textBox6->Location = System::Drawing::Point(122, 50);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(66, 26);
-			this->textBox6->TabIndex = 12;
+			this->button1->Location = System::Drawing::Point(431, 54);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(53, 52);
+			this->button1->TabIndex = 8;
+			this->button1->Text = L"alarm";
+			this->button1->UseVisualStyleBackColor = true;
 			// 
-			// button3
+			// label4
 			// 
-			this->button3->Location = System::Drawing::Point(215, 46);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(52, 41);
-			this->button3->TabIndex = 13;
-			this->button3->Text = L"alarm";
-			this->button3->UseVisualStyleBackColor = true;
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(331, 38);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(69, 20);
+			this->label4->TabIndex = 7;
+			this->label4->Text = L"label4";
 			// 
-			// groupBox3
+			// label3
 			// 
-			this->groupBox3->Controls->Add(this->button4);
-			this->groupBox3->Controls->Add(this->button3);
-			this->groupBox3->Controls->Add(this->textBox6);
-			this->groupBox3->Controls->Add(this->textBox5);
-			this->groupBox3->Location = System::Drawing::Point(681, 52);
-			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(372, 122);
-			this->groupBox3->TabIndex = 14;
-			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"groupBox3";
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(236, 38);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(69, 20);
+			this->label3->TabIndex = 6;
+			this->label3->Text = L"label3";
 			// 
-			// button4
+			// label2
 			// 
-			this->button4->Location = System::Drawing::Point(293, 46);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(52, 41);
-			this->button4->TabIndex = 14;
-			this->button4->Text = L"detail";
-			this->button4->UseVisualStyleBackColor = true;
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(133, 38);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(69, 20);
+			this->label2->TabIndex = 5;
+			this->label2->Text = L"label2";
 			// 
-			// button5
+			// label1
 			// 
-			this->button5->Location = System::Drawing::Point(138, 15);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(75, 23);
-			this->button5->TabIndex = 15;
-			this->button5->Text = L"button5";
-			this->button5->UseVisualStyleBackColor = true;
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(36, 38);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(69, 20);
+			this->label1->TabIndex = 4;
+			this->label1->Text = L"label1";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(334, 69);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(66, 30);
+			this->textBox4->TabIndex = 3;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(239, 69);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(66, 30);
+			this->textBox3->TabIndex = 2;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(136, 69);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(66, 30);
+			this->textBox2->TabIndex = 1;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(39, 69);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(66, 30);
+			this->textBox1->TabIndex = 0;
 			// 
 			// save
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1207, 606);
 			this->Controls->Add(this->groupBox1);
@@ -510,10 +513,10 @@ namespace WindowsFormsApplication1 {
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->groupBox1->ResumeLayout(false);
-			this->groupBox2->ResumeLayout(false);
-			this->groupBox2->PerformLayout();
 			this->groupBox3->ResumeLayout(false);
 			this->groupBox3->PerformLayout();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -526,6 +529,14 @@ private: System::Void comToolStripMenuItem_Click(System::Object^  sender, System
 private: System::Void groupBox1_Enter(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void save_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 EnvDetail^ envdetail = gcnew EnvDetail;
+			 envdetail->ShowDialog();
+}
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+			 transfer^ transferdetail = gcnew transfer;
+			 transferdetail->ShowDialog();
 }
 };
 }

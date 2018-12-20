@@ -39,6 +39,12 @@
     <ClCompile Include="Enviroment-SET.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="EnvDetail.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvHistory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -60,6 +66,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Enviroment-SET.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvDetail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvHistory.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -84,6 +96,9 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="transfer.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enviroment-SET.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

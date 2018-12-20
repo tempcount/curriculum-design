@@ -41,11 +41,12 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::ToolStripMenuItem^  helpToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  introductionToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  aboutToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  inquireToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^  recieveDetailToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  configToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  openToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  closeToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  ≤÷ø‚µ„ToolStripMenuItem;
 
 	private:
 		/// <summary>
@@ -62,15 +63,15 @@ namespace WindowsFormsApplication1 {
 		{
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->beginToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->recieveDetailToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->comToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->introductionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->inquireToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->configToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->openToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->closeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->recieveDetailToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->introductionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->≤÷ø‚µ„ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -78,7 +79,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->beginToolStripMenuItem,
-					this->comToolStripMenuItem, this->inquireToolStripMenuItem, this->helpToolStripMenuItem
+					this->comToolStripMenuItem, this->≤÷ø‚µ„ToolStripMenuItem, this->helpToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -90,8 +91,14 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->beginToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->recieveDetailToolStripMenuItem });
 			this->beginToolStripMenuItem->Name = L"beginToolStripMenuItem";
-			this->beginToolStripMenuItem->Size = System::Drawing::Size(63, 24);
-			this->beginToolStripMenuItem->Text = L"begin";
+			this->beginToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->beginToolStripMenuItem->Text = L"◊€∫œ∑÷Œˆ";
+			// 
+			// recieveDetailToolStripMenuItem
+			// 
+			this->recieveDetailToolStripMenuItem->Name = L"recieveDetailToolStripMenuItem";
+			this->recieveDetailToolStripMenuItem->Size = System::Drawing::Size(176, 24);
+			this->recieveDetailToolStripMenuItem->Text = L"recieve detail";
 			// 
 			// comToolStripMenuItem
 			// 
@@ -100,9 +107,27 @@ namespace WindowsFormsApplication1 {
 					this->openToolStripMenuItem, this->closeToolStripMenuItem
 			});
 			this->comToolStripMenuItem->Name = L"comToolStripMenuItem";
-			this->comToolStripMenuItem->Size = System::Drawing::Size(102, 24);
-			this->comToolStripMenuItem->Text = L"vitural com";
+			this->comToolStripMenuItem->Size = System::Drawing::Size(111, 24);
+			this->comToolStripMenuItem->Text = L"µ•“ª≤÷ø‚∑÷Œˆ";
 			this->comToolStripMenuItem->Click += gcnew System::EventHandler(this, &transfer::comToolStripMenuItem_Click);
+			// 
+			// configToolStripMenuItem
+			// 
+			this->configToolStripMenuItem->Name = L"configToolStripMenuItem";
+			this->configToolStripMenuItem->Size = System::Drawing::Size(124, 24);
+			this->configToolStripMenuItem->Text = L"config";
+			// 
+			// openToolStripMenuItem
+			// 
+			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
+			this->openToolStripMenuItem->Size = System::Drawing::Size(124, 24);
+			this->openToolStripMenuItem->Text = L"open";
+			// 
+			// closeToolStripMenuItem
+			// 
+			this->closeToolStripMenuItem->Name = L"closeToolStripMenuItem";
+			this->closeToolStripMenuItem->Size = System::Drawing::Size(124, 24);
+			this->closeToolStripMenuItem->Text = L"close";
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -111,51 +136,27 @@ namespace WindowsFormsApplication1 {
 					this->aboutToolStripMenuItem
 			});
 			this->helpToolStripMenuItem->Name = L"helpToolStripMenuItem";
-			this->helpToolStripMenuItem->Size = System::Drawing::Size(53, 24);
-			this->helpToolStripMenuItem->Text = L"help";
+			this->helpToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->helpToolStripMenuItem->Text = L"∞Ô÷˙";
 			this->helpToolStripMenuItem->Click += gcnew System::EventHandler(this, &transfer::helpToolStripMenuItem_Click);
 			// 
 			// introductionToolStripMenuItem
 			// 
 			this->introductionToolStripMenuItem->Name = L"introductionToolStripMenuItem";
-			this->introductionToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->introductionToolStripMenuItem->Size = System::Drawing::Size(169, 24);
 			this->introductionToolStripMenuItem->Text = L"introduction";
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(169, 24);
 			this->aboutToolStripMenuItem->Text = L"about";
 			// 
-			// inquireToolStripMenuItem
+			// ≤÷ø‚µ„ToolStripMenuItem
 			// 
-			this->inquireToolStripMenuItem->Name = L"inquireToolStripMenuItem";
-			this->inquireToolStripMenuItem->Size = System::Drawing::Size(72, 24);
-			this->inquireToolStripMenuItem->Text = L"inquire";
-			// 
-			// configToolStripMenuItem
-			// 
-			this->configToolStripMenuItem->Name = L"configToolStripMenuItem";
-			this->configToolStripMenuItem->Size = System::Drawing::Size(175, 24);
-			this->configToolStripMenuItem->Text = L"config";
-			// 
-			// openToolStripMenuItem
-			// 
-			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(175, 24);
-			this->openToolStripMenuItem->Text = L"open";
-			// 
-			// closeToolStripMenuItem
-			// 
-			this->closeToolStripMenuItem->Name = L"closeToolStripMenuItem";
-			this->closeToolStripMenuItem->Size = System::Drawing::Size(175, 24);
-			this->closeToolStripMenuItem->Text = L"close";
-			// 
-			// recieveDetailToolStripMenuItem
-			// 
-			this->recieveDetailToolStripMenuItem->Name = L"recieveDetailToolStripMenuItem";
-			this->recieveDetailToolStripMenuItem->Size = System::Drawing::Size(176, 24);
-			this->recieveDetailToolStripMenuItem->Text = L"recieve detail";
+			this->≤÷ø‚µ„ToolStripMenuItem->Name = L"≤÷ø‚µ„ToolStripMenuItem";
+			this->≤÷ø‚µ„ToolStripMenuItem->Size = System::Drawing::Size(66, 24);
+			this->≤÷ø‚µ„ToolStripMenuItem->Text = L"≤÷ø‚µ„";
 			// 
 			// transfer
 			// 
@@ -166,6 +167,7 @@ namespace WindowsFormsApplication1 {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"transfer";
 			this->Text = L"transfer";
+			this->Load += gcnew System::EventHandler(this, &transfer::transfer_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -176,6 +178,8 @@ namespace WindowsFormsApplication1 {
 	private: System::Void helpToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void comToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void transfer_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

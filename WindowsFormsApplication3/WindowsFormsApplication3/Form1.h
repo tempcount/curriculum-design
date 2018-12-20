@@ -1,6 +1,6 @@
 #pragma once
 
-namespace WindowsFormsApplication1 {
+namespace WindowsFormsApplication3 {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -10,16 +10,16 @@ namespace WindowsFormsApplication1 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// admin 摘要
+	/// Form1 摘要
 	/// </summary>
-	public ref class admin : public System::Windows::Forms::Form
+	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
-		admin(void)
+		Form1(void)
 		{
 			InitializeComponent();
 			//
-			//TODO:  在此处添加构造函数代码
+			//TODO: 在此处添加构造函数代码
 			//
 		}
 
@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1 {
 		/// <summary>
 		/// 清理所有正在使用的资源。
 		/// </summary>
-		~admin()
+		~Form1()
 		{
 			if (components)
 			{
@@ -48,18 +48,13 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->SuspendLayout();
-			// 
-			// admin
-			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
+			this->components = gcnew System::ComponentModel::Container();
+			this->Size = System::Drawing::Size(300,300);
+			this->Text = L"Form1";
+			this->Padding = System::Windows::Forms::Padding(0);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(459, 305);
-			this->Name = L"admin";
-			this->Text = L"admin";
-			this->ResumeLayout(false);
-
 		}
 #pragma endregion
 	};
 }
+
