@@ -139,18 +139,18 @@ namespace WindowsFormsApplication1 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
@@ -607,21 +607,21 @@ namespace WindowsFormsApplication1 {
 			// chart1
 			// 
 			this->chart1->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
+			chartArea5->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea5);
 			this->chart1->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend1->Alignment = System::Drawing::StringAlignment::Far;
-			legend1->Enabled = false;
-			legend1->Name = L"Legend1";
-			this->chart1->Legends->Add(legend1);
+			legend5->Alignment = System::Drawing::StringAlignment::Far;
+			legend5->Enabled = false;
+			legend5->Name = L"Legend1";
+			this->chart1->Legends->Add(legend5);
 			this->chart1->Location = System::Drawing::Point(25, 61);
 			this->chart1->Margin = System::Windows::Forms::Padding(4);
 			this->chart1->Name = L"chart1";
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series1->Legend = L"Legend1";
-			series1->Name = L"Series1";
-			this->chart1->Series->Add(series1);
+			series5->ChartArea = L"ChartArea1";
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series5->Legend = L"Legend1";
+			series5->Name = L"Series1";
+			this->chart1->Series->Add(series5);
 			this->chart1->Size = System::Drawing::Size(477, 250);
 			this->chart1->TabIndex = 6;
 			this->chart1->Text = L"chart1";
@@ -724,38 +724,38 @@ namespace WindowsFormsApplication1 {
 			// 
 			// chart4
 			// 
-			chartArea2->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea2);
-			legend2->Enabled = false;
-			legend2->Name = L"Legend1";
-			this->chart4->Legends->Add(legend2);
+			chartArea6->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea6);
+			legend6->Enabled = false;
+			legend6->Name = L"Legend1";
+			this->chart4->Legends->Add(legend6);
 			this->chart4->Location = System::Drawing::Point(25, 388);
 			this->chart4->Margin = System::Windows::Forms::Padding(4);
 			this->chart4->Name = L"chart4";
-			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series2->Legend = L"Legend1";
-			series2->Name = L"Series1";
-			this->chart4->Series->Add(series2);
+			series6->ChartArea = L"ChartArea1";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series6->Legend = L"Legend1";
+			series6->Name = L"Series1";
+			this->chart4->Series->Add(series6);
 			this->chart4->Size = System::Drawing::Size(477, 250);
 			this->chart4->TabIndex = 3;
 			this->chart4->Text = L"chart4";
 			// 
 			// chart3
 			// 
-			chartArea3->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea3);
-			legend3->Enabled = false;
-			legend3->Name = L"Legend1";
-			this->chart3->Legends->Add(legend3);
+			chartArea7->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea7);
+			legend7->Enabled = false;
+			legend7->Name = L"Legend1";
+			this->chart3->Legends->Add(legend7);
 			this->chart3->Location = System::Drawing::Point(552, 388);
 			this->chart3->Margin = System::Windows::Forms::Padding(4);
 			this->chart3->Name = L"chart3";
-			series3->ChartArea = L"ChartArea1";
-			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series3->Legend = L"Legend1";
-			series3->Name = L"Series1";
-			this->chart3->Series->Add(series3);
+			series7->ChartArea = L"ChartArea1";
+			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series7->Legend = L"Legend1";
+			series7->Name = L"Series1";
+			this->chart3->Series->Add(series7);
 			this->chart3->Size = System::Drawing::Size(477, 250);
 			this->chart3->TabIndex = 2;
 			this->chart3->Text = L"chart3";
@@ -763,21 +763,21 @@ namespace WindowsFormsApplication1 {
 			// chart2
 			// 
 			this->chart2->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea4->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea4);
+			chartArea8->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea8);
 			this->chart2->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend4->Alignment = System::Drawing::StringAlignment::Far;
-			legend4->Enabled = false;
-			legend4->Name = L"Legend1";
-			this->chart2->Legends->Add(legend4);
+			legend8->Alignment = System::Drawing::StringAlignment::Far;
+			legend8->Enabled = false;
+			legend8->Name = L"Legend1";
+			this->chart2->Legends->Add(legend8);
 			this->chart2->Location = System::Drawing::Point(552, 61);
 			this->chart2->Margin = System::Windows::Forms::Padding(4);
 			this->chart2->Name = L"chart2";
-			series4->ChartArea = L"ChartArea1";
-			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series4->Legend = L"Legend1";
-			series4->Name = L"Series1";
-			this->chart2->Series->Add(series4);
+			series8->ChartArea = L"ChartArea1";
+			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series8->Legend = L"Legend1";
+			series8->Name = L"Series1";
+			this->chart2->Series->Add(series8);
 			this->chart2->Size = System::Drawing::Size(477, 250);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
@@ -785,6 +785,7 @@ namespace WindowsFormsApplication1 {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号", L"2号", L"3号" });
 			this->comboBox1->Location = System::Drawing::Point(79, 366);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(121, 28);
@@ -1073,7 +1074,7 @@ public: void data_receivce()//接收串口数据
 									split = buff->Split(59);
 									DateTime dateTime = DateTime::Now;             //获取系统当前时间
 									//********连接数据库并存储*******************//////
-									strConn = String::Format("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=AGMS.mdb");
+									strConn = String::Format("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=Database.mdb");
 									OleDbConnection^ con1 = gcnew OleDbConnection(strConn);
 									//********选择车厢后画图并存储数据********// 
 									int nIndex = this->comboBox1->SelectedIndex;
