@@ -84,6 +84,7 @@ namespace WindowsFormsApplication1 {
 			this->button2->TabIndex = 16;
 			this->button2->Text = L"退出";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &SerialForm::button2_Click);
 			// 
 			// button1
 			// 
@@ -215,6 +216,22 @@ namespace WindowsFormsApplication1 {
 	}
 			 public:static SerialPort ^com = gcnew SerialPort();
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if (this->comboBox4->Text->Trim() == "" || this->comboBox3->Text->Trim() == "" || this->comboBox2->Text->Trim() == "" || this->comboBox1->Text->Trim() == "")
+			 {
+				 MessageBox::Show("请输入完整信息！", "警告");
+				 this->Close();
+			 }
+			 else
+			 {
+
+				 com->PortName = this->comboBox4->Text->Trim();
+				 com->BaudRate = Single::Parse(this->comboBox3->Text->Trim());
+				 this->Close();
+
+			 }
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Close();
 }
 };
 }

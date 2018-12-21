@@ -50,6 +50,16 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button3;
+	private: System::Data::OleDb::OleDbCommand^  oleDbSelectCommand1;
+	private: System::Data::OleDb::OleDbCommand^  oleDbInsertCommand1;
+	private: System::Data::OleDb::OleDbCommand^  oleDbUpdateCommand1;
+	private: System::Data::OleDb::OleDbCommand^  oleDbDeleteCommand1;
+	private: System::Data::OleDb::OleDbDataAdapter^  oleDbDataAdapter1;
+
+
+
+
+
 
 	private:
 		/// <summary>
@@ -77,6 +87,11 @@ namespace WindowsFormsApplication1 {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->oleDbSelectCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
+			this->oleDbInsertCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
+			this->oleDbUpdateCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
+			this->oleDbDeleteCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
+			this->oleDbDataAdapter1 = (gcnew System::Data::OleDb::OleDbDataAdapter());
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -210,6 +225,13 @@ namespace WindowsFormsApplication1 {
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
 			// 
+			// oleDbDataAdapter1
+			// 
+			this->oleDbDataAdapter1->DeleteCommand = this->oleDbDeleteCommand1;
+			this->oleDbDataAdapter1->InsertCommand = this->oleDbInsertCommand1;
+			this->oleDbDataAdapter1->SelectCommand = this->oleDbSelectCommand1;
+			this->oleDbDataAdapter1->UpdateCommand = this->oleDbUpdateCommand1;
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(11, 20);
@@ -297,6 +319,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 }
+
 };
 }
 

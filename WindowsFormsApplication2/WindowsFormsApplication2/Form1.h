@@ -109,11 +109,12 @@ namespace WindowsFormsApplication2 {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(50, 82);
+			this->dataGridView1->Location = System::Drawing::Point(32, 83);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowTemplate->Height = 27;
 			this->dataGridView1->Size = System::Drawing::Size(921, 278);
 			this->dataGridView1->TabIndex = 1;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView1_CellContentClick);
 			// 
 			// button1
 			// 
@@ -146,6 +147,7 @@ namespace WindowsFormsApplication2 {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Form1";
 			this->Text = L"Form1";
+			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -240,6 +242,10 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 			 da1->Fill( table );
 
 			 this->dataGridView1->DataSource =table;*/
+}
+private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+}
+private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
