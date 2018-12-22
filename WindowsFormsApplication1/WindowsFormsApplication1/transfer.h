@@ -182,6 +182,7 @@ namespace WindowsFormsApplication1 {
 			this->dataGridView1->RowTemplate->Height = 27;
 			this->dataGridView1->Size = System::Drawing::Size(1225, 490);
 			this->dataGridView1->TabIndex = 1;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &transfer::dataGridView1_CellContentClick);
 			// 
 			// comboBox1
 			// 
@@ -321,6 +322,8 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 private: System::Void oleDbConnection1_InfoMessage(System::Object^  sender, System::Data::OleDb::OleDbInfoMessageEventArgs^  e) {
 }
 private: System::Void oleDbDataAdapter1_RowUpdated(System::Object^  sender, System::Data::OleDb::OleDbRowUpdatedEventArgs^  e) {
+}
+private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 }
 };
 }

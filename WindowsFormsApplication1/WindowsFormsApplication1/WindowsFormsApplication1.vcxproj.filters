@@ -51,6 +51,9 @@
     <ClCompile Include="SetForm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -84,6 +87,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SetForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -120,6 +126,9 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="SerialForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetForm.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

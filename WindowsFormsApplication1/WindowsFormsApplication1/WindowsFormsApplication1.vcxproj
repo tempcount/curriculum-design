@@ -91,6 +91,7 @@
     <ClCompile Include="EnvDetail.cpp" />
     <ClCompile Include="EnvHistory.cpp" />
     <ClCompile Include="Enviroment-SET.cpp" />
+    <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="save.cpp" />
     <ClCompile Include="SerialForm.cpp" />
     <ClCompile Include="SetForm.cpp" />
@@ -115,6 +116,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Form1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
@@ -154,6 +158,9 @@
     <EmbeddedResource Include="Form1.resX">
       <DependentUpon>Form1.h</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="save.resx">
       <DependentUpon>save.h</DependentUpon>

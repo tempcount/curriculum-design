@@ -3,6 +3,7 @@
 #include "tchar.h"
 #include"SerialForm.h"
 #include"SetForm.h"
+#include"EnvHistory.h"
 namespace WindowsFormsApplication1 {
 	using namespace System::IO::Ports;
 	using namespace System;
@@ -139,18 +140,18 @@ namespace WindowsFormsApplication1 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
@@ -451,6 +452,7 @@ namespace WindowsFormsApplication1 {
 			this->hISTORYToolStripMenuItem->Name = L"hISTORYToolStripMenuItem";
 			this->hISTORYToolStripMenuItem->Size = System::Drawing::Size(86, 24);
 			this->hISTORYToolStripMenuItem->Text = L"HISTORY";
+			this->hISTORYToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::hISTORYToolStripMenuItem_Click);
 			// 
 			// iMAGESETTINGToolStripMenuItem
 			// 
@@ -603,25 +605,26 @@ namespace WindowsFormsApplication1 {
 			this->实时数据->TabIndex = 8;
 			this->实时数据->TabStop = false;
 			this->实时数据->Text = L"实时数据";
+			this->实时数据->Enter += gcnew System::EventHandler(this, &EnvDetail::实时数据_Enter);
 			// 
 			// chart1
 			// 
 			this->chart1->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea5->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea5);
+			chartArea1->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea1);
 			this->chart1->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend5->Alignment = System::Drawing::StringAlignment::Far;
-			legend5->Enabled = false;
-			legend5->Name = L"Legend1";
-			this->chart1->Legends->Add(legend5);
+			legend1->Alignment = System::Drawing::StringAlignment::Far;
+			legend1->Enabled = false;
+			legend1->Name = L"Legend1";
+			this->chart1->Legends->Add(legend1);
 			this->chart1->Location = System::Drawing::Point(25, 61);
 			this->chart1->Margin = System::Windows::Forms::Padding(4);
 			this->chart1->Name = L"chart1";
-			series5->ChartArea = L"ChartArea1";
-			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series5->Legend = L"Legend1";
-			series5->Name = L"Series1";
-			this->chart1->Series->Add(series5);
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Series1";
+			this->chart1->Series->Add(series1);
 			this->chart1->Size = System::Drawing::Size(477, 250);
 			this->chart1->TabIndex = 6;
 			this->chart1->Text = L"chart1";
@@ -724,38 +727,38 @@ namespace WindowsFormsApplication1 {
 			// 
 			// chart4
 			// 
-			chartArea6->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea6);
-			legend6->Enabled = false;
-			legend6->Name = L"Legend1";
-			this->chart4->Legends->Add(legend6);
+			chartArea2->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea2);
+			legend2->Enabled = false;
+			legend2->Name = L"Legend1";
+			this->chart4->Legends->Add(legend2);
 			this->chart4->Location = System::Drawing::Point(25, 388);
 			this->chart4->Margin = System::Windows::Forms::Padding(4);
 			this->chart4->Name = L"chart4";
-			series6->ChartArea = L"ChartArea1";
-			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series6->Legend = L"Legend1";
-			series6->Name = L"Series1";
-			this->chart4->Series->Add(series6);
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series2->Legend = L"Legend1";
+			series2->Name = L"Series1";
+			this->chart4->Series->Add(series2);
 			this->chart4->Size = System::Drawing::Size(477, 250);
 			this->chart4->TabIndex = 3;
 			this->chart4->Text = L"chart4";
 			// 
 			// chart3
 			// 
-			chartArea7->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea7);
-			legend7->Enabled = false;
-			legend7->Name = L"Legend1";
-			this->chart3->Legends->Add(legend7);
+			chartArea3->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea3);
+			legend3->Enabled = false;
+			legend3->Name = L"Legend1";
+			this->chart3->Legends->Add(legend3);
 			this->chart3->Location = System::Drawing::Point(552, 388);
 			this->chart3->Margin = System::Windows::Forms::Padding(4);
 			this->chart3->Name = L"chart3";
-			series7->ChartArea = L"ChartArea1";
-			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series7->Legend = L"Legend1";
-			series7->Name = L"Series1";
-			this->chart3->Series->Add(series7);
+			series3->ChartArea = L"ChartArea1";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Series1";
+			this->chart3->Series->Add(series3);
 			this->chart3->Size = System::Drawing::Size(477, 250);
 			this->chart3->TabIndex = 2;
 			this->chart3->Text = L"chart3";
@@ -763,21 +766,21 @@ namespace WindowsFormsApplication1 {
 			// chart2
 			// 
 			this->chart2->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea8->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea8);
+			chartArea4->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea4);
 			this->chart2->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend8->Alignment = System::Drawing::StringAlignment::Far;
-			legend8->Enabled = false;
-			legend8->Name = L"Legend1";
-			this->chart2->Legends->Add(legend8);
+			legend4->Alignment = System::Drawing::StringAlignment::Far;
+			legend4->Enabled = false;
+			legend4->Name = L"Legend1";
+			this->chart2->Legends->Add(legend4);
 			this->chart2->Location = System::Drawing::Point(552, 61);
 			this->chart2->Margin = System::Windows::Forms::Padding(4);
 			this->chart2->Name = L"chart2";
-			series8->ChartArea = L"ChartArea1";
-			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series8->Legend = L"Legend1";
-			series8->Name = L"Series1";
-			this->chart2->Series->Add(series8);
+			series4->ChartArea = L"ChartArea1";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series4->Legend = L"Legend1";
+			series4->Name = L"Series1";
+			this->chart2->Series->Add(series4);
 			this->chart2->Size = System::Drawing::Size(477, 250);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
@@ -793,21 +796,21 @@ namespace WindowsFormsApplication1 {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(141, 197);
+			this->textBox1->Location = System::Drawing::Point(88, 227);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 30);
 			this->textBox1->TabIndex = 10;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(311, 188);
+			this->textBox2->Location = System::Drawing::Point(235, 227);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(100, 30);
 			this->textBox2->TabIndex = 11;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(492, 197);
+			this->textBox3->Location = System::Drawing::Point(388, 227);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(100, 30);
 			this->textBox3->TabIndex = 12;
@@ -896,10 +899,10 @@ namespace WindowsFormsApplication1 {
 				static_cast<System::Byte>(134)));
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->ItemHeight = 20;
-			this->listBox1->Location = System::Drawing::Point(79, 46);
+			this->listBox1->Location = System::Drawing::Point(28, 46);
 			this->listBox1->Margin = System::Windows::Forms::Padding(4);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(476, 144);
+			this->listBox1->Size = System::Drawing::Size(586, 144);
 			this->listBox1->TabIndex = 14;
 			// 
 			// EnvDetail
@@ -1556,6 +1559,12 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 			 //this->timer1->Interval = Int32::Parse(this->numericUpDown1->Text);
 			 data_receivce();
 
+}
+private: System::Void hISTORYToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 EnvHistory ^dlg = gcnew EnvHistory();
+			 dlg->ShowDialog();
+}
+private: System::Void 实时数据_Enter(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
