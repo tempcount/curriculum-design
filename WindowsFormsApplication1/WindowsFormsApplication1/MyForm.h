@@ -49,13 +49,18 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  label4;
-	private: System::Data::OleDb::OleDbCommand^  oleDbSelectCommand1;
-	private: System::Data::OleDb::OleDbConnection^  oleDbConnection1;
-	private: System::Data::OleDb::OleDbDataAdapter^  oleDbDataAdapter1;
-	private: System::Data::OleDb::OleDbCommand^  oleDbDeleteCommand;
-	private: System::Data::OleDb::OleDbCommand^  oleDbInsertCommand;
-	private: System::Data::OleDb::OleDbCommand^  oleDbUpdateCommand;
+
+
+
+
+
+
 	private: System::Drawing::Printing::PrintDocument^  printDocument1;
+	private: System::Data::OleDb::OleDbCommand^  oleDbSelectCommand1;
+	private: System::Data::OleDb::OleDbCommand^  oleDbInsertCommand1;
+	private: System::Data::OleDb::OleDbCommand^  oleDbUpdateCommand1;
+	private: System::Data::OleDb::OleDbCommand^  oleDbDeleteCommand1;
+	private: System::Data::OleDb::OleDbDataAdapter^  oleDbDataAdapter1;
 
 	private:
 		/// <summary>
@@ -70,7 +75,6 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -85,13 +89,12 @@ namespace WindowsFormsApplication1 {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->oleDbSelectCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
-			this->oleDbConnection1 = (gcnew System::Data::OleDb::OleDbConnection());
-			this->oleDbDataAdapter1 = (gcnew System::Data::OleDb::OleDbDataAdapter());
-			this->oleDbDeleteCommand = (gcnew System::Data::OleDb::OleDbCommand());
-			this->oleDbInsertCommand = (gcnew System::Data::OleDb::OleDbCommand());
-			this->oleDbUpdateCommand = (gcnew System::Data::OleDb::OleDbCommand());
 			this->printDocument1 = (gcnew System::Drawing::Printing::PrintDocument());
+			this->oleDbSelectCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
+			this->oleDbInsertCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
+			this->oleDbUpdateCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
+			this->oleDbDeleteCommand1 = (gcnew System::Data::OleDb::OleDbCommand());
+			this->oleDbDataAdapter1 = (gcnew System::Data::OleDb::OleDbDataAdapter());
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -250,102 +253,16 @@ namespace WindowsFormsApplication1 {
 			this->label4->TabIndex = 23;
 			this->label4->Text = L"label4";
 			// 
-			// oleDbSelectCommand1
-			// 
-			this->oleDbSelectCommand1->CommandText = L"SELECT  湿度 AS Expr1, [异常数据表_湿度].*\r\nFROM      [异常数据表_湿度]";
-			this->oleDbSelectCommand1->Connection = this->oleDbConnection1;
-			// 
-			// oleDbConnection1
-			// 
-			this->oleDbConnection1->ConnectionString = L"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"C:\\Users\\ASUS\\Desktop\\vc++ curricul"
-				L"um design\\curriculum-design\\WindowsFormsApplication1\\WindowsFormsApplication1\\CA"
-				L"NKUZONGHE.mdb\"";
-			// 
-			// oleDbDataAdapter1
-			// 
-			this->oleDbDataAdapter1->DeleteCommand = this->oleDbDeleteCommand;
-			this->oleDbDataAdapter1->InsertCommand = this->oleDbInsertCommand;
-			this->oleDbDataAdapter1->SelectCommand = this->oleDbSelectCommand1;
-			cli::array< System::Data::Common::DataColumnMapping^ >^ __mcTemp__1 = gcnew cli::array< System::Data::Common::DataColumnMapping^  >(5) {
-				(gcnew System::Data::Common::DataColumnMapping(L"Expr1",
-					L"Expr1")), (gcnew System::Data::Common::DataColumnMapping(L"ID", L"ID")), (gcnew System::Data::Common::DataColumnMapping(L"湿度",
-					L"湿度")), (gcnew System::Data::Common::DataColumnMapping(L"湿度日期时间", L"湿度日期时间")), (gcnew System::Data::Common::DataColumnMapping(L"湿度对应车辆",
-					L"湿度对应车辆"))
-			};
-			this->oleDbDataAdapter1->TableMappings->AddRange(gcnew cli::array< System::Data::Common::DataTableMapping^  >(1) {
-				(gcnew System::Data::Common::DataTableMapping(L"Table",
-					L"异常数据表_湿度", __mcTemp__1))
-			});
-			this->oleDbDataAdapter1->UpdateCommand = this->oleDbUpdateCommand;
-			// 
-			// oleDbDeleteCommand
-			// 
-			this->oleDbDeleteCommand->CommandText = resources->GetString(L"oleDbDeleteCommand.CommandText");
-			this->oleDbDeleteCommand->Connection = this->oleDbConnection1;
-			this->oleDbDeleteCommand->Parameters->AddRange(gcnew cli::array< System::Data::OleDb::OleDbParameter^  >(9) {
-				(gcnew System::Data::OleDb::OleDbParameter(L"IsNull_Expr1",
-					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"Expr1", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_Expr1",
-					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"Expr1", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_ID",
-					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"ID", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度",
-					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度",
-					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"湿度", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度日期时间",
-					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度日期时间", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度日期时间",
-					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"湿度日期时间", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度对应车辆",
-					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度对应车辆", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度对应车辆",
-					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"湿度对应车辆", System::Data::DataRowVersion::Original, nullptr))
-			});
-			// 
-			// oleDbInsertCommand
-			// 
-			this->oleDbInsertCommand->CommandText = L"INSERT INTO `异常数据表_湿度` (`湿度`, `湿度`, `湿度日期时间`, `湿度对应车辆`) VALUES (\?, \?, \?, \?)";
-			this->oleDbInsertCommand->Connection = this->oleDbConnection1;
-			this->oleDbInsertCommand->Parameters->AddRange(gcnew cli::array< System::Data::OleDb::OleDbParameter^  >(4) {
-				(gcnew System::Data::OleDb::OleDbParameter(L"Expr1",
-					System::Data::OleDb::OleDbType::VarWChar, 0, L"Expr1")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度", System::Data::OleDb::OleDbType::VarWChar,
-					0, L"湿度")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度日期时间", System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度日期时间")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度对应车辆",
-					System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度对应车辆"))
-			});
-			// 
-			// oleDbUpdateCommand
-			// 
-			this->oleDbUpdateCommand->CommandText = resources->GetString(L"oleDbUpdateCommand.CommandText");
-			this->oleDbUpdateCommand->Connection = this->oleDbConnection1;
-			this->oleDbUpdateCommand->Parameters->AddRange(gcnew cli::array< System::Data::OleDb::OleDbParameter^  >(13) {
-				(gcnew System::Data::OleDb::OleDbParameter(L"Expr1",
-					System::Data::OleDb::OleDbType::VarWChar, 0, L"Expr1")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度", System::Data::OleDb::OleDbType::VarWChar,
-					0, L"湿度")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度日期时间", System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度日期时间")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度对应车辆",
-					System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度对应车辆")), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_Expr1", System::Data::OleDb::OleDbType::Integer,
-					0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0), L"Expr1", System::Data::DataRowVersion::Original,
-					true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_Expr1", System::Data::OleDb::OleDbType::VarWChar,
-					0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0), static_cast<System::Byte>(0), L"Expr1",
-					System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_ID", System::Data::OleDb::OleDbType::Integer,
-					0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0), static_cast<System::Byte>(0), L"ID", System::Data::DataRowVersion::Original,
-					nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度", System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input,
-					static_cast<System::Byte>(0), static_cast<System::Byte>(0), L"湿度", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度",
-					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"湿度", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度日期时间",
-					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度日期时间", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度日期时间",
-					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"湿度日期时间", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度对应车辆",
-					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度对应车辆", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度对应车辆",
-					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"湿度对应车辆", System::Data::DataRowVersion::Original, nullptr))
-			});
-			// 
 			// printDocument1
 			// 
 			this->printDocument1->PrintPage += gcnew System::Drawing::Printing::PrintPageEventHandler(this, &MyForm::printDocument1_PrintPage);
+			// 
+			// oleDbDataAdapter1
+			// 
+			this->oleDbDataAdapter1->DeleteCommand = this->oleDbDeleteCommand1;
+			this->oleDbDataAdapter1->InsertCommand = this->oleDbInsertCommand1;
+			this->oleDbDataAdapter1->SelectCommand = this->oleDbSelectCommand1;
+			this->oleDbDataAdapter1->UpdateCommand = this->oleDbUpdateCommand1;
 			// 
 			// MyForm
 			// 
@@ -380,7 +297,7 @@ private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  
 	 private: String^ strConn;
 	private: BindingSource^ binding1;
 private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-			 strConn = String::Format("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=CANKUZONGHE.mdb");
+			 strConn = String::Format("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=AGMS.mdb");
 
 			 OleDbConnection^ con1 = gcnew OleDbConnection(strConn);
 
@@ -481,7 +398,7 @@ private: System::Void printDocument1_PrintPage(System::Object^  sender, System::
 			 Drawing::Pen^  tablesPen = gcnew Drawing::Pen(Color::Black);
 
 			 // g->FillRectangle(Brushes::LightGray, Rectangle(left, top, width, 30));
-			 g->DrawImage(gcnew Bitmap("..\\Debug\\1.jpg"), 650, -15, 160, top + 10);
+			// g->DrawImage(gcnew Bitmap("..\\Debug\\1.jpg"), 650, -15, 160, top + 10);
 			 g->DrawLine(tablesPen, left, top + 30, left + width, top + 30);
 
 			 Drawing::Font^titlesFont = gcnew Drawing::Font(L"宋体", 12, FontStyle::Bold);

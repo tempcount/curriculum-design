@@ -1,5 +1,5 @@
 #pragma once
-#include"MyForm.h"
+#include"SingleAnalyse.h"
 namespace WindowsFormsApplication1 {
 
 	using namespace System;
@@ -332,7 +332,7 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 			 this->dataGridView1->DataMember = "Test"; // 指定要打开的表
 }
 private: System::Void 仓库2分析ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-			 MyForm ^dlg = gcnew MyForm();
+			 SingleAnalyse^ dlg = gcnew SingleAnalyse();
 			 dlg->ShowDialog();
 }
 };

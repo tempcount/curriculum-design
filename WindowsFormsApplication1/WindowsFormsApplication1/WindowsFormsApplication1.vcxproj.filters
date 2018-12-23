@@ -54,6 +54,9 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SingleAnalyse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -89,7 +92,7 @@
     <ClInclude Include="SetForm.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="SingleAnalyse.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -129,6 +132,9 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="SetForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

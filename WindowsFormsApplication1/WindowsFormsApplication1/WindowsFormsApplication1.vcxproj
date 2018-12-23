@@ -95,6 +95,7 @@
     <ClCompile Include="save.cpp" />
     <ClCompile Include="SerialForm.cpp" />
     <ClCompile Include="SetForm.cpp" />
+    <ClCompile Include="SingleAnalyse.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -118,9 +119,6 @@
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="save.h">
       <FileType>CppForm</FileType>
@@ -129,6 +127,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SetForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SingleAnalyse.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="stdafx.h" />
@@ -159,9 +160,6 @@
       <DependentUpon>Form1.h</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="save.resx">
       <DependentUpon>save.h</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SetForm.resx">
       <DependentUpon>SetForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleAnalyse.resx">
+      <DependentUpon>SingleAnalyse.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="transfer.resx">
       <DependentUpon>transfer.h</DependentUpon>
