@@ -9,6 +9,7 @@ namespace WindowsFormsApplication1 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Data::OleDb;
+	using namespace System::Drawing::Drawing2D;
 	/// <summary>
 	/// SingleAnalyse 摘要
 	/// </summary>
@@ -210,6 +211,7 @@ namespace WindowsFormsApplication1 {
 			this->button2->TabIndex = 17;
 			this->button2->Text = L"打印";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &SingleAnalyse::button2_Click);
 			// 
 			// button1
 			// 
@@ -220,6 +222,7 @@ namespace WindowsFormsApplication1 {
 			this->button1->TabIndex = 16;
 			this->button1->Text = L"打印预览";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &SingleAnalyse::button1_Click);
 			// 
 			// label6
 			// 
@@ -363,9 +366,13 @@ namespace WindowsFormsApplication1 {
 					static_cast<System::Byte>(0), L"湿度对应车辆", System::Data::DataRowVersion::Original, nullptr))
 			});
 			// 
+			// printDocument1
+			// 
+			this->printDocument1->PrintPage += gcnew System::Drawing::Printing::PrintPageEventHandler(this, &SingleAnalyse::printDocument1_PrintPage);
+			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(731, 217);
+			this->textBox3->Location = System::Drawing::Point(278, 296);
 			this->textBox3->Margin = System::Windows::Forms::Padding(4);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(132, 25);
@@ -373,7 +380,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(780, 316);
+			this->textBox4->Location = System::Drawing::Point(444, 296);
 			this->textBox4->Margin = System::Windows::Forms::Padding(4);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(132, 25);
@@ -381,7 +388,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(516, 291);
+			this->textBox2->Location = System::Drawing::Point(82, 296);
 			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(132, 25);
@@ -411,6 +418,7 @@ namespace WindowsFormsApplication1 {
 			this->Name = L"SingleAnalyse";
 			this->Text = L"SingleAnalyse";
 			this->Load += gcnew System::EventHandler(this, &SingleAnalyse::SingleAnalyse_Load);
+			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &SingleAnalyse::SingleAnalyse_Paint);
 			this->groupBox2->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -418,6 +426,7 @@ namespace WindowsFormsApplication1 {
 		}
 #pragma endregion
 	private: System::Void SingleAnalyse_Load(System::Object^  sender, System::EventArgs^  e) {
+				 scoreNum = gcnew array<int>(5){ 0 };
 	}
 			  private: String^ strConn;
 		private: BindingSource^ binding1;
@@ -502,7 +511,7 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 			 int i;
 			 this->textBox2->Text = this->listView1->Items->Count.ToString();
 			 temp1 = this->listView1->Items->Count;
-
+			 scoreNum[1] = temp1;
 
 
 
@@ -523,7 +532,7 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 			 this->textBox3->Text = this->listView1->Items->Count.ToString();
 			 temp2 = this->listView1->Items->Count;
 
-
+			 scoreNum[2] = temp2;
 
 	/*	 System::Data::OleDb::OleDbCommand ^ cmd3 = gcnew System::Data::OleDb::OleDbCommand(strCmd3, con1);
 
@@ -563,11 +572,12 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 
 			 //this->listView1->AutoResizeColumn(5, ColumnHeaderAutoResizeStyle::ColumnContent);
 
-
+			 scoreNum[0] = this->listView1->Items->Count;
 			 this->textBox4->Text = (this->listView1->Items->Count - temp1 - temp2).ToString();
 			 temp3 = this->listView1->Items->Count;
-
-
+			 scoreNum[3] = temp3;
+		
+			 	 //DrawScore();        // 绘制成绩分布图
 }
 
 		 	private: System::Void DispView(DataTable^ table)
@@ -609,11 +619,221 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 				 for each (DataColumn^ col in table->Columns)
 
 					 listView1->Columns->Add(col->Caption, 120);
-
+	
 	}
+					 private: array<int>^scoreNum;
 private: System::Void listView1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private:System::Void DrawScore(System::Drawing::Graphics^ g) {
+
+	
+
+			FontFamily^fontFamily = gcnew FontFamily(L"宋体");    // 宋体字体
+
+			Drawing::Font^font = gcnew Drawing::Font(fontFamily, 10, FontStyle::Regular);
+
+			SolidBrush^brush1 = gcnew SolidBrush(Color::Black);
+
+
+
+			// 绘制直角坐标系的两条坐标线及文字
+
+			Pen^ pen1 = gcnew Pen(Color::Black);
+
+			pen1->EndCap = LineCap::ArrowAnchor; // 末端带箭头
+
+			g->DrawLine(pen1, 20, 200, 20, 20); // 垂直线
+
+			g->DrawLine(pen1, 20, 200, 320, 200);// 水平线
+
+			g->DrawString(L"人数", font, brush1, 20, 20);
+
+			g->DrawString(L"<60", font, brush1, 50, 210);
+
+			g->DrawString(L"60-70", font, brush1, 90, 210);
+
+			g->DrawString(L"70-80", font, brush1, 140, 210);
+
+			g->DrawString(L"80-90", font, brush1, 190, 210);
+
+			g->DrawString(L">=90", font, brush1, 240, 210);
+
+			g->DrawString(L"分数段", font, brush1, 280, 210);
+
+
+
+			array<Point>^ points = gcnew array<Point>{
+
+				//Point(60, 240 - 15 * scoreNum[4]),
+
+					Point(110, 240 - 15 * scoreNum[3]),
+
+					Point(160, 240 - 15 * scoreNum[2]),
+
+					Point(210, 240 - 15 * scoreNum[1]),
+
+					//Point(260, 240 - 15 * scoreNum[0])
+
+			};
+
+
+
+			array<HatchBrush^>^ brushes = gcnew array<HatchBrush^>{
+
+			//	gcnew HatchBrush(HatchStyle::LightVertical, Color::Red, Color::Gray),
+
+					gcnew HatchBrush(HatchStyle::LightDownwardDiagonal, Color::Yellow, Color::Blue),
+
+					gcnew HatchBrush(HatchStyle::LightHorizontal, Color::White, Color::Green),
+
+					gcnew HatchBrush(HatchStyle::LightUpwardDiagonal, Color::Yellow, Color::Orange),
+
+					//gcnew HatchBrush(HatchStyle::OutlinedDiamond, Color::Blue, Color::Red),
+
+			};
+
+
+
+			// 直方图
+
+			for (int i = 2; i >= 0; i--) {
+
+				g->FillRectangle(brushes[i], points[i].X - 25, points[i].Y, 50, 200 - points[i].Y);
+
+				g->DrawString(scoreNum[i] + L"人", font, brush1, points[i].X - 10, points[i].Y - 15);
+
+			}
+
+
+
+			// 曲线图
+
+			Pen^ pen2 = gcnew Pen(Color::Blue, 2);
+
+			g->DrawCurve(pen2, points); // 基数曲线
+
+
+
+			// 圆饼图
+
+			float startAngle = 0.0f, sweepAngle = 0.0f;
+
+			for (int i = 3; i >= 1; i--) {
+
+				startAngle = startAngle + sweepAngle; // 起始角度
+
+				sweepAngle = (float)scoreNum[i] * 360 / scoreNum[0]; // 扫描角度
+
+				g->FillPie(brushes[i],   System::Drawing::Rectangle::Rectangle(340, 40, 180, 180), startAngle, sweepAngle);
+
+			}
+
+}
+private: System::Void SingleAnalyse_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+			 DrawScore(e->Graphics);        // 绘制成绩分布图
+}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 PrintPreviewDialog^ previewDlg = gcnew PrintPreviewDialog(); // 打印预览对话框
+
+			 previewDlg->Document = this->printDocument1;         //设置打印文档对象
+
+			 previewDlg->ShowDialog();                                      // 显示打印预览对话框
+}
+private: System::Void printDocument1_PrintPage(System::Object^  sender, System::Drawing::Printing::PrintPageEventArgs^  e) {
+			 Graphics^ g = e->Graphics;
+
+			 int left = e->MarginBounds.Left;                   // 左上角X位置
+
+			 int top = e->MarginBounds.Top;                   // 左上角Y位置
+
+			 int width = e->MarginBounds.Width;                 //有效区域宽度
+
+			 int height = e->MarginBounds.Height;             // 有效区域高度
+
+			 // 打印页头(宋体,26号)
+
+			 Drawing::Font^ headerFont =
+
+				 gcnew Drawing::Font(L"宋体", 20, FontStyle::Regular);
+
+			 g->DrawString(L"中通快递运输异常报表", headerFont, Brushes::Black, left + 150, top);
+
+			 // 打印标题(背景灰色,宋体,12号)
+
+			 top += 60;
+
+			 Drawing::Pen^  tablesPen = gcnew Drawing::Pen(Color::Black);
+
+			 // g->FillRectangle(Brushes::LightGray, Rectangle(left, top, width, 30));
+			 g->DrawImage(gcnew Bitmap("..\\Debug\\1.jpg"), 650, -15, 160, top + 10);
+			 g->DrawLine(tablesPen, left, top + 30, left + width, top + 30);
+
+			 Drawing::Font^titlesFont = gcnew Drawing::Font(L"宋体", 12, FontStyle::Bold);
+
+			 g->DrawString(L"ID", titlesFont, Brushes::Black, left + 40, top + 5);
+
+			 g->DrawLine(tablesPen, left + 120, top, left + 120, top + 30);          //列分隔线
+
+			 g->DrawString(L"温度", titlesFont, Brushes::Black, left + 150, top + 5);
+
+			 g->DrawLine(tablesPen, left + 220, top, left + 220, top + 30);
+
+			 g->DrawString(L"温度日期时间", titlesFont, Brushes::Black, left + 290, top + 5);
+
+			 g->DrawLine(tablesPen, left + 440, top, left + 440, top + 30);
+
+			 g->DrawString(L"车辆", titlesFont, Brushes::Black, left + 480, top + 5);
+
+			 //g->DrawLine(tablesPen, left + 430, top, left + 430, top + 30);
+
+			 //g->DrawString(L"成绩3", titlesFont, Brushes::Black, left + 450, top + 5);
+
+			 // 打印页表
+
+			 top += 30, height -= 30;
+
+			 Drawing::Font^ tablesFont =
+
+				 gcnew Drawing::Font(L"宋体", 12, FontStyle::Regular);
+
+			 for each(ListViewItem^ item in this->listView1->Items) {
+
+				 g->DrawString(item->SubItems[0]->Text, tablesFont, Brushes::Black, left + 30, top + 5);      // 学号
+
+				 g->DrawLine(tablesPen, left + 120, top, left + 120, top + 30);             //列分隔线
+
+				 g->DrawString(item->SubItems[1]->Text, tablesFont, Brushes::Black, left + 150, top + 5);    // 姓名
+
+				 g->DrawLine(tablesPen, left + 220, top, left + 220, top + 30);
+
+				 g->DrawString(item->SubItems[2]->Text, tablesFont, Brushes::Black, left + 260, top + 5);    // 成绩1
+
+				 g->DrawLine(tablesPen, left + 440, top, left + 440, top + 30);
+
+				 g->DrawString(item->SubItems[3]->Text, tablesFont, Brushes::Black, left + 480, top + 5);    // 成绩2
+
+				 // g->DrawLine(tablesPen, left + 620, top, left + 650, top + 30);
+
+				 //g->DrawString(item->SubItems[4]->Text, tablesFont, Brushes::Black, left + 460, top + 5);    // 成绩3
+
+				 //g->DrawLine(tablesPen, left, top + 30, left + width, top + 30);
+
+				 top += 30, height -= 30;
+
+			 }
+
+			 e->HasMorePages = false;
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 PrintDialog^ printDlg = gcnew PrintDialog();                   //打印对话框
+
+			 printDlg->Document = this->printDocument1;            //设置打印文档
+
+			 if (printDlg->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+
+				 this->printDocument1->Print();                               //开始打印
 }
 };
 }

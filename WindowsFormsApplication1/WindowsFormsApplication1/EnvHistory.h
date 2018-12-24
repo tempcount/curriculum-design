@@ -1,5 +1,6 @@
 #pragma once
 #include"SingleAnalyse.h"
+
 namespace WindowsFormsApplication1 {
 
 	using namespace System;
@@ -51,7 +52,7 @@ namespace WindowsFormsApplication1 {
 
 	private: System::Windows::Forms::ToolStripMenuItem^  °ïÖúToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  ÍË³öToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  ²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem;
+
 	private: System::Windows::Forms::ComboBox^  comboBox1;
 	private: System::Windows::Forms::DataGridView^  dataGridView1;
 
@@ -79,7 +80,6 @@ namespace WindowsFormsApplication1 {
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
 			this->²Ö¿â2·ÖÎöToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->°ïÖúToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ÍË³öToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
@@ -193,15 +193,16 @@ namespace WindowsFormsApplication1 {
 			// 
 			// menuStrip2
 			// 
-			this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+			this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->²Ö¿â2·ÖÎöToolStripMenuItem,
-					this->²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem, this->°ïÖúToolStripMenuItem, this->ÍË³öToolStripMenuItem
+					this->°ïÖúToolStripMenuItem, this->ÍË³öToolStripMenuItem
 			});
 			this->menuStrip2->Location = System::Drawing::Point(0, 0);
 			this->menuStrip2->Name = L"menuStrip2";
 			this->menuStrip2->Size = System::Drawing::Size(1290, 28);
 			this->menuStrip2->TabIndex = 3;
 			this->menuStrip2->Text = L"menuStrip2";
+			this->menuStrip2->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &EnvHistory::menuStrip2_ItemClicked);
 			// 
 			// ²Ö¿â2·ÖÎöToolStripMenuItem
 			// 
@@ -209,12 +210,6 @@ namespace WindowsFormsApplication1 {
 			this->²Ö¿â2·ÖÎöToolStripMenuItem->Size = System::Drawing::Size(111, 24);
 			this->²Ö¿â2·ÖÎöToolStripMenuItem->Text = L"µ¥Ò»Ö¸±ê·ÖÎö";
 			this->²Ö¿â2·ÖÎöToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvHistory::²Ö¿â2·ÖÎöToolStripMenuItem_Click);
-			// 
-			// ²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem
-			// 
-			this->²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem->Name = L"²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem";
-			this->²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem->Size = System::Drawing::Size(111, 24);
-			this->²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem->Text = L"²Ö¿â»·¾³ÆÀ¹À";
 			// 
 			// °ïÖúToolStripMenuItem
 			// 
@@ -335,5 +330,9 @@ private: System::Void ²Ö¿â2·ÖÎöToolStripMenuItem_Click(System::Object^  sender, 
 			 SingleAnalyse^ dlg = gcnew SingleAnalyse();
 			 dlg->ShowDialog();
 }
+private: System::Void menuStrip2_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+}
+	private: System::Void ²Ö¿â»·¾³ÆÀ¹ÀToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
 };
 }

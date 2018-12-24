@@ -218,7 +218,7 @@ namespace WindowsFormsApplication3 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(814, 363);
+			this->ClientSize = System::Drawing::Size(815, 366);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
