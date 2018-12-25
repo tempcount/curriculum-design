@@ -176,18 +176,17 @@ namespace WindowsFormsApplication1 {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->dataGridView1->Location = System::Drawing::Point(0, 28);
+			this->dataGridView1->Location = System::Drawing::Point(33, 104);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowTemplate->Height = 27;
-			this->dataGridView1->Size = System::Drawing::Size(1225, 490);
+			this->dataGridView1->Size = System::Drawing::Size(1180, 356);
 			this->dataGridView1->TabIndex = 1;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &transfer::dataGridView1_CellContentClick);
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(361, 61);
+			this->comboBox1->Location = System::Drawing::Point(262, 55);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(251, 23);
 			this->comboBox1->TabIndex = 4;

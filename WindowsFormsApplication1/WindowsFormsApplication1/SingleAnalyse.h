@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(631, 14);
+			this->label2->Location = System::Drawing::Point(1008, 6);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(67, 15);
 			this->label2->TabIndex = 7;
@@ -123,7 +123,7 @@ namespace WindowsFormsApplication1 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(79, 23);
+			this->label3->Location = System::Drawing::Point(456, 15);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(67, 15);
 			this->label3->TabIndex = 6;
@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->dateTimePicker2->CustomFormat = L"yyyy/MM/dd HH:mm:ss";
 			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker2->Location = System::Drawing::Point(562, 49);
+			this->dateTimePicker2->Location = System::Drawing::Point(939, 41);
 			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dateTimePicker2->Name = L"dateTimePicker2";
 			this->dateTimePicker2->Size = System::Drawing::Size(214, 25);
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->dateTimePicker1->CustomFormat = L"yyyy/MM/dd HH:mm:ss";
 			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker1->Location = System::Drawing::Point(149, 49);
+			this->dateTimePicker1->Location = System::Drawing::Point(526, 41);
 			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(271, 25);
@@ -154,7 +154,7 @@ namespace WindowsFormsApplication1 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label1->Location = System::Drawing::Point(934, 9);
+			this->label1->Location = System::Drawing::Point(75, 15);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(169, 20);
@@ -165,7 +165,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"异常数据表_温度", L"异常数据表_湿度", L"异常数据表_振荡度", L"异常数据表_有毒气体" });
-			this->comboBox1->Location = System::Drawing::Point(943, 53);
+			this->comboBox1->Location = System::Drawing::Point(129, 45);
 			this->comboBox1->Margin = System::Windows::Forms::Padding(4);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(160, 23);
@@ -274,7 +274,7 @@ namespace WindowsFormsApplication1 {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label9->Location = System::Drawing::Point(446, 321);
+			this->label9->Location = System::Drawing::Point(443, 339);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(19, 20);
@@ -372,7 +372,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(278, 296);
+			this->textBox3->Location = System::Drawing::Point(275, 314);
 			this->textBox3->Margin = System::Windows::Forms::Padding(4);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(132, 25);
@@ -380,7 +380,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(444, 296);
+			this->textBox4->Location = System::Drawing::Point(441, 314);
 			this->textBox4->Margin = System::Windows::Forms::Padding(4);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(132, 25);
@@ -388,7 +388,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(82, 296);
+			this->textBox2->Location = System::Drawing::Point(79, 314);
 			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(132, 25);

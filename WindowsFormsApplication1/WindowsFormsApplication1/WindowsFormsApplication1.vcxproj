@@ -93,6 +93,7 @@
     <ClCompile Include="Enviroment-SET.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="save.cpp" />
+    <ClCompile Include="SaveAnalyse.cpp" />
     <ClCompile Include="SerialForm.cpp" />
     <ClCompile Include="SetForm.cpp" />
     <ClCompile Include="SingleAnalyse.cpp" />
@@ -121,6 +122,9 @@
     </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="save.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SaveAnalyse.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SerialForm.h">
@@ -162,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="save.resx">
       <DependentUpon>save.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveAnalyse.resx">
+      <DependentUpon>SaveAnalyse.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SerialForm.resx">
       <DependentUpon>SerialForm.h</DependentUpon>
