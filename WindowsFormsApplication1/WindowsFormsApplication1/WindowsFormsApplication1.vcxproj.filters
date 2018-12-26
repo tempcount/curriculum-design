@@ -60,6 +60,12 @@
     <ClCompile Include="SaveAnalyse.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MyForm1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FruitAnalyse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -99,6 +105,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SaveAnalyse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FruitAnalyse.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -141,6 +150,9 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="SingleAnalyse.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveAnalyse.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

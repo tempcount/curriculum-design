@@ -248,7 +248,7 @@ namespace WindowsFormsApplication1 {
 			this->label1->Location = System::Drawing::Point(64, 325);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(75, 20);
+			this->label1->Size = System::Drawing::Size(62, 16);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Select";
 			this->label1->Click += gcnew System::EventHandler(this, &EnvDetail::label1_Click);
@@ -281,7 +281,7 @@ namespace WindowsFormsApplication1 {
 			this->label7->AutoSize = true;
 			this->label7->Location = System::Drawing::Point(279, 63);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(64, 20);
+			this->label7->Size = System::Drawing::Size(53, 16);
 			this->label7->TabIndex = 16;
 			this->label7->Text = L"ERROR";
 			// 
@@ -290,7 +290,7 @@ namespace WindowsFormsApplication1 {
 			this->label6->AutoSize = true;
 			this->label6->Location = System::Drawing::Point(123, 63);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(75, 20);
+			this->label6->Size = System::Drawing::Size(62, 16);
 			this->label6->TabIndex = 15;
 			this->label6->Text = L"EXPECT";
 			// 
@@ -298,28 +298,28 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->numericUpDown5->Location = System::Drawing::Point(263, 273);
 			this->numericUpDown5->Name = L"numericUpDown5";
-			this->numericUpDown5->Size = System::Drawing::Size(101, 30);
+			this->numericUpDown5->Size = System::Drawing::Size(101, 26);
 			this->numericUpDown5->TabIndex = 14;
 			// 
 			// numericUpDown6
 			// 
 			this->numericUpDown6->Location = System::Drawing::Point(263, 219);
 			this->numericUpDown6->Name = L"numericUpDown6";
-			this->numericUpDown6->Size = System::Drawing::Size(101, 30);
+			this->numericUpDown6->Size = System::Drawing::Size(101, 26);
 			this->numericUpDown6->TabIndex = 13;
 			// 
 			// numericUpDown7
 			// 
 			this->numericUpDown7->Location = System::Drawing::Point(263, 161);
 			this->numericUpDown7->Name = L"numericUpDown7";
-			this->numericUpDown7->Size = System::Drawing::Size(101, 30);
+			this->numericUpDown7->Size = System::Drawing::Size(101, 26);
 			this->numericUpDown7->TabIndex = 12;
 			// 
 			// numericUpDown8
 			// 
 			this->numericUpDown8->Location = System::Drawing::Point(263, 105);
 			this->numericUpDown8->Name = L"numericUpDown8";
-			this->numericUpDown8->Size = System::Drawing::Size(101, 30);
+			this->numericUpDown8->Size = System::Drawing::Size(101, 26);
 			this->numericUpDown8->TabIndex = 11;
 			// 
 			// label5
@@ -327,7 +327,7 @@ namespace WindowsFormsApplication1 {
 			this->label5->AutoSize = true;
 			this->label5->Location = System::Drawing::Point(16, 273);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(75, 20);
+			this->label5->Size = System::Drawing::Size(62, 16);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"label5";
 			// 
@@ -335,7 +335,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->numericUpDown4->Location = System::Drawing::Point(115, 271);
 			this->numericUpDown4->Name = L"numericUpDown4";
-			this->numericUpDown4->Size = System::Drawing::Size(101, 30);
+			this->numericUpDown4->Size = System::Drawing::Size(101, 26);
 			this->numericUpDown4->TabIndex = 9;
 			// 
 			// label4
@@ -343,7 +343,7 @@ namespace WindowsFormsApplication1 {
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(16, 219);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(75, 20);
+			this->label4->Size = System::Drawing::Size(62, 16);
 			this->label4->TabIndex = 8;
 			this->label4->Text = L"label4";
 			// 
@@ -351,7 +351,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->numericUpDown3->Location = System::Drawing::Point(115, 217);
 			this->numericUpDown3->Name = L"numericUpDown3";
-			this->numericUpDown3->Size = System::Drawing::Size(101, 30);
+			this->numericUpDown3->Size = System::Drawing::Size(101, 26);
 			this->numericUpDown3->TabIndex = 7;
 			// 
 			// label3
@@ -359,7 +359,7 @@ namespace WindowsFormsApplication1 {
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(16, 161);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(75, 20);
+			this->label3->Size = System::Drawing::Size(62, 16);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"label3";
 			// 
@@ -367,7 +367,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->numericUpDown2->Location = System::Drawing::Point(115, 159);
 			this->numericUpDown2->Name = L"numericUpDown2";
-			this->numericUpDown2->Size = System::Drawing::Size(101, 30);
+			this->numericUpDown2->Size = System::Drawing::Size(101, 26);
 			this->numericUpDown2->TabIndex = 5;
 			// 
 			// label2
@@ -375,7 +375,7 @@ namespace WindowsFormsApplication1 {
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(16, 105);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(75, 20);
+			this->label2->Size = System::Drawing::Size(62, 16);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"label2";
 			// 
@@ -383,7 +383,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->numericUpDown1->Location = System::Drawing::Point(115, 103);
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(101, 30);
+			this->numericUpDown1->Size = System::Drawing::Size(101, 26);
 			this->numericUpDown1->TabIndex = 0;
 			// 
 			// button1
@@ -413,7 +413,7 @@ namespace WindowsFormsApplication1 {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1814, 28);
+			this->menuStrip1->Size = System::Drawing::Size(1814, 25);
 			this->menuStrip1->TabIndex = 6;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -424,33 +424,33 @@ namespace WindowsFormsApplication1 {
 					this->打开串口ToolStripMenuItem, this->关闭串口ToolStripMenuItem
 			});
 			this->串口设置ToolStripMenuItem->Name = L"串口设置ToolStripMenuItem";
-			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
 			this->串口设置ToolStripMenuItem->Text = L"串口设置";
 			this->串口设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &EnvDetail::串口设置ToolStripMenuItem_DropDownItemClicked);
 			// 
 			// 串口设置ToolStripMenuItem1
 			// 
 			this->串口设置ToolStripMenuItem1->Name = L"串口设置ToolStripMenuItem1";
-			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(138, 24);
+			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(124, 22);
 			this->串口设置ToolStripMenuItem1->Text = L"串口设置";
 			this->串口设置ToolStripMenuItem1->Click += gcnew System::EventHandler(this, &EnvDetail::串口设置ToolStripMenuItem1_Click);
 			// 
 			// 打开串口ToolStripMenuItem
 			// 
 			this->打开串口ToolStripMenuItem->Name = L"打开串口ToolStripMenuItem";
-			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(138, 24);
+			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开串口ToolStripMenuItem->Text = L"打开串口";
 			// 
 			// 关闭串口ToolStripMenuItem
 			// 
 			this->关闭串口ToolStripMenuItem->Name = L"关闭串口ToolStripMenuItem";
-			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(138, 24);
+			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭串口ToolStripMenuItem->Text = L"关闭串口";
 			// 
 			// hISTORYToolStripMenuItem
 			// 
 			this->hISTORYToolStripMenuItem->Name = L"hISTORYToolStripMenuItem";
-			this->hISTORYToolStripMenuItem->Size = System::Drawing::Size(86, 24);
+			this->hISTORYToolStripMenuItem->Size = System::Drawing::Size(72, 21);
 			this->hISTORYToolStripMenuItem->Text = L"HISTORY";
 			this->hISTORYToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::hISTORYToolStripMenuItem_Click);
 			// 
@@ -461,19 +461,19 @@ namespace WindowsFormsApplication1 {
 					this->平滑度设置ToolStripMenuItem, this->格式设置ToolStripMenuItem
 			});
 			this->iMAGESETTINGToolStripMenuItem->Name = L"iMAGESETTINGToolStripMenuItem";
-			this->iMAGESETTINGToolStripMenuItem->Size = System::Drawing::Size(136, 24);
+			this->iMAGESETTINGToolStripMenuItem->Size = System::Drawing::Size(115, 21);
 			this->iMAGESETTINGToolStripMenuItem->Text = L"IMAGE SETTING";
 			// 
 			// 坐标设置ToolStripMenuItem
 			// 
 			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
-			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
 			// 
 			// 平滑度设置ToolStripMenuItem
 			// 
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
-			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
 			// 
 			// 格式设置ToolStripMenuItem
@@ -483,19 +483,19 @@ namespace WindowsFormsApplication1 {
 					this->折线图ToolStripMenuItem
 			});
 			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
-			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->格式设置ToolStripMenuItem->Text = L"格式设置";
 			// 
 			// 曲线图ToolStripMenuItem
 			// 
 			this->曲线图ToolStripMenuItem->Name = L"曲线图ToolStripMenuItem";
-			this->曲线图ToolStripMenuItem->Size = System::Drawing::Size(123, 24);
+			this->曲线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
 			this->曲线图ToolStripMenuItem->Text = L"曲线图";
 			// 
 			// 折线图ToolStripMenuItem
 			// 
 			this->折线图ToolStripMenuItem->Name = L"折线图ToolStripMenuItem";
-			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(123, 24);
+			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
 			this->折线图ToolStripMenuItem->Text = L"折线图";
 			// 
 			// tOOLToolStripMenuItem
@@ -505,32 +505,32 @@ namespace WindowsFormsApplication1 {
 					this->状态栏ToolStripMenuItem, this->字体ToolStripMenuItem, this->自动换行ToolStripMenuItem
 			});
 			this->tOOLToolStripMenuItem->Name = L"tOOLToolStripMenuItem";
-			this->tOOLToolStripMenuItem->Size = System::Drawing::Size(62, 24);
+			this->tOOLToolStripMenuItem->Size = System::Drawing::Size(53, 21);
 			this->tOOLToolStripMenuItem->Text = L"TOOL";
 			this->tOOLToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::tOOLToolStripMenuItem_Click);
 			// 
 			// 工具栏ToolStripMenuItem
 			// 
 			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->工具栏ToolStripMenuItem->Text = L"工具栏";
 			// 
 			// 状态栏ToolStripMenuItem
 			// 
 			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->状态栏ToolStripMenuItem->Text = L"状态栏";
 			// 
 			// 字体ToolStripMenuItem
 			// 
 			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->字体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->字体ToolStripMenuItem->Text = L"字体";
 			// 
 			// 自动换行ToolStripMenuItem
 			// 
 			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
-			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->自动换行ToolStripMenuItem->Text = L"自动换行";
 			// 
 			// 统计与分析ToolStripMenuItem
@@ -540,26 +540,26 @@ namespace WindowsFormsApplication1 {
 					this->pARAMETER1ToolStripMenuItem
 			});
 			this->统计与分析ToolStripMenuItem->Name = L"统计与分析ToolStripMenuItem";
-			this->统计与分析ToolStripMenuItem->Size = System::Drawing::Size(96, 24);
+			this->统计与分析ToolStripMenuItem->Size = System::Drawing::Size(80, 21);
 			this->统计与分析ToolStripMenuItem->Text = L"统计与分析";
 			// 
 			// pAPERToolStripMenuItem
 			// 
 			this->pAPERToolStripMenuItem->Name = L"pAPERToolStripMenuItem";
-			this->pAPERToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->pAPERToolStripMenuItem->Size = System::Drawing::Size(148, 22);
 			this->pAPERToolStripMenuItem->Text = L"单一指标分析";
 			this->pAPERToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::pAPERToolStripMenuItem_Click);
 			// 
 			// pARAMETER1ToolStripMenuItem
 			// 
 			this->pARAMETER1ToolStripMenuItem->Name = L"pARAMETER1ToolStripMenuItem";
-			this->pARAMETER1ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->pARAMETER1ToolStripMenuItem->Size = System::Drawing::Size(148, 22);
 			this->pARAMETER1ToolStripMenuItem->Text = L"综合指标分析";
 			// 
 			// qToolStripMenuItem
 			// 
 			this->qToolStripMenuItem->Name = L"qToolStripMenuItem";
-			this->qToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->qToolStripMenuItem->Size = System::Drawing::Size(68, 21);
 			this->qToolStripMenuItem->Text = L"环境设置";
 			this->qToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::qToolStripMenuItem_Click);
 			// 
@@ -632,7 +632,7 @@ namespace WindowsFormsApplication1 {
 			this->label8->Location = System::Drawing::Point(168, 668);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(82, 24);
+			this->label8->Size = System::Drawing::Size(66, 19);
 			this->label8->TabIndex = 4;
 			this->label8->Text = L"振荡度";
 			// 
@@ -656,7 +656,7 @@ namespace WindowsFormsApplication1 {
 			this->label9->Location = System::Drawing::Point(677, 668);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(106, 24);
+			this->label9->Size = System::Drawing::Size(85, 19);
 			this->label9->TabIndex = 4;
 			this->label9->Text = L"有害气体";
 			// 
@@ -680,7 +680,7 @@ namespace WindowsFormsApplication1 {
 			this->label10->Location = System::Drawing::Point(696, 335);
 			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(58, 24);
+			this->label10->Size = System::Drawing::Size(47, 19);
 			this->label10->TabIndex = 4;
 			this->label10->Text = L"湿度";
 			// 
@@ -704,7 +704,7 @@ namespace WindowsFormsApplication1 {
 			this->label11->Location = System::Drawing::Point(168, 334);
 			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(58, 24);
+			this->label11->Size = System::Drawing::Size(47, 19);
 			this->label11->TabIndex = 4;
 			this->label11->Text = L"温度";
 			// 
@@ -774,28 +774,28 @@ namespace WindowsFormsApplication1 {
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号", L"2号", L"3号" });
 			this->comboBox1->Location = System::Drawing::Point(79, 366);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 28);
+			this->comboBox1->Size = System::Drawing::Size(121, 24);
 			this->comboBox1->TabIndex = 9;
 			// 
 			// textBox1
 			// 
 			this->textBox1->Location = System::Drawing::Point(88, 227);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 30);
+			this->textBox1->Size = System::Drawing::Size(100, 26);
 			this->textBox1->TabIndex = 10;
 			// 
 			// textBox2
 			// 
 			this->textBox2->Location = System::Drawing::Point(235, 227);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 30);
+			this->textBox2->Size = System::Drawing::Size(100, 26);
 			this->textBox2->TabIndex = 11;
 			// 
 			// textBox3
 			// 
 			this->textBox3->Location = System::Drawing::Point(388, 227);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 30);
+			this->textBox3->Size = System::Drawing::Size(100, 26);
 			this->textBox3->TabIndex = 12;
 			// 
 			// statusStrip1
@@ -816,13 +816,13 @@ namespace WindowsFormsApplication1 {
 			// toolStripStatusLabel1
 			// 
 			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
-			this->toolStripStatusLabel1->Size = System::Drawing::Size(167, 53);
+			this->toolStripStatusLabel1->Size = System::Drawing::Size(131, 53);
 			this->toolStripStatusLabel1->Text = L"toolStripStatusLabel1";
 			// 
 			// toolStripStatusLabel2
 			// 
 			this->toolStripStatusLabel2->Name = L"toolStripStatusLabel2";
-			this->toolStripStatusLabel2->Size = System::Drawing::Size(167, 53);
+			this->toolStripStatusLabel2->Size = System::Drawing::Size(131, 53);
 			this->toolStripStatusLabel2->Text = L"toolStripStatusLabel2";
 			// 
 			// toolStripProgressBar1
@@ -837,7 +837,7 @@ namespace WindowsFormsApplication1 {
 			// toolStripStatusLabel3
 			// 
 			this->toolStripStatusLabel3->Name = L"toolStripStatusLabel3";
-			this->toolStripStatusLabel3->Size = System::Drawing::Size(824, 53);
+			this->toolStripStatusLabel3->Size = System::Drawing::Size(896, 53);
 			this->toolStripStatusLabel3->Spring = true;
 			// 
 			// toolStripStatusLabel4
@@ -881,16 +881,16 @@ namespace WindowsFormsApplication1 {
 			this->listBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 20;
+			this->listBox1->ItemHeight = 16;
 			this->listBox1->Location = System::Drawing::Point(28, 46);
 			this->listBox1->Margin = System::Windows::Forms::Padding(4);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(586, 144);
+			this->listBox1->Size = System::Drawing::Size(586, 132);
 			this->listBox1->TabIndex = 14;
 			// 
 			// EnvDetail
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(11, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1814, 808);
 			this->Controls->Add(this->listBox1);
