@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1 {
 		}
 	private: System::Windows::Forms::GroupBox^  groupBox1;
 	protected:
-	private: System::Windows::Forms::ComboBox^  comboBox2;
+
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label1;
@@ -71,7 +71,6 @@ namespace WindowsFormsApplication1 {
 		{
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -92,7 +91,6 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->groupBox1->BackColor = System::Drawing::Color::Yellow;
 			this->groupBox1->Controls->Add(this->comboBox1);
-			this->groupBox1->Controls->Add(this->comboBox2);
 			this->groupBox1->Controls->Add(this->label4);
 			this->groupBox1->Controls->Add(this->label2);
 			this->groupBox1->Controls->Add(this->label1);
@@ -115,33 +113,21 @@ namespace WindowsFormsApplication1 {
 			this->comboBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12));
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号车数据表", L"2号车数据表", L"3号车数据表" });
-			this->comboBox1->Location = System::Drawing::Point(800, 2);
+			this->comboBox1->Location = System::Drawing::Point(987, 61);
 			this->comboBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(177, 28);
 			this->comboBox1->TabIndex = 10;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &EnvHistory::comboBox1_SelectedIndexChanged);
 			// 
-			// comboBox2
-			// 
-			this->comboBox2->Font = (gcnew System::Drawing::Font(L"宋体", 12));
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号车数据表", L"2号车数据表", L"3号车数据表" });
-			this->comboBox2->Location = System::Drawing::Point(1003, 61);
-			this->comboBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(177, 28);
-			this->comboBox2->TabIndex = 9;
-			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &EnvHistory::comboBox2_SelectedIndexChanged);
-			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->label4->Location = System::Drawing::Point(940, 32);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(114, 20);
+			this->label4->Size = System::Drawing::Size(130, 24);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"选择数据表";
 			// 
@@ -207,8 +193,8 @@ namespace WindowsFormsApplication1 {
 			// 仓库2分析ToolStripMenuItem
 			// 
 			this->仓库2分析ToolStripMenuItem->Name = L"仓库2分析ToolStripMenuItem";
-			this->仓库2分析ToolStripMenuItem->Size = System::Drawing::Size(111, 24);
-			this->仓库2分析ToolStripMenuItem->Text = L"单一指标分析";
+			this->仓库2分析ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->仓库2分析ToolStripMenuItem->Text = L"指标分析";
 			this->仓库2分析ToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvHistory::仓库2分析ToolStripMenuItem_Click);
 			// 
 			// 帮助ToolStripMenuItem

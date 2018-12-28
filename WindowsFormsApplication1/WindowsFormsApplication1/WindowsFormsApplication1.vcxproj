@@ -92,6 +92,7 @@
     <ClCompile Include="EnvHistory.cpp" />
     <ClCompile Include="Enviroment-SET.cpp" />
     <ClCompile Include="FruitAnalyse.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="save.cpp" />
@@ -123,6 +124,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FruitAnalyse.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Map.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
@@ -171,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FruitAnalyse.resx">
       <DependentUpon>FruitAnalyse.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map.resx">
+      <DependentUpon>Map.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="save.resx">
       <DependentUpon>save.h</DependentUpon>

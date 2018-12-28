@@ -4,6 +4,7 @@
 #include"SerialForm.h"
 #include"SetForm.h"
 #include"EnvHistory.h"
+#include"SingleAnalyse.h"
 namespace WindowsFormsApplication1 {
 	using namespace System::IO::Ports;
 	using namespace System;
@@ -40,59 +41,59 @@ namespace WindowsFormsApplication1 {
 		}
 
 	protected:
-	private: System::Windows::Forms::Label^  label1;
 
-	private: System::Windows::Forms::GroupBox^  groupBox2;
-	private: System::Windows::Forms::Label^  label7;
-	private: System::Windows::Forms::Label^  label6;
-	private: System::Windows::Forms::NumericUpDown^  numericUpDown5;
-	private: System::Windows::Forms::NumericUpDown^  numericUpDown6;
-	private: System::Windows::Forms::NumericUpDown^  numericUpDown7;
-	private: System::Windows::Forms::NumericUpDown^  numericUpDown8;
-	private: System::Windows::Forms::Label^  label5;
-	private: System::Windows::Forms::NumericUpDown^  numericUpDown4;
-	private: System::Windows::Forms::Label^  label4;
-	private: System::Windows::Forms::NumericUpDown^  numericUpDown3;
-	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::NumericUpDown^  numericUpDown2;
-	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::NumericUpDown^  numericUpDown1;
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Button^  button2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^  hISTORYToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  iMAGESETTINGToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  tOOLToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  工具栏ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  状态栏ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  字体ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  自动换行ToolStripMenuItem;
 
 
 
 
 
 
-	private: System::Windows::Forms::ToolStripMenuItem^  坐标设置ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  平滑度设置ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  格式设置ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  曲线图ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  折线图ToolStripMenuItem;
+
+
+
+
+
+
+
+
+
+
+
 	private: System::ComponentModel::BackgroundWorker^  backgroundWorker1;
 	private: System::Data::OleDb::OleDbConnection^  oleDbConnection1;
 	private: System::IO::Ports::SerialPort^  serialPort1;
-	private: System::Windows::Forms::GroupBox^  实时数据;
-	private: System::Windows::Forms::Button^  button4;
-	private: System::Windows::Forms::Label^  label8;
-	private: System::Windows::Forms::Button^  button3;
-	private: System::Windows::Forms::Label^  label9;
-	private: System::Windows::Forms::Button^  button5;
-	private: System::Windows::Forms::Label^  label10;
-	private: System::Windows::Forms::Button^  button6;
-	private: System::Windows::Forms::Label^  label11;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart4;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart3;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart2;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	private: System::Windows::Forms::ToolStripMenuItem^  串口设置ToolStripMenuItem;
@@ -100,8 +101,8 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::ToolStripMenuItem^  打开串口ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  关闭串口ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  qToolStripMenuItem;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart1;
+
+
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::TextBox^  textBox2;
 	private: System::Windows::Forms::TextBox^  textBox3;
@@ -115,9 +116,35 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel6;
 	private: System::Windows::Forms::Timer^  timer1;
 	private: System::Windows::Forms::ListBox^  listBox1;
-	private: System::Windows::Forms::ToolStripMenuItem^  统计与分析ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  pAPERToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  pARAMETER1ToolStripMenuItem;
+
+
+
+private: System::Windows::Forms::Label^  label1;
+
+
+private: System::Windows::Forms::ComboBox^  comboBox1;
+private: System::Windows::Forms::GroupBox^  实时数据;
+private: System::Windows::Forms::Button^  button4;
+private: System::Windows::Forms::Label^  label4;
+private: System::Windows::Forms::Button^  button3;
+private: System::Windows::Forms::Label^  label3;
+private: System::Windows::Forms::Button^  button2;
+private: System::Windows::Forms::Label^  label2;
+private: System::Windows::Forms::Button^  button1;
+private: System::Windows::Forms::Label^  label5;
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart4;
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart3;
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart2;
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart1;
+private: System::Windows::Forms::TextBox^  textBox4;
+private: System::Windows::Forms::GroupBox^  groupBox1;
+private: System::Windows::Forms::Label^  label9;
+private: System::Windows::Forms::Label^  label8;
+private: System::Windows::Forms::Label^  label7;
+private: System::Windows::Forms::Label^  label6;
+private: System::Windows::Forms::Label^  label10;
+private: System::Windows::Forms::ToolStripMenuItem^  统计与分析ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  监控ToolStripMenuItem;
 
 
 
@@ -143,74 +170,29 @@ namespace WindowsFormsApplication1 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->numericUpDown5 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->numericUpDown6 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->numericUpDown7 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->numericUpDown8 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->numericUpDown4 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->numericUpDown3 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->串口设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->串口设置ToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开串口ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->关闭串口ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->hISTORYToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->iMAGESETTINGToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->坐标设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->平滑度设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->格式设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->曲线图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->折线图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->tOOLToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->工具栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->状态栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->字体ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->自动换行ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->统计与分析ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->pAPERToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->pARAMETER1ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->qToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->统计与分析ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
 			this->oleDbConnection1 = (gcnew System::Data::OleDb::OleDbConnection());
 			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
-			this->实时数据 = (gcnew System::Windows::Forms::GroupBox());
-			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->chart4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->chart3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
@@ -224,196 +206,48 @@ namespace WindowsFormsApplication1 {
 			this->toolStripStatusLabel6 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
-			this->groupBox2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->实时数据 = (gcnew System::Windows::Forms::GroupBox());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->chart4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->chart3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->监控ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
+			this->statusStrip1->SuspendLayout();
 			this->实时数据->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->BeginInit();
-			this->statusStrip1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
+			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(64, 325);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(62, 16);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"Select";
-			this->label1->Click += gcnew System::EventHandler(this, &EnvDetail::label1_Click);
-			// 
-			// groupBox2
-			// 
-			this->groupBox2->Controls->Add(this->label7);
-			this->groupBox2->Controls->Add(this->label6);
-			this->groupBox2->Controls->Add(this->numericUpDown5);
-			this->groupBox2->Controls->Add(this->numericUpDown6);
-			this->groupBox2->Controls->Add(this->numericUpDown7);
-			this->groupBox2->Controls->Add(this->numericUpDown8);
-			this->groupBox2->Controls->Add(this->label5);
-			this->groupBox2->Controls->Add(this->numericUpDown4);
-			this->groupBox2->Controls->Add(this->label4);
-			this->groupBox2->Controls->Add(this->numericUpDown3);
-			this->groupBox2->Controls->Add(this->label3);
-			this->groupBox2->Controls->Add(this->numericUpDown2);
-			this->groupBox2->Controls->Add(this->label2);
-			this->groupBox2->Controls->Add(this->numericUpDown1);
-			this->groupBox2->Location = System::Drawing::Point(68, 434);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(391, 347);
-			this->groupBox2->TabIndex = 3;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"EXPECT SETTING";
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(279, 63);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(53, 16);
-			this->label7->TabIndex = 16;
-			this->label7->Text = L"ERROR";
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(123, 63);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(62, 16);
-			this->label6->TabIndex = 15;
-			this->label6->Text = L"EXPECT";
-			// 
-			// numericUpDown5
-			// 
-			this->numericUpDown5->Location = System::Drawing::Point(263, 273);
-			this->numericUpDown5->Name = L"numericUpDown5";
-			this->numericUpDown5->Size = System::Drawing::Size(101, 26);
-			this->numericUpDown5->TabIndex = 14;
-			// 
-			// numericUpDown6
-			// 
-			this->numericUpDown6->Location = System::Drawing::Point(263, 219);
-			this->numericUpDown6->Name = L"numericUpDown6";
-			this->numericUpDown6->Size = System::Drawing::Size(101, 26);
-			this->numericUpDown6->TabIndex = 13;
-			// 
-			// numericUpDown7
-			// 
-			this->numericUpDown7->Location = System::Drawing::Point(263, 161);
-			this->numericUpDown7->Name = L"numericUpDown7";
-			this->numericUpDown7->Size = System::Drawing::Size(101, 26);
-			this->numericUpDown7->TabIndex = 12;
-			// 
-			// numericUpDown8
-			// 
-			this->numericUpDown8->Location = System::Drawing::Point(263, 105);
-			this->numericUpDown8->Name = L"numericUpDown8";
-			this->numericUpDown8->Size = System::Drawing::Size(101, 26);
-			this->numericUpDown8->TabIndex = 11;
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(16, 273);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(62, 16);
-			this->label5->TabIndex = 10;
-			this->label5->Text = L"label5";
-			// 
-			// numericUpDown4
-			// 
-			this->numericUpDown4->Location = System::Drawing::Point(115, 271);
-			this->numericUpDown4->Name = L"numericUpDown4";
-			this->numericUpDown4->Size = System::Drawing::Size(101, 26);
-			this->numericUpDown4->TabIndex = 9;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(16, 219);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(62, 16);
-			this->label4->TabIndex = 8;
-			this->label4->Text = L"label4";
-			// 
-			// numericUpDown3
-			// 
-			this->numericUpDown3->Location = System::Drawing::Point(115, 217);
-			this->numericUpDown3->Name = L"numericUpDown3";
-			this->numericUpDown3->Size = System::Drawing::Size(101, 26);
-			this->numericUpDown3->TabIndex = 7;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(16, 161);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(62, 16);
-			this->label3->TabIndex = 6;
-			this->label3->Text = L"label3";
-			// 
-			// numericUpDown2
-			// 
-			this->numericUpDown2->Location = System::Drawing::Point(115, 159);
-			this->numericUpDown2->Name = L"numericUpDown2";
-			this->numericUpDown2->Size = System::Drawing::Size(101, 26);
-			this->numericUpDown2->TabIndex = 5;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(16, 105);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(62, 16);
-			this->label2->TabIndex = 4;
-			this->label2->Text = L"label2";
-			// 
-			// numericUpDown1
-			// 
-			this->numericUpDown1->Location = System::Drawing::Point(115, 103);
-			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(101, 26);
-			this->numericUpDown1->TabIndex = 0;
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(351, 366);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(108, 40);
-			this->button1->TabIndex = 4;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(281, 360);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(64, 56);
-			this->button2->TabIndex = 5;
-			this->button2->Text = L"LED";
-			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->串口设置ToolStripMenuItem,
-					this->hISTORYToolStripMenuItem, this->iMAGESETTINGToolStripMenuItem, this->tOOLToolStripMenuItem, this->统计与分析ToolStripMenuItem,
-					this->qToolStripMenuItem
+					this->hISTORYToolStripMenuItem, this->qToolStripMenuItem, this->统计与分析ToolStripMenuItem, this->监控ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1814, 25);
+			this->menuStrip1->Size = System::Drawing::Size(1814, 28);
 			this->menuStrip1->TabIndex = 6;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -424,378 +258,75 @@ namespace WindowsFormsApplication1 {
 					this->打开串口ToolStripMenuItem, this->关闭串口ToolStripMenuItem
 			});
 			this->串口设置ToolStripMenuItem->Name = L"串口设置ToolStripMenuItem";
-			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
+			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
 			this->串口设置ToolStripMenuItem->Text = L"串口设置";
 			this->串口设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &EnvDetail::串口设置ToolStripMenuItem_DropDownItemClicked);
 			// 
 			// 串口设置ToolStripMenuItem1
 			// 
 			this->串口设置ToolStripMenuItem1->Name = L"串口设置ToolStripMenuItem1";
-			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(124, 22);
+			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(138, 24);
 			this->串口设置ToolStripMenuItem1->Text = L"串口设置";
 			this->串口设置ToolStripMenuItem1->Click += gcnew System::EventHandler(this, &EnvDetail::串口设置ToolStripMenuItem1_Click);
 			// 
 			// 打开串口ToolStripMenuItem
 			// 
 			this->打开串口ToolStripMenuItem->Name = L"打开串口ToolStripMenuItem";
-			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(138, 24);
 			this->打开串口ToolStripMenuItem->Text = L"打开串口";
 			// 
 			// 关闭串口ToolStripMenuItem
 			// 
 			this->关闭串口ToolStripMenuItem->Name = L"关闭串口ToolStripMenuItem";
-			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(138, 24);
 			this->关闭串口ToolStripMenuItem->Text = L"关闭串口";
 			// 
 			// hISTORYToolStripMenuItem
 			// 
 			this->hISTORYToolStripMenuItem->Name = L"hISTORYToolStripMenuItem";
-			this->hISTORYToolStripMenuItem->Size = System::Drawing::Size(72, 21);
-			this->hISTORYToolStripMenuItem->Text = L"HISTORY";
+			this->hISTORYToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->hISTORYToolStripMenuItem->Text = L"历史数据";
 			this->hISTORYToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::hISTORYToolStripMenuItem_Click);
-			// 
-			// iMAGESETTINGToolStripMenuItem
-			// 
-			this->iMAGESETTINGToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->坐标设置ToolStripMenuItem,
-					this->平滑度设置ToolStripMenuItem, this->格式设置ToolStripMenuItem
-			});
-			this->iMAGESETTINGToolStripMenuItem->Name = L"iMAGESETTINGToolStripMenuItem";
-			this->iMAGESETTINGToolStripMenuItem->Size = System::Drawing::Size(115, 21);
-			this->iMAGESETTINGToolStripMenuItem->Text = L"IMAGE SETTING";
-			// 
-			// 坐标设置ToolStripMenuItem
-			// 
-			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
-			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
-			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
-			// 
-			// 平滑度设置ToolStripMenuItem
-			// 
-			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
-			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
-			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
-			// 
-			// 格式设置ToolStripMenuItem
-			// 
-			this->格式设置ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->曲线图ToolStripMenuItem,
-					this->折线图ToolStripMenuItem
-			});
-			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
-			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
-			this->格式设置ToolStripMenuItem->Text = L"格式设置";
-			// 
-			// 曲线图ToolStripMenuItem
-			// 
-			this->曲线图ToolStripMenuItem->Name = L"曲线图ToolStripMenuItem";
-			this->曲线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
-			this->曲线图ToolStripMenuItem->Text = L"曲线图";
-			// 
-			// 折线图ToolStripMenuItem
-			// 
-			this->折线图ToolStripMenuItem->Name = L"折线图ToolStripMenuItem";
-			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
-			this->折线图ToolStripMenuItem->Text = L"折线图";
-			// 
-			// tOOLToolStripMenuItem
-			// 
-			this->tOOLToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->工具栏ToolStripMenuItem,
-					this->状态栏ToolStripMenuItem, this->字体ToolStripMenuItem, this->自动换行ToolStripMenuItem
-			});
-			this->tOOLToolStripMenuItem->Name = L"tOOLToolStripMenuItem";
-			this->tOOLToolStripMenuItem->Size = System::Drawing::Size(53, 21);
-			this->tOOLToolStripMenuItem->Text = L"TOOL";
-			this->tOOLToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::tOOLToolStripMenuItem_Click);
-			// 
-			// 工具栏ToolStripMenuItem
-			// 
-			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->工具栏ToolStripMenuItem->Text = L"工具栏";
-			// 
-			// 状态栏ToolStripMenuItem
-			// 
-			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->状态栏ToolStripMenuItem->Text = L"状态栏";
-			// 
-			// 字体ToolStripMenuItem
-			// 
-			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->字体ToolStripMenuItem->Text = L"字体";
-			// 
-			// 自动换行ToolStripMenuItem
-			// 
-			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
-			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->自动换行ToolStripMenuItem->Text = L"自动换行";
-			// 
-			// 统计与分析ToolStripMenuItem
-			// 
-			this->统计与分析ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->pAPERToolStripMenuItem,
-					this->pARAMETER1ToolStripMenuItem
-			});
-			this->统计与分析ToolStripMenuItem->Name = L"统计与分析ToolStripMenuItem";
-			this->统计与分析ToolStripMenuItem->Size = System::Drawing::Size(80, 21);
-			this->统计与分析ToolStripMenuItem->Text = L"统计与分析";
-			// 
-			// pAPERToolStripMenuItem
-			// 
-			this->pAPERToolStripMenuItem->Name = L"pAPERToolStripMenuItem";
-			this->pAPERToolStripMenuItem->Size = System::Drawing::Size(148, 22);
-			this->pAPERToolStripMenuItem->Text = L"单一指标分析";
-			this->pAPERToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::pAPERToolStripMenuItem_Click);
-			// 
-			// pARAMETER1ToolStripMenuItem
-			// 
-			this->pARAMETER1ToolStripMenuItem->Name = L"pARAMETER1ToolStripMenuItem";
-			this->pARAMETER1ToolStripMenuItem->Size = System::Drawing::Size(148, 22);
-			this->pARAMETER1ToolStripMenuItem->Text = L"综合指标分析";
 			// 
 			// qToolStripMenuItem
 			// 
 			this->qToolStripMenuItem->Name = L"qToolStripMenuItem";
-			this->qToolStripMenuItem->Size = System::Drawing::Size(68, 21);
+			this->qToolStripMenuItem->Size = System::Drawing::Size(81, 24);
 			this->qToolStripMenuItem->Text = L"环境设置";
 			this->qToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::qToolStripMenuItem_Click);
 			// 
-			// 实时数据
+			// 统计与分析ToolStripMenuItem
 			// 
-			this->实时数据->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->实时数据->Controls->Add(this->chart1);
-			this->实时数据->Controls->Add(this->button4);
-			this->实时数据->Controls->Add(this->label8);
-			this->实时数据->Controls->Add(this->button3);
-			this->实时数据->Controls->Add(this->label9);
-			this->实时数据->Controls->Add(this->button5);
-			this->实时数据->Controls->Add(this->label10);
-			this->实时数据->Controls->Add(this->button6);
-			this->实时数据->Controls->Add(this->label11);
-			this->实时数据->Controls->Add(this->chart4);
-			this->实时数据->Controls->Add(this->chart3);
-			this->实时数据->Controls->Add(this->chart2);
-			this->实时数据->Font = (gcnew System::Drawing::Font(L"宋体", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->实时数据->Location = System::Drawing::Point(667, 58);
-			this->实时数据->Margin = System::Windows::Forms::Padding(4);
-			this->实时数据->Name = L"实时数据";
-			this->实时数据->Padding = System::Windows::Forms::Padding(4);
-			this->实时数据->Size = System::Drawing::Size(1096, 700);
-			this->实时数据->TabIndex = 8;
-			this->实时数据->TabStop = false;
-			this->实时数据->Text = L"实时数据";
-			this->实时数据->Enter += gcnew System::EventHandler(this, &EnvDetail::实时数据_Enter);
-			// 
-			// chart1
-			// 
-			this->chart1->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
-			this->chart1->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend1->Alignment = System::Drawing::StringAlignment::Far;
-			legend1->Enabled = false;
-			legend1->Name = L"Legend1";
-			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(25, 61);
-			this->chart1->Margin = System::Windows::Forms::Padding(4);
-			this->chart1->Name = L"chart1";
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series1->Legend = L"Legend1";
-			series1->Name = L"Series1";
-			this->chart1->Series->Add(series1);
-			this->chart1->Size = System::Drawing::Size(477, 250);
-			this->chart1->TabIndex = 6;
-			this->chart1->Text = L"chart1";
-			// 
-			// button4
-			// 
-			this->button4->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->button4->Location = System::Drawing::Point(288, 661);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(85, 30);
-			this->button4->TabIndex = 5;
-			this->button4->Text = L"正常";
-			this->button4->UseVisualStyleBackColor = true;
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label8->Location = System::Drawing::Point(168, 668);
-			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(66, 19);
-			this->label8->TabIndex = 4;
-			this->label8->Text = L"振荡度";
-			// 
-			// button3
-			// 
-			this->button3->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->button3->Location = System::Drawing::Point(816, 661);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(85, 30);
-			this->button3->TabIndex = 5;
-			this->button3->Text = L"正常";
-			this->button3->UseVisualStyleBackColor = true;
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label9->Location = System::Drawing::Point(677, 668);
-			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(85, 19);
-			this->label9->TabIndex = 4;
-			this->label9->Text = L"有害气体";
-			// 
-			// button5
-			// 
-			this->button5->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->button5->Location = System::Drawing::Point(816, 334);
-			this->button5->Margin = System::Windows::Forms::Padding(4);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(85, 30);
-			this->button5->TabIndex = 5;
-			this->button5->Text = L"正常";
-			this->button5->UseVisualStyleBackColor = true;
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label10->Location = System::Drawing::Point(696, 335);
-			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(47, 19);
-			this->label10->TabIndex = 4;
-			this->label10->Text = L"湿度";
-			// 
-			// button6
-			// 
-			this->button6->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->button6->Location = System::Drawing::Point(288, 332);
-			this->button6->Margin = System::Windows::Forms::Padding(4);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(85, 30);
-			this->button6->TabIndex = 5;
-			this->button6->Text = L"正常";
-			this->button6->UseVisualStyleBackColor = true;
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label11->Location = System::Drawing::Point(168, 334);
-			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(47, 19);
-			this->label11->TabIndex = 4;
-			this->label11->Text = L"温度";
-			// 
-			// chart4
-			// 
-			chartArea2->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea2);
-			legend2->Enabled = false;
-			legend2->Name = L"Legend1";
-			this->chart4->Legends->Add(legend2);
-			this->chart4->Location = System::Drawing::Point(25, 388);
-			this->chart4->Margin = System::Windows::Forms::Padding(4);
-			this->chart4->Name = L"chart4";
-			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series2->Legend = L"Legend1";
-			series2->Name = L"Series1";
-			this->chart4->Series->Add(series2);
-			this->chart4->Size = System::Drawing::Size(477, 250);
-			this->chart4->TabIndex = 3;
-			this->chart4->Text = L"chart4";
-			// 
-			// chart3
-			// 
-			chartArea3->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea3);
-			legend3->Enabled = false;
-			legend3->Name = L"Legend1";
-			this->chart3->Legends->Add(legend3);
-			this->chart3->Location = System::Drawing::Point(552, 388);
-			this->chart3->Margin = System::Windows::Forms::Padding(4);
-			this->chart3->Name = L"chart3";
-			series3->ChartArea = L"ChartArea1";
-			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series3->Legend = L"Legend1";
-			series3->Name = L"Series1";
-			this->chart3->Series->Add(series3);
-			this->chart3->Size = System::Drawing::Size(477, 250);
-			this->chart3->TabIndex = 2;
-			this->chart3->Text = L"chart3";
-			// 
-			// chart2
-			// 
-			this->chart2->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea4->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea4);
-			this->chart2->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend4->Alignment = System::Drawing::StringAlignment::Far;
-			legend4->Enabled = false;
-			legend4->Name = L"Legend1";
-			this->chart2->Legends->Add(legend4);
-			this->chart2->Location = System::Drawing::Point(552, 61);
-			this->chart2->Margin = System::Windows::Forms::Padding(4);
-			this->chart2->Name = L"chart2";
-			series4->ChartArea = L"ChartArea1";
-			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series4->Legend = L"Legend1";
-			series4->Name = L"Series1";
-			this->chart2->Series->Add(series4);
-			this->chart2->Size = System::Drawing::Size(477, 250);
-			this->chart2->TabIndex = 1;
-			this->chart2->Text = L"chart2";
-			// 
-			// comboBox1
-			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号", L"2号", L"3号" });
-			this->comboBox1->Location = System::Drawing::Point(79, 366);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 24);
-			this->comboBox1->TabIndex = 9;
+			this->统计与分析ToolStripMenuItem->Name = L"统计与分析ToolStripMenuItem";
+			this->统计与分析ToolStripMenuItem->Size = System::Drawing::Size(96, 24);
+			this->统计与分析ToolStripMenuItem->Text = L"统计与分析";
+			this->统计与分析ToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::统计与分析ToolStripMenuItem_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(88, 227);
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox1->Location = System::Drawing::Point(139, 52);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 26);
+			this->textBox1->Size = System::Drawing::Size(239, 34);
 			this->textBox1->TabIndex = 10;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(235, 227);
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox2->Location = System::Drawing::Point(139, 117);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 26);
+			this->textBox2->Size = System::Drawing::Size(239, 34);
 			this->textBox2->TabIndex = 11;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(388, 227);
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox3->Location = System::Drawing::Point(139, 188);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 26);
+			this->textBox3->Size = System::Drawing::Size(239, 34);
 			this->textBox3->TabIndex = 12;
 			// 
 			// statusStrip1
@@ -816,13 +347,13 @@ namespace WindowsFormsApplication1 {
 			// toolStripStatusLabel1
 			// 
 			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
-			this->toolStripStatusLabel1->Size = System::Drawing::Size(131, 53);
+			this->toolStripStatusLabel1->Size = System::Drawing::Size(167, 53);
 			this->toolStripStatusLabel1->Text = L"toolStripStatusLabel1";
 			// 
 			// toolStripStatusLabel2
 			// 
 			this->toolStripStatusLabel2->Name = L"toolStripStatusLabel2";
-			this->toolStripStatusLabel2->Size = System::Drawing::Size(131, 53);
+			this->toolStripStatusLabel2->Size = System::Drawing::Size(167, 53);
 			this->toolStripStatusLabel2->Text = L"toolStripStatusLabel2";
 			// 
 			// toolStripProgressBar1
@@ -837,7 +368,7 @@ namespace WindowsFormsApplication1 {
 			// toolStripStatusLabel3
 			// 
 			this->toolStripStatusLabel3->Name = L"toolStripStatusLabel3";
-			this->toolStripStatusLabel3->Size = System::Drawing::Size(896, 53);
+			this->toolStripStatusLabel3->Size = System::Drawing::Size(824, 53);
 			this->toolStripStatusLabel3->Spring = true;
 			// 
 			// toolStripStatusLabel4
@@ -881,28 +412,324 @@ namespace WindowsFormsApplication1 {
 			this->listBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(28, 46);
+			this->listBox1->ItemHeight = 20;
+			this->listBox1->Location = System::Drawing::Point(86, 84);
 			this->listBox1->Margin = System::Windows::Forms::Padding(4);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(586, 132);
+			this->listBox1->Size = System::Drawing::Size(541, 144);
 			this->listBox1->TabIndex = 14;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(166, 279);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(93, 20);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"仓库选择";
+			this->label1->Click += gcnew System::EventHandler(this, &EnvDetail::label1_Click);
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号", L"2号", L"3号" });
+			this->comboBox1->Location = System::Drawing::Point(310, 279);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(188, 28);
+			this->comboBox1->TabIndex = 9;
+			// 
+			// 实时数据
+			// 
+			this->实时数据->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->实时数据->Controls->Add(this->button4);
+			this->实时数据->Controls->Add(this->label4);
+			this->实时数据->Controls->Add(this->button3);
+			this->实时数据->Controls->Add(this->label3);
+			this->实时数据->Controls->Add(this->button2);
+			this->实时数据->Controls->Add(this->label2);
+			this->实时数据->Controls->Add(this->button1);
+			this->实时数据->Controls->Add(this->label5);
+			this->实时数据->Controls->Add(this->chart4);
+			this->实时数据->Controls->Add(this->chart3);
+			this->实时数据->Controls->Add(this->chart2);
+			this->实时数据->Controls->Add(this->chart1);
+			this->实时数据->Font = (gcnew System::Drawing::Font(L"宋体", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->实时数据->Location = System::Drawing::Point(705, 32);
+			this->实时数据->Margin = System::Windows::Forms::Padding(4);
+			this->实时数据->Name = L"实时数据";
+			this->实时数据->Padding = System::Windows::Forms::Padding(4);
+			this->实时数据->Size = System::Drawing::Size(1117, 704);
+			this->实时数据->TabIndex = 15;
+			this->实时数据->TabStop = false;
+			this->实时数据->Text = L"实时数据显示";
+			this->实时数据->Enter += gcnew System::EventHandler(this, &EnvDetail::实时数据_Enter_1);
+			// 
+			// button4
+			// 
+			this->button4->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button4->Location = System::Drawing::Point(291, 640);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(85, 30);
+			this->button4->TabIndex = 5;
+			this->button4->Text = L"正常";
+			this->button4->UseVisualStyleBackColor = true;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label4->Location = System::Drawing::Point(173, 642);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(106, 24);
+			this->label4->TabIndex = 4;
+			this->label4->Text = L"氧气浓度";
+			// 
+			// button3
+			// 
+			this->button3->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button3->Location = System::Drawing::Point(821, 638);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(85, 30);
+			this->button3->TabIndex = 5;
+			this->button3->Text = L"正常";
+			this->button3->UseVisualStyleBackColor = true;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label3->Location = System::Drawing::Point(707, 639);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(106, 24);
+			this->label3->TabIndex = 4;
+			this->label3->Text = L"乙烯浓度";
+			// 
+			// button2
+			// 
+			this->button2->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button2->Location = System::Drawing::Point(821, 317);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(85, 30);
+			this->button2->TabIndex = 5;
+			this->button2->Text = L"正常";
+			this->button2->UseVisualStyleBackColor = true;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label2->Location = System::Drawing::Point(728, 318);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(58, 24);
+			this->label2->TabIndex = 4;
+			this->label2->Text = L"湿度";
+			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button1->Location = System::Drawing::Point(272, 317);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(85, 30);
+			this->button1->TabIndex = 5;
+			this->button1->Text = L"正常";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label5->Location = System::Drawing::Point(173, 318);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(58, 24);
+			this->label5->TabIndex = 4;
+			this->label5->Text = L"温度";
+			// 
+			// chart4
+			// 
+			chartArea5->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea5);
+			legend5->Enabled = false;
+			legend5->Name = L"Legend1";
+			this->chart4->Legends->Add(legend5);
+			this->chart4->Location = System::Drawing::Point(51, 388);
+			this->chart4->Margin = System::Windows::Forms::Padding(4);
+			this->chart4->Name = L"chart4";
+			series5->ChartArea = L"ChartArea1";
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series5->Legend = L"Legend1";
+			series5->Name = L"Series1";
+			this->chart4->Series->Add(series5);
+			this->chart4->Size = System::Drawing::Size(451, 236);
+			this->chart4->TabIndex = 3;
+			this->chart4->Text = L"chart4";
+			// 
+			// chart3
+			// 
+			chartArea6->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea6);
+			legend6->Enabled = false;
+			legend6->Name = L"Legend1";
+			this->chart3->Legends->Add(legend6);
+			this->chart3->Location = System::Drawing::Point(575, 388);
+			this->chart3->Margin = System::Windows::Forms::Padding(4);
+			this->chart3->Name = L"chart3";
+			series6->ChartArea = L"ChartArea1";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series6->Legend = L"Legend1";
+			series6->Name = L"Series1";
+			this->chart3->Series->Add(series6);
+			this->chart3->Size = System::Drawing::Size(454, 236);
+			this->chart3->TabIndex = 2;
+			this->chart3->Text = L"chart3";
+			// 
+			// chart2
+			// 
+			this->chart2->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
+			chartArea7->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea7);
+			this->chart2->Cursor = System::Windows::Forms::Cursors::Cross;
+			legend7->Alignment = System::Drawing::StringAlignment::Far;
+			legend7->Enabled = false;
+			legend7->Name = L"Legend1";
+			this->chart2->Legends->Add(legend7);
+			this->chart2->Location = System::Drawing::Point(575, 61);
+			this->chart2->Margin = System::Windows::Forms::Padding(4);
+			this->chart2->Name = L"chart2";
+			series7->ChartArea = L"ChartArea1";
+			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series7->Legend = L"Legend1";
+			series7->Name = L"Series1";
+			this->chart2->Series->Add(series7);
+			this->chart2->Size = System::Drawing::Size(454, 240);
+			this->chart2->TabIndex = 1;
+			this->chart2->Text = L"chart2";
+			// 
+			// chart1
+			// 
+			chartArea8->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea8);
+			legend8->Enabled = false;
+			legend8->Name = L"Legend1";
+			this->chart1->Legends->Add(legend8);
+			this->chart1->Location = System::Drawing::Point(51, 61);
+			this->chart1->Margin = System::Windows::Forms::Padding(4);
+			this->chart1->Name = L"chart1";
+			series8->ChartArea = L"ChartArea1";
+			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series8->Legend = L"Legend1";
+			series8->Name = L"Series1";
+			this->chart1->Series->Add(series8);
+			this->chart1->Size = System::Drawing::Size(451, 240);
+			this->chart1->TabIndex = 0;
+			this->chart1->Text = L"chart1";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox4->Location = System::Drawing::Point(139, 259);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(239, 34);
+			this->textBox4->TabIndex = 16;
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->Controls->Add(this->label9);
+			this->groupBox1->Controls->Add(this->label8);
+			this->groupBox1->Controls->Add(this->label7);
+			this->groupBox1->Controls->Add(this->label6);
+			this->groupBox1->Controls->Add(this->textBox4);
+			this->groupBox1->Controls->Add(this->textBox1);
+			this->groupBox1->Controls->Add(this->textBox2);
+			this->groupBox1->Controls->Add(this->textBox3);
+			this->groupBox1->Location = System::Drawing::Point(120, 349);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(427, 323);
+			this->groupBox1->TabIndex = 17;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"评价与建议";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(30, 265);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(93, 20);
+			this->label9->TabIndex = 20;
+			this->label9->Text = L"乙烯浓度";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(30, 194);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(93, 20);
+			this->label8->TabIndex = 19;
+			this->label8->Text = L"氧气浓度";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(46, 123);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(51, 20);
+			this->label7->TabIndex = 18;
+			this->label7->Text = L"湿度";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(46, 58);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(51, 20);
+			this->label6->TabIndex = 17;
+			this->label6->Text = L"温度";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(46, 49);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(93, 20);
+			this->label10->TabIndex = 18;
+			this->label10->Text = L"数据接收";
+			// 
+			// 监控ToolStripMenuItem
+			// 
+			this->监控ToolStripMenuItem->Name = L"监控ToolStripMenuItem";
+			this->监控ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->监控ToolStripMenuItem->Text = L"监控";
 			// 
 			// EnvDetail
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1814, 808);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->groupBox1);
+			this->Controls->Add(this->实时数据);
 			this->Controls->Add(this->listBox1);
 			this->Controls->Add(this->statusStrip1);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->comboBox1);
-			this->Controls->Add(this->实时数据);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip1);
 			this->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(134)));
@@ -911,26 +738,18 @@ namespace WindowsFormsApplication1 {
 			this->Name = L"EnvDetail";
 			this->Text = L"EnvDetail";
 			this->Load += gcnew System::EventHandler(this, &EnvDetail::EnvDetail_Load);
-			this->groupBox2->ResumeLayout(false);
-			this->groupBox2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
+			this->statusStrip1->ResumeLayout(false);
+			this->statusStrip1->PerformLayout();
 			this->实时数据->ResumeLayout(false);
 			this->实时数据->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->EndInit();
-			this->statusStrip1->ResumeLayout(false);
-			this->statusStrip1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1082,15 +901,15 @@ public: void data_receivce()//接收串口数据
 									valuechange::纬度3 = split[17];*/
 
 									con1->Open();    // 打开连接
-									sql1 = "INSERT INTO 1号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[0] + " , " + split[1] + " , " + split[2] + ", " + split[3] + ",Now() , '1号' )";
+									sql1 = "INSERT INTO 1号车数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[0] + " , " + split[1] + " , " + split[2] + ", " + split[3] + ",Now() , '1号' )";
 									OleDbCommand^ comm1 = gcnew OleDbCommand(sql1, con1);
 									comm1->ExecuteNonQuery();
-									sql2 = "INSERT INTO 2号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[6] + " , " + split[7] + " , " + split[8] + ", " + split[9] + ",Now() , '2号' )";
+									sql2 = "INSERT INTO 2号车数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[6] + " , " + split[7] + " , " + split[8] + ", " + split[9] + ",Now() , '2号' )";
 									OleDbCommand^ comm2 = gcnew OleDbCommand(sql2, con1);
 									comm2->ExecuteNonQuery();
 									//con1->Close();
 									//con1->Open();    // 打开连接
-									sql3 = "INSERT INTO 3号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[12] + " , " + split[13] + " , " + split[14] + ", " + split[15] + ",Now() , '3号' )";
+									sql3 = "INSERT INTO 3号车数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[12] + " , " + split[13] + " , " + split[14] + ", " + split[15] + ",Now() , '3号' )";
 									OleDbCommand^ comm3 = gcnew OleDbCommand(sql3, con1);
 									comm3->ExecuteNonQuery();
 									con1->Close();
@@ -1109,7 +928,7 @@ public: void data_receivce()//接收串口数据
 												if (split[0] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车辆]) VALUES( " + split[0] + " ,Now() , '" + strTableName + "' )";
+													sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应仓库]) VALUES( " + split[0] + " ,Now() , '" + strTableName + "' )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1);
 													comm2->ExecuteNonQuery();
 													con1->Close();
@@ -1133,7 +952,7 @@ public: void data_receivce()//接收串口数据
 												if (split[1] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[1] + " ,Now() , '" + strTableName + "'  )";
+													sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应仓库]) VALUES( " + split[1] + " ,Now() , '" + strTableName + "'  )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1148,7 +967,7 @@ public: void data_receivce()//接收串口数据
 											chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[3]);
 											chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 
-											if (float::Parse(split[3])<0 || float::Parse(split[3])>80)  //有毒气体超限报警
+											if (float::Parse(split[3])<0 || float::Parse(split[3])>80)  //乙烯浓度超限报警
 											{
 												UpdateColor1(button3);
 												button3->Text = "警告";
@@ -1156,7 +975,7 @@ public: void data_receivce()//接收串口数据
 												if (split[3] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_有毒气体([有毒气体],[有毒气体日期时间],[有毒气体对应车辆]) VALUES(" + split[3] + " ,Now() , '" + strTableName + "'  )";
+													sql4 = "INSERT INTO 异常数据表_乙烯浓度([乙烯浓度],[乙烯浓度日期时间],[乙烯浓度对应仓库]) VALUES(" + split[3] + " ,Now() , '" + strTableName + "'  )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1171,7 +990,7 @@ public: void data_receivce()//接收串口数据
 											chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[2]);
 											chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 
-											if (float::Parse(split[2])<0 || float::Parse(split[2])>20)  //振荡度超限报警
+											if (float::Parse(split[2])<0 || float::Parse(split[2])>20)  //氧气浓度超限报警
 											{
 												UpdateColor1(button4);
 												button4->Text = "警告";
@@ -1179,7 +998,7 @@ public: void data_receivce()//接收串口数据
 												if (split[2] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车辆]) VALUES( " + split[2] + " ,Now() , '" + strTableName + "' )";
+													sql4 = "INSERT INTO 异常数据表_氧气浓度([氧气浓度],[氧气浓度日期时间],[氧气浓度对应仓库]) VALUES( " + split[2] + " ,Now() , '" + strTableName + "' )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1193,18 +1012,21 @@ public: void data_receivce()//接收串口数据
 											}
 
 											//分析
-											if ((float::Parse(split[2]) > 10 && float::Parse(split[2]) < 30)) this->textBox1->Text = "震荡度较大";
-											else if (float::Parse(split[2]) < 10) this->textBox1->Text = "震荡度较小";
-											else if (float::Parse(split[2]) > 30) this->textBox1->Text = "震荡度很大";
+											if ((float::Parse(split[2]) > 10 && float::Parse(split[2]) < 30)) this->textBox1->Text = "仓库氧气浓度较大";
+											else if (float::Parse(split[2]) < 10) this->textBox1->Text = "仓库氧气浓度偏低";
+											else if (float::Parse(split[2]) > 30) this->textBox1->Text = "仓库氧气浓度偏高";
 
-											if ((float::Parse(split[3]) > 10 && float::Parse(split[3]) < 40)) this->textBox2->Text = "车内空气质量一般";
-											else if (float::Parse(split[3]) < 10) this->textBox2->Text = "车内空气质量好";
-											else if (float::Parse(split[3]) > 40) this->textBox2->Text = "车内空气质量差";
+											if ((float::Parse(split[1]) > 10&& float::Parse(split[1]) < 20)) this->textBox2->Text = "仓库湿度正常";
+											else if (float::Parse(split[1]) < 10) this->textBox2->Text = "仓库湿度偏低";
+											else if (float::Parse(split[1]) > 20) this->textBox2->Text = "仓库湿度偏高";
 
-											if ((float::Parse(split[0]) > 26 && float::Parse(split[0]) < 28)) this->textBox3->Text = "车厢内温度适宜";
-											else if (float::Parse(split[0]) < 26) this->textBox3->Text = "车内温度偏低";
-											else if (float::Parse(split[0]) > 28) this->textBox3->Text = "车内温度偏高";
+											if ((float::Parse(split[0]) > 0 && float::Parse(split[0]) < 5)) this->textBox3->Text = "仓库温度适宜";
+											else if (float::Parse(split[0]) < 0) this->textBox3->Text = "仓库温度偏低";
+											else if (float::Parse(split[0]) > 5) this->textBox3->Text = "仓库温度偏高";
 
+											if ((float::Parse(split[3]) > 26 && float::Parse(split[3]) < 28)) this->textBox4->Text = "仓库乙烯浓度正常";
+											else if (float::Parse(split[3]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低";
+											else if (float::Parse(split[3]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高";
 								
 										}
 									}
@@ -1224,7 +1046,7 @@ public: void data_receivce()//接收串口数据
 												if (split[6] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车辆]) VALUES( " + split[6] + " ,Now() , '" + strTableName + "' )";
+													sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应仓库]) VALUES( " + split[6] + " ,Now() , '" + strTableName + "' )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1245,7 +1067,7 @@ public: void data_receivce()//接收串口数据
 												if (split[7] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[7] + " ,Now() , '" + strTableName + "'  )";
+													sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应仓库]) VALUES( " + split[7] + " ,Now() , '" + strTableName + "'  )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1260,7 +1082,7 @@ public: void data_receivce()//接收串口数据
 											chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[9]);
 											chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 
-											if (float::Parse(split[9])<0 || float::Parse(split[9])>80)  //有毒气体超限报警
+											if (float::Parse(split[9])<0 || float::Parse(split[9])>80)  //乙烯浓度超限报警
 											{
 												UpdateColor1(button3);
 												button3->Text = "警告";
@@ -1268,7 +1090,7 @@ public: void data_receivce()//接收串口数据
 												if (split[9] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_有毒气体([有毒气体],[有毒气体日期时间],[有毒气体对应车辆]) VALUES(" + split[9] + " ,Now() , '" + strTableName + "'  )";
+													sql4 = "INSERT INTO 异常数据表_乙烯浓度([乙烯浓度],[乙烯浓度日期时间],[乙烯浓度对应仓库]) VALUES(" + split[9] + " ,Now() , '" + strTableName + "'  )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1281,7 +1103,7 @@ public: void data_receivce()//接收串口数据
 											}
 											chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[8]);
 											chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-											if (float::Parse(split[8])<45 || float::Parse(split[8])>75)  //振荡度超限报警
+											if (float::Parse(split[8])<45 || float::Parse(split[8])>75)  //氧气浓度超限报警
 											{
 												UpdateColor1(button4);
 												button4->Text = "警告";
@@ -1289,7 +1111,7 @@ public: void data_receivce()//接收串口数据
 												if (split[8] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车辆]) VALUES( " + split[8] + " ,Now() , '" + strTableName + "' )";
+													sql4 = "INSERT INTO 异常数据表_氧气浓度([氧气浓度],[氧气浓度日期时间],[氧气浓度对应仓库]) VALUES( " + split[8] + " ,Now() , '" + strTableName + "' )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1303,17 +1125,21 @@ public: void data_receivce()//接收串口数据
 											}
 
 											//分析
-											if ((float::Parse(split[8]) > 10 && float::Parse(split[8]) < 30)) this->textBox1->Text = "震荡度较大";
-											else if (float::Parse(split[8]) < 10) this->textBox1->Text = "震荡度较小";
-											else if (float::Parse(split[8]) > 30) this->textBox1->Text = "震荡度很大";
+											if ((float::Parse(split[2+6]) > 10 && float::Parse(split[2+6]) < 30)) this->textBox1->Text = "仓库氧气浓度较大";
+											else if (float::Parse(split[2+6]) < 10) this->textBox1->Text = "仓库氧气浓度偏低";
+											else if (float::Parse(split[2+6]) > 30) this->textBox1->Text = "仓库氧气浓度偏高";
 
-											if ((float::Parse(split[9]) > 10 && float::Parse(split[9]) < 40)) this->textBox2->Text = "车内空气质量一般";
-											else if (float::Parse(split[9]) < 10) this->textBox2->Text = "车内空气质量好";
-											else if (float::Parse(split[9]) > 40) this->textBox2->Text = "车内空气质量差";
+											if ((float::Parse(split[1+6]) > 10 && float::Parse(split[1]) < 20)) this->textBox2->Text = "仓库湿度正常";
+											else if (float::Parse(split[1+6]) < 10) this->textBox2->Text = "仓库湿度偏低";
+											else if (float::Parse(split[1+6]) > 20) this->textBox2->Text = "仓库湿度偏高";
 
-											if ((float::Parse(split[6]) > 26 && float::Parse(split[6]) < 28)) this->textBox3->Text = "车厢内温度适宜";
-											else if (float::Parse(split[6]) < 26) this->textBox3->Text = "车内温度偏低";
-											else if (float::Parse(split[6]) > 28) this->textBox3->Text = "车内温度偏高";
+											if ((float::Parse(split[0+6]) > 0 && float::Parse(split[0]) < 5)) this->textBox3->Text = "仓库温度适宜";
+											else if (float::Parse(split[0+6]) < 0) this->textBox3->Text = "仓库温度偏低";
+											else if (float::Parse(split[0+6]) > 5) this->textBox3->Text = "仓库温度偏高";
+
+											if ((float::Parse(split[3+6]) > 26 && float::Parse(split[3]) < 28)) this->textBox4->Text = "仓库乙烯浓度正常";
+											else if (float::Parse(split[3+6]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低";
+											else if (float::Parse(split[3+6]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高";
 
 									
 										}
@@ -1333,7 +1159,7 @@ public: void data_receivce()//接收串口数据
 												if (split[12] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车辆]) VALUES( " + split[12] + " ,Now() , '" + strTableName + "' )";
+													sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应仓库]) VALUES( " + split[12] + " ,Now() , '" + strTableName + "' )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1354,7 +1180,7 @@ public: void data_receivce()//接收串口数据
 												if (split[13] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_PM([湿度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[13] + " ,Now() , '" + strTableName + "'  )";
+													sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应仓库]) VALUES( " + split[13] + " ,Now() , '" + strTableName + "'  )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1367,7 +1193,7 @@ public: void data_receivce()//接收串口数据
 											}
 											chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[15]);
 											chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-											if (float::Parse(split[15])<26 || float::Parse(split[15])>28)  //有毒气体超限报警
+											if (float::Parse(split[15])<26 || float::Parse(split[15])>28)  //乙烯浓度超限报警
 											{
 												UpdateColor1(button3);
 												button3->Text = "警告";
@@ -1375,7 +1201,7 @@ public: void data_receivce()//接收串口数据
 												if (split[15] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_有毒气体([有毒气体],[有毒气体日期时间],[有毒气体对应车辆]) VALUES(" + split[15] + " ,Now() , '" + strTableName + "'  )";
+													sql4 = "INSERT INTO 异常数据表_乙烯浓度([乙烯浓度],[乙烯浓度日期时间],[乙烯浓度对应仓库]) VALUES(" + split[15] + " ,Now() , '" + strTableName + "'  )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1388,7 +1214,7 @@ public: void data_receivce()//接收串口数据
 											}
 											chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[14]);
 											chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-											if (float::Parse(split[14])<45 || float::Parse(split[14])>75)  //振荡度超限报警
+											if (float::Parse(split[14])<45 || float::Parse(split[14])>75)  //氧气浓度超限报警
 											{
 												UpdateColor1(button4);
 												button4->Text = "警告";
@@ -1396,7 +1222,7 @@ public: void data_receivce()//接收串口数据
 												if (split[14] != nullptr)
 												{
 													con1->Open();    // 打开连接
-													sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车辆]) VALUES( " + split[14] + " ,Now() , '" + strTableName + "' )";
+													sql4 = "INSERT INTO 异常数据表_氧气浓度([氧气浓度],[氧气浓度日期时间],[氧气浓度对应仓库]) VALUES( " + split[14] + " ,Now() , '" + strTableName + "' )";
 													OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 													con1->Close();
 												}
@@ -1409,17 +1235,21 @@ public: void data_receivce()//接收串口数据
 											}
 
 											//分析
-											if ((float::Parse(split[14]) > 10 && float::Parse(split[14]) < 30)) this->textBox1->Text = "震荡度较大";
-											else if (float::Parse(split[14]) < 10) this->textBox1->Text = "震荡度较小";
-											else if (float::Parse(split[14]) > 30) this->textBox1->Text = "震荡度很大";
+											if ((float::Parse(split[2 + 12]) > 10 && float::Parse(split[2 + 12]) < 30)) this->textBox1->Text = "仓库氧气浓度较大";
+											else if (float::Parse(split[2 + 12]) < 10) this->textBox1->Text = "仓库氧气浓度偏低";
+											else if (float::Parse(split[2 + 12]) > 30) this->textBox1->Text = "仓库氧气浓度偏高";
 
-											if ((float::Parse(split[15]) > 10 && float::Parse(split[15]) < 40)) this->textBox2->Text = "车内空气质量一般";
-											else if (float::Parse(split[15]) < 10) this->textBox2->Text = "车内空气质量好";
-											else if (float::Parse(split[15]) > 40) this->textBox2->Text = "车内空气质量差";
+											if ((float::Parse(split[1 + 12]) > 10 && float::Parse(split[1 + 12]) < 20)) this->textBox2->Text = "仓库湿度正常";
+											else if (float::Parse(split[1 + 12]) < 10) this->textBox2->Text = "仓库湿度偏低";
+											else if (float::Parse(split[1 + 12]) > 20) this->textBox2->Text = "仓库湿度偏高";
 
-											if ((float::Parse(split[12]) > 26 && float::Parse(split[12]) < 28)) this->textBox3->Text = "车厢内温度适宜";
-											else if (float::Parse(split[12]) < 26) this->textBox3->Text = "车内温度偏低";
-											else if (float::Parse(split[12]) > 28) this->textBox3->Text = "车内温度偏高";
+											if ((float::Parse(split[0 + 12]) > 0 && float::Parse(split[0 + 12]) < 5)) this->textBox3->Text = "仓库温度适宜";
+											else if (float::Parse(split[0 + 12]) < 0) this->textBox3->Text = "仓库温度偏低";
+											else if (float::Parse(split[0 + 12]) > 5) this->textBox3->Text = "仓库温度偏高";
+
+											if ((float::Parse(split[3 + 12]) > 26 && float::Parse(split[3 + 12]) < 28)) this->textBox4->Text = "仓库乙烯浓度正常";
+											else if (float::Parse(split[3 + 12]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低";
+											else if (float::Parse(split[3 + 12]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高";
 
 						
 										}
@@ -1550,6 +1380,12 @@ private: System::Void hISTORYToolStripMenuItem_Click(System::Object^  sender, Sy
 private: System::Void 实时数据_Enter(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void pAPERToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void 实时数据_Enter_1(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void 统计与分析ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 SingleAnalyse^ dlg = gcnew SingleAnalyse();
+			 dlg->ShowDialog();
 }
 };
 }

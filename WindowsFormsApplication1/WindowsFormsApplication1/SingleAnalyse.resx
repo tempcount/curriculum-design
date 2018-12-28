@@ -160,7 +160,7 @@
     <value>False</value>
   </metadata>
   <data name="oleDbUpdateCommand.CommandText" xml:space="preserve">
-    <value>UPDATE `异常数据表_湿度` SET `湿度` = ?, `湿度日期时间` = ?, `湿度对应车辆` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `湿度` IS NULL) OR (`湿度` = ?)) AND ((? = 1 AND `湿度日期时间` IS NULL) OR (`湿度日期时间` = ?)) AND ((? = 1 AND `湿度对应车辆` IS NULL) OR (`湿度对应车辆` = ?)))</value>
+    <value>UPDATE `异常数据表_湿度` SET `湿度` = ?, `湿度日期时间` = ?, `湿度对应仓库` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `湿度` IS NULL) OR (`湿度` = ?)) AND ((? = 1 AND `湿度日期时间` IS NULL) OR (`湿度日期时间` = ?)) AND ((? = 1 AND `湿度对应仓库` IS NULL) OR (`湿度对应仓库` = ?)))</value>
   </data>
   <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>349, 17</value>

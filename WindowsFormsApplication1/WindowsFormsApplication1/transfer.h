@@ -1,6 +1,7 @@
 #pragma once
 #include"SaveAnalyse.h"
 #include"FruitAnalyse.h"
+#include"Map.h"
 namespace WindowsFormsApplication1 {
 
 	using namespace System;
@@ -56,6 +57,7 @@ namespace WindowsFormsApplication1 {
 	private: System::Data::OleDb::OleDbConnection^  oleDbConnection1;
 	private: System::Data::OleDb::OleDbDataAdapter^  oleDbDataAdapter1;
 	private: System::Data::OleDb::OleDbCommand^  oleDbInsertCommand;
+	private: System::Windows::Forms::Label^  label1;
 
 	private:
 		/// <summary>
@@ -83,6 +85,7 @@ namespace WindowsFormsApplication1 {
 			this->oleDbConnection1 = (gcnew System::Data::OleDb::OleDbConnection());
 			this->oleDbDataAdapter1 = (gcnew System::Data::OleDb::OleDbDataAdapter());
 			this->oleDbInsertCommand = (gcnew System::Data::OleDb::OleDbCommand());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
@@ -95,30 +98,31 @@ namespace WindowsFormsApplication1 {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(919, 25);
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
+			this->menuStrip1->Size = System::Drawing::Size(1225, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// beginToolStripMenuItem
 			// 
 			this->beginToolStripMenuItem->Name = L"beginToolStripMenuItem";
-			this->beginToolStripMenuItem->Size = System::Drawing::Size(68, 21);
+			this->beginToolStripMenuItem->Size = System::Drawing::Size(81, 24);
 			this->beginToolStripMenuItem->Text = L"综合分析";
 			this->beginToolStripMenuItem->Click += gcnew System::EventHandler(this, &transfer::beginToolStripMenuItem_Click);
 			// 
 			// comToolStripMenuItem
 			// 
 			this->comToolStripMenuItem->Name = L"comToolStripMenuItem";
-			this->comToolStripMenuItem->Size = System::Drawing::Size(92, 21);
+			this->comToolStripMenuItem->Size = System::Drawing::Size(111, 24);
 			this->comToolStripMenuItem->Text = L"单一仓库分析";
 			this->comToolStripMenuItem->Click += gcnew System::EventHandler(this, &transfer::comToolStripMenuItem_Click);
 			// 
 			// 仓库点ToolStripMenuItem
 			// 
 			this->仓库点ToolStripMenuItem->Name = L"仓库点ToolStripMenuItem";
-			this->仓库点ToolStripMenuItem->Size = System::Drawing::Size(56, 21);
+			this->仓库点ToolStripMenuItem->Size = System::Drawing::Size(66, 24);
 			this->仓库点ToolStripMenuItem->Text = L"仓库点";
+			this->仓库点ToolStripMenuItem->Click += gcnew System::EventHandler(this, &transfer::仓库点ToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -127,40 +131,42 @@ namespace WindowsFormsApplication1 {
 					this->aboutToolStripMenuItem
 			});
 			this->helpToolStripMenuItem->Name = L"helpToolStripMenuItem";
-			this->helpToolStripMenuItem->Size = System::Drawing::Size(44, 21);
+			this->helpToolStripMenuItem->Size = System::Drawing::Size(51, 24);
 			this->helpToolStripMenuItem->Text = L"帮助";
 			this->helpToolStripMenuItem->Click += gcnew System::EventHandler(this, &transfer::helpToolStripMenuItem_Click);
 			// 
 			// introductionToolStripMenuItem
 			// 
 			this->introductionToolStripMenuItem->Name = L"introductionToolStripMenuItem";
-			this->introductionToolStripMenuItem->Size = System::Drawing::Size(146, 22);
+			this->introductionToolStripMenuItem->Size = System::Drawing::Size(169, 24);
 			this->introductionToolStripMenuItem->Text = L"introduction";
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(146, 22);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(169, 24);
 			this->aboutToolStripMenuItem->Text = L"about";
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(25, 83);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
+			this->dataGridView1->Location = System::Drawing::Point(33, 104);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowTemplate->Height = 27;
-			this->dataGridView1->Size = System::Drawing::Size(885, 285);
+			this->dataGridView1->Size = System::Drawing::Size(1180, 356);
 			this->dataGridView1->TabIndex = 1;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &transfer::dataGridView1_CellContentClick);
 			// 
 			// comboBox1
 			// 
+			this->comboBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(196, 44);
-			this->comboBox1->Margin = System::Windows::Forms::Padding(2);
+			this->comboBox1->Location = System::Drawing::Point(512, 57);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(189, 20);
+			this->comboBox1->Size = System::Drawing::Size(251, 28);
 			this->comboBox1->TabIndex = 4;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &transfer::comboBox1_SelectedIndexChanged);
 			// 
@@ -201,18 +207,30 @@ namespace WindowsFormsApplication1 {
 					0, L"课程号")), (gcnew System::Data::OleDb::OleDbParameter(L"成绩", System::Data::OleDb::OleDbType::Single, 0, L"成绩"))
 			});
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label1->Location = System::Drawing::Point(371, 60);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(109, 20);
+			this->label1->TabIndex = 5;
+			this->label1->Text = L"数据表选择";
+			// 
 			// transfer
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(919, 414);
+			this->ClientSize = System::Drawing::Size(1225, 518);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"transfer";
-			this->Text = L"transfer";
+			this->Text = L"库存管理";
 			this->Load += gcnew System::EventHandler(this, &transfer::transfer_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
@@ -301,6 +319,10 @@ private: System::Void dataGridView1_CellContentClick(System::Object^  sender, Sy
 }
 private: System::Void beginToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			 FruitAnalyse^ dlg = gcnew FruitAnalyse();
+			 dlg->ShowDialog();
+}
+private: System::Void 仓库点ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Map^ dlg = gcnew Map();
 			 dlg->ShowDialog();
 }
 };

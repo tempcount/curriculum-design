@@ -178,7 +178,7 @@ namespace WindowsFormsApplication1 {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"异常数据表_温度", L"异常数据表_湿度", L"异常数据表_振荡度", L"异常数据表_有毒气体" });
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"异常数据表_温度", L"异常数据表_湿度", L"异常数据表_氧气浓度", L"异常数据表_乙烯浓度" });
 			this->comboBox1->Location = System::Drawing::Point(97, 36);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(121, 20);
@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1 {
 			cli::array< System::Data::Common::DataColumnMapping^ >^ __mcTemp__1 = gcnew cli::array< System::Data::Common::DataColumnMapping^  >(4) {
 				(gcnew System::Data::Common::DataColumnMapping(L"ID",
 					L"ID")), (gcnew System::Data::Common::DataColumnMapping(L"湿度", L"湿度")), (gcnew System::Data::Common::DataColumnMapping(L"湿度日期时间",
-					L"湿度日期时间")), (gcnew System::Data::Common::DataColumnMapping(L"湿度对应车辆", L"湿度对应车辆"))
+					L"湿度日期时间")), (gcnew System::Data::Common::DataColumnMapping(L"湿度对应仓库", L"湿度对应仓库"))
 			};
 			this->oleDbDataAdapter1->TableMappings->AddRange(gcnew cli::array< System::Data::Common::DataTableMapping^  >(1) {
 				(gcnew System::Data::Common::DataTableMapping(L"Table",
@@ -285,7 +285,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->oleDbDeleteCommand->CommandText = L"DELETE FROM `异常数据表_湿度` WHERE ((`ID` = \?) AND ((\? = 1 AND `湿度` IS NULL) OR (`湿度` ="
 				L" \?)) AND ((\? = 1 AND `湿度日期时间` IS NULL) OR (`湿度日期时间` = \?)) AND ((\? = 1 AND `湿度对应车"
-				L"辆` IS NULL) OR (`湿度对应车辆` = \?)))";
+				L"辆` IS NULL) OR (`湿度对应仓库` = \?)))";
 			this->oleDbDeleteCommand->Connection = this->oleDbConnection1;
 			this->oleDbDeleteCommand->Parameters->AddRange(gcnew cli::array< System::Data::OleDb::OleDbParameter^  >(7) {
 				(gcnew System::Data::OleDb::OleDbParameter(L"Original_ID",
@@ -298,11 +298,11 @@ namespace WindowsFormsApplication1 {
 					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
 					L"湿度日期时间", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度日期时间",
 					System::Data::OleDb::OleDbType::Date, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度日期时间", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度对应车辆",
+					L"湿度日期时间", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度对应仓库",
 					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度对应车辆", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度对应车辆",
+					L"湿度对应仓库", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度对应仓库",
 					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"湿度对应车辆", System::Data::DataRowVersion::Original, nullptr))
+					static_cast<System::Byte>(0), L"湿度对应仓库", System::Data::DataRowVersion::Original, nullptr))
 			});
 			// 
 			// oleDbConnection1
@@ -313,12 +313,12 @@ namespace WindowsFormsApplication1 {
 			// 
 			// oleDbInsertCommand
 			// 
-			this->oleDbInsertCommand->CommandText = L"INSERT INTO `异常数据表_湿度` (`湿度`, `湿度日期时间`, `湿度对应车辆`) VALUES (\?, \?, \?)";
+			this->oleDbInsertCommand->CommandText = L"INSERT INTO `异常数据表_湿度` (`湿度`, `湿度日期时间`, `湿度对应仓库`) VALUES (\?, \?, \?)";
 			this->oleDbInsertCommand->Connection = this->oleDbConnection1;
 			this->oleDbInsertCommand->Parameters->AddRange(gcnew cli::array< System::Data::OleDb::OleDbParameter^  >(3) {
 				(gcnew System::Data::OleDb::OleDbParameter(L"湿度",
 					System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度日期时间", System::Data::OleDb::OleDbType::Date,
-					0, L"湿度日期时间")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度对应车辆", System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度对应车辆"))
+					0, L"湿度日期时间")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度对应仓库", System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度对应仓库"))
 			});
 			// 
 			// oleDbSelectCommand1
@@ -333,7 +333,7 @@ namespace WindowsFormsApplication1 {
 			this->oleDbUpdateCommand->Parameters->AddRange(gcnew cli::array< System::Data::OleDb::OleDbParameter^  >(10) {
 				(gcnew System::Data::OleDb::OleDbParameter(L"湿度",
 					System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度日期时间", System::Data::OleDb::OleDbType::Date,
-					0, L"湿度日期时间")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度对应车辆", System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度对应车辆")),
+					0, L"湿度日期时间")), (gcnew System::Data::OleDb::OleDbParameter(L"湿度对应仓库", System::Data::OleDb::OleDbType::VarWChar, 0, L"湿度对应仓库")),
 					(gcnew System::Data::OleDb::OleDbParameter(L"Original_ID", System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input,
 					false, static_cast<System::Byte>(0), static_cast<System::Byte>(0), L"ID", System::Data::DataRowVersion::Original, nullptr)),
 					(gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度", System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input,
@@ -343,11 +343,11 @@ namespace WindowsFormsApplication1 {
 					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
 					L"湿度日期时间", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度日期时间",
 					System::Data::OleDb::OleDbType::Date, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度日期时间", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度对应车辆",
+					L"湿度日期时间", System::Data::DataRowVersion::Original, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"IsNull_湿度对应仓库",
 					System::Data::OleDb::OleDbType::Integer, 0, System::Data::ParameterDirection::Input, static_cast<System::Byte>(0), static_cast<System::Byte>(0),
-					L"湿度对应车辆", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度对应车辆",
+					L"湿度对应仓库", System::Data::DataRowVersion::Original, true, nullptr)), (gcnew System::Data::OleDb::OleDbParameter(L"Original_湿度对应仓库",
 					System::Data::OleDb::OleDbType::VarWChar, 0, System::Data::ParameterDirection::Input, false, static_cast<System::Byte>(0),
-					static_cast<System::Byte>(0), L"湿度对应车辆", System::Data::DataRowVersion::Original, nullptr))
+					static_cast<System::Byte>(0), L"湿度对应仓库", System::Data::DataRowVersion::Original, nullptr))
 			});
 			// 
 			// printDocument1
@@ -500,35 +500,35 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 			 {
 			 case 0:
 				 strCmd = String::Format("SELECT * FROM {0} WHERE 温度日期时间>={1} AND 温度日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 温度日期时间>={1} AND 温度日期时间<={2} AND 温度对应车辆='1号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 温度日期时间>={1} AND 温度日期时间<={2} AND 温度对应车辆='2号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd3 = String::Format("SELECT * FROM {0} WHERE 温度日期时间>={1} AND 温度日期时间<={2} AND 温度对应车辆='3号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 温度日期时间>={1} AND 温度日期时间<={2} AND 温度对应仓库='1号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 温度日期时间>={1} AND 温度日期时间<={2} AND 温度对应仓库='2号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd3 = String::Format("SELECT * FROM {0} WHERE 温度日期时间>={1} AND 温度日期时间<={2} AND 温度对应仓库='3号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
 
 				 this->label4->Text = "温度";
 				 break;
 			 case 1:
 				 strCmd = String::Format("SELECT * FROM {0} WHERE 湿度日期时间>={1} AND 湿度日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 湿度日期时间>={1} AND 湿度日期时间<={2} AND 湿度对应车辆='1号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 湿度日期时间>={1} AND 湿度日期时间<={2} AND 湿度对应车辆='2号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd3 = String::Format("SELECT * FROM {0} WHERE 湿度日期时间>={1} AND 湿度日期时间<={2} AND 湿度对应车辆='3号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 湿度日期时间>={1} AND 湿度日期时间<={2} AND 湿度对应仓库='1号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 湿度日期时间>={1} AND 湿度日期时间<={2} AND 湿度对应仓库='2号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd3 = String::Format("SELECT * FROM {0} WHERE 湿度日期时间>={1} AND 湿度日期时间<={2} AND 湿度对应仓库='3号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
 
 				 this->label4->Text = "湿度";
 				 break;
 			 case 2:
-				 strCmd = String::Format("SELECT * FROM {0} WHERE 振荡度日期时间>={1} AND 振荡度日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 振荡度日期时间>={1} AND 振荡度日期时间<={2} AND 振荡度对应车辆='1号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 振荡度日期时间>={1} AND 振荡度日期时间<={2} AND 振荡度对应车辆='2号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd3 = String::Format("SELECT * FROM {0} WHERE 振荡度日期时间>={1} AND 振荡度日期时间<={2} AND 振荡度对应车辆='3号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd = String::Format("SELECT * FROM {0} WHERE 氧气浓度日期时间>={1} AND 氧气浓度日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 氧气浓度日期时间>={1} AND 氧气浓度日期时间<={2} AND 氧气浓度对应仓库='1号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 氧气浓度日期时间>={1} AND 氧气浓度日期时间<={2} AND 氧气浓度对应仓库='2号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd3 = String::Format("SELECT * FROM {0} WHERE 氧气浓度日期时间>={1} AND 氧气浓度日期时间<={2} AND 氧气浓度对应仓库='3号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
 
-					this->label4->Text = "振荡度";
+					this->label4->Text = "氧气浓度";
 				 break;
 			 case 3:
-				 strCmd = String::Format("SELECT * FROM {0} WHERE 有毒气体日期时间>={1} AND 有毒气体日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 有毒气体日期时间>={1} AND 有毒气体日期时间<={2} AND 有毒气体对应车辆='1号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 有毒气体日期时间>={1} AND 有毒气体日期时间<={2} AND 有毒气体对应车辆='2号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
-				 strCmd3 = String::Format("SELECT * FROM {0} WHERE 有毒气体日期时间>={1} AND 有毒气体日期时间<={2} AND 有毒气体对应车辆='3号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd = String::Format("SELECT * FROM {0} WHERE 乙烯浓度日期时间>={1} AND 乙烯浓度日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 乙烯浓度日期时间>={1} AND 乙烯浓度日期时间<={2} AND 乙烯浓度对应仓库='1号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 乙烯浓度日期时间>={1} AND 乙烯浓度日期时间<={2} AND 乙烯浓度对应仓库='2号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
+				 strCmd3 = String::Format("SELECT * FROM {0} WHERE 乙烯浓度日期时间>={1} AND 乙烯浓度日期时间<={2} AND 乙烯浓度对应仓库='3号'", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
 
-				 this->label4->Text = "有毒气体";
+				 this->label4->Text = "乙烯浓度";
 				 break;
 
 			 }
@@ -626,12 +626,18 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 		
 			 if (temp1 + temp2 + temp3 != 0)
 			 {
-				 array<String^> ^yy = gcnew array<String^>{"仓库1", "仓库2", "仓库3"};
-				 array <double> ^xx = gcnew array<double>{temp1 / temp1 + temp2 + temp3, temp2 / temp1 + temp2 + temp3, temp3 / temp1 + temp2 + temp3 };
+				 array<String^> ^yy = gcnew array<String^>{"仓库3", "仓库1", "仓库2"};
+				 array <double> ^xx = gcnew array<double>{temp1 , temp2, temp3};
 				 chart1->Series["Series1"]->Points->DataBindXY(yy, xx);
 
 			 }
+			else
+			 {
+				 array<String^> ^yy = gcnew array<String^>{"无"};
+				 array <double> ^xx = gcnew array<double>{1};
+				 chart1->Series["Series1"]->Points->DataBindXY(yy, xx);
 
+			 }
 
 }
 
@@ -839,7 +845,7 @@ private: System::Void printDocument1_PrintPage(System::Object^  sender, System::
 
 			 g->DrawLine(tablesPen, left + 440, top, left + 440, top + 30);
 
-			 g->DrawString(L"车辆", titlesFont, Brushes::Black, left + 480, top + 5);
+			 g->DrawString(L"仓库", titlesFont, Brushes::Black, left + 480, top + 5);
 
 			 //g->DrawLine(tablesPen, left + 430, top, left + 430, top + 30);
 
