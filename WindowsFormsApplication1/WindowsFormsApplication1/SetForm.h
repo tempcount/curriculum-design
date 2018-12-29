@@ -57,6 +57,11 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown13;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown14;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown15;
+	private: System::Windows::Forms::Label^  label9;
+
 
 	private:
 		/// <summary>
@@ -71,6 +76,7 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(SetForm::typeid));
 			this->numericUpDown12 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown11 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown10 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -93,6 +99,10 @@ namespace WindowsFormsApplication1 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown13 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown14 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown15 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown11))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->BeginInit();
@@ -105,11 +115,14 @@ namespace WindowsFormsApplication1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown13))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown14))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown15))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// numericUpDown12
 			// 
-			this->numericUpDown12->Location = System::Drawing::Point(563, 162);
+			this->numericUpDown12->Location = System::Drawing::Point(446, 118);
 			this->numericUpDown12->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown12->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown12->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -119,7 +132,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown11
 			// 
-			this->numericUpDown11->Location = System::Drawing::Point(563, 215);
+			this->numericUpDown11->Location = System::Drawing::Point(446, 171);
 			this->numericUpDown11->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown11->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown11->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -129,7 +142,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown10
 			// 
-			this->numericUpDown10->Location = System::Drawing::Point(563, 269);
+			this->numericUpDown10->Location = System::Drawing::Point(446, 225);
 			this->numericUpDown10->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown10->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown10->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -139,7 +152,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown9
 			// 
-			this->numericUpDown9->Location = System::Drawing::Point(563, 320);
+			this->numericUpDown9->Location = System::Drawing::Point(446, 276);
 			this->numericUpDown9->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown9->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown9->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -149,7 +162,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown8
 			// 
-			this->numericUpDown8->Location = System::Drawing::Point(424, 163);
+			this->numericUpDown8->Location = System::Drawing::Point(307, 119);
 			this->numericUpDown8->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown8->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown8->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -159,7 +172,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown6
 			// 
-			this->numericUpDown6->Location = System::Drawing::Point(424, 318);
+			this->numericUpDown6->Location = System::Drawing::Point(307, 274);
 			this->numericUpDown6->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown6->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown6->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -169,7 +182,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown4
 			// 
-			this->numericUpDown4->Location = System::Drawing::Point(424, 215);
+			this->numericUpDown4->Location = System::Drawing::Point(307, 171);
 			this->numericUpDown4->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown4->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown4->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -179,7 +192,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown2
 			// 
-			this->numericUpDown2->Location = System::Drawing::Point(424, 264);
+			this->numericUpDown2->Location = System::Drawing::Point(307, 220);
 			this->numericUpDown2->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown2->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -190,33 +203,41 @@ namespace WindowsFormsApplication1 {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(589, 128);
+			this->label8->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label8->Location = System::Drawing::Point(463, 84);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(45, 15);
+			this->label8->Size = System::Drawing::Size(61, 21);
 			this->label8->TabIndex = 32;
 			this->label8->Text = L"3号车";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(449, 128);
+			this->label7->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label7->Location = System::Drawing::Point(322, 84);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(45, 15);
+			this->label7->Size = System::Drawing::Size(61, 21);
 			this->label7->TabIndex = 31;
 			this->label7->Text = L"2号车";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(301, 128);
+			this->label6->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label6->Location = System::Drawing::Point(178, 84);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(45, 15);
+			this->label6->Size = System::Drawing::Size(58, 21);
 			this->label6->TabIndex = 30;
 			this->label6->Text = L"1号车";
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(479, 389);
+			this->button2->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button2->Location = System::Drawing::Point(377, 411);
 			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(95, 34);
@@ -226,7 +247,9 @@ namespace WindowsFormsApplication1 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(284, 389);
+			this->button1->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button1->Location = System::Drawing::Point(182, 411);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(95, 34);
@@ -237,7 +260,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown7
 			// 
-			this->numericUpDown7->Location = System::Drawing::Point(284, 320);
+			this->numericUpDown7->Location = System::Drawing::Point(167, 276);
 			this->numericUpDown7->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown7->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown7->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -247,7 +270,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown5
 			// 
-			this->numericUpDown5->Location = System::Drawing::Point(284, 266);
+			this->numericUpDown5->Location = System::Drawing::Point(167, 222);
 			this->numericUpDown5->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown5->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown5->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -257,7 +280,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown3
 			// 
-			this->numericUpDown3->Location = System::Drawing::Point(284, 163);
+			this->numericUpDown3->Location = System::Drawing::Point(167, 119);
 			this->numericUpDown3->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown3->Name = L"numericUpDown3";
@@ -266,7 +289,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(284, 219);
+			this->numericUpDown1->Location = System::Drawing::Point(167, 175);
 			this->numericUpDown1->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
@@ -277,68 +300,115 @@ namespace WindowsFormsApplication1 {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label5->Location = System::Drawing::Point(173, 323);
+			this->label5->Location = System::Drawing::Point(56, 279);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(109, 20);
+			this->label5->Size = System::Drawing::Size(90, 21);
 			this->label5->TabIndex = 22;
-			this->label5->Text = L"氟化物浓度";
+			this->label5->Text = L"氧气浓度";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label4->Location = System::Drawing::Point(197, 269);
+			this->label4->Location = System::Drawing::Point(80, 225);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(49, 20);
+			this->label4->Size = System::Drawing::Size(50, 21);
 			this->label4->TabIndex = 21;
 			this->label4->Text = L"湿度";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(197, 215);
+			this->label3->Location = System::Drawing::Point(80, 171);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(49, 20);
+			this->label3->Size = System::Drawing::Size(50, 21);
 			this->label3->TabIndex = 20;
 			this->label3->Text = L"温度";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label2->Location = System::Drawing::Point(181, 162);
+			this->label2->Location = System::Drawing::Point(64, 118);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(79, 20);
+			this->label2->Size = System::Drawing::Size(82, 21);
 			this->label2->TabIndex = 23;
 			this->label2->Text = L"开启PID";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"华文新魏", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label1->Location = System::Drawing::Point(332, 92);
+			this->label1->Location = System::Drawing::Point(215, 36);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(187, 25);
+			this->label1->Size = System::Drawing::Size(187, 26);
 			this->label1->TabIndex = 19;
 			this->label1->Text = L"环境合理值设置";
+			// 
+			// numericUpDown13
+			// 
+			this->numericUpDown13->Location = System::Drawing::Point(446, 334);
+			this->numericUpDown13->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown13->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
+			this->numericUpDown13->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
+			this->numericUpDown13->Name = L"numericUpDown13";
+			this->numericUpDown13->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown13->TabIndex = 44;
+			// 
+			// numericUpDown14
+			// 
+			this->numericUpDown14->Location = System::Drawing::Point(307, 332);
+			this->numericUpDown14->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown14->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
+			this->numericUpDown14->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
+			this->numericUpDown14->Name = L"numericUpDown14";
+			this->numericUpDown14->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown14->TabIndex = 43;
+			// 
+			// numericUpDown15
+			// 
+			this->numericUpDown15->Location = System::Drawing::Point(167, 334);
+			this->numericUpDown15->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown15->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
+			this->numericUpDown15->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
+			this->numericUpDown15->Name = L"numericUpDown15";
+			this->numericUpDown15->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown15->TabIndex = 42;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label9->Location = System::Drawing::Point(56, 337);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(90, 21);
+			this->label9->TabIndex = 41;
+			this->label9->Text = L"乙烯浓度";
 			// 
 			// SetForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(871, 525);
+			//this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(627, 508);
+			this->Controls->Add(this->numericUpDown13);
+			this->Controls->Add(this->numericUpDown14);
+			this->Controls->Add(this->numericUpDown15);
+			this->Controls->Add(this->label9);
 			this->Controls->Add(this->numericUpDown12);
 			this->Controls->Add(this->numericUpDown11);
 			this->Controls->Add(this->numericUpDown10);
@@ -375,6 +445,9 @@ namespace WindowsFormsApplication1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown13))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown14))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown15))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

@@ -34,6 +34,8 @@ namespace WindowsFormsApplication1 {
 				delete components;
 			}
 		}
+	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,7 +50,16 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(admin::typeid));
+			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
 			this->SuspendLayout();
+			// 
+			// skinEngine1
+			// 
+			this->skinEngine1->SerialNumber = L"";
+			this->skinEngine1->SkinFile = L"C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplic"
+				L"ation1\\Debug\\MSN.ssk";
+			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
 			// 
 			// admin
 			// 

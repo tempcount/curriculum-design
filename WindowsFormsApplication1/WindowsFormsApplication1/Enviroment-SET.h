@@ -62,6 +62,8 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::ToolStripMenuItem^  退出ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  发多少ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  帮助ToolStripMenuItem;
+	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
+
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -78,6 +80,7 @@ namespace WindowsFormsApplication1 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(EnviromentSET::typeid));
 			this->errorProvider1 = (gcnew System::Windows::Forms::ErrorProvider(this->components));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -99,11 +102,12 @@ namespace WindowsFormsApplication1 {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->帮助ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->发多少ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->开始ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->重置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->退出ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->发多少ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->帮助ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
@@ -144,9 +148,9 @@ namespace WindowsFormsApplication1 {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->groupBox1->Location = System::Drawing::Point(93, 57);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox1->Size = System::Drawing::Size(1161, 222);
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
@@ -155,7 +159,7 @@ namespace WindowsFormsApplication1 {
 			// button4
 			// 
 			this->button4->Location = System::Drawing::Point(957, 136);
-			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(119, 42);
 			this->button4->TabIndex = 20;
@@ -165,7 +169,7 @@ namespace WindowsFormsApplication1 {
 			// button3
 			// 
 			this->button3->Location = System::Drawing::Point(957, 68);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(119, 42);
 			this->button3->TabIndex = 19;
@@ -175,7 +179,7 @@ namespace WindowsFormsApplication1 {
 			// button2
 			// 
 			this->button2->Location = System::Drawing::Point(133, 148);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(68, 42);
 			this->button2->TabIndex = 18;
@@ -185,7 +189,7 @@ namespace WindowsFormsApplication1 {
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(133, 68);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(68, 42);
 			this->button1->TabIndex = 17;
@@ -195,7 +199,7 @@ namespace WindowsFormsApplication1 {
 			// numericUpDown5
 			// 
 			this->numericUpDown5->Location = System::Drawing::Point(764, 148);
-			this->numericUpDown5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numericUpDown5->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown5->Name = L"numericUpDown5";
 			this->numericUpDown5->Size = System::Drawing::Size(127, 30);
 			this->numericUpDown5->TabIndex = 16;
@@ -203,7 +207,7 @@ namespace WindowsFormsApplication1 {
 			// numericUpDown6
 			// 
 			this->numericUpDown6->Location = System::Drawing::Point(591, 148);
-			this->numericUpDown6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numericUpDown6->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown6->Name = L"numericUpDown6";
 			this->numericUpDown6->Size = System::Drawing::Size(127, 30);
 			this->numericUpDown6->TabIndex = 15;
@@ -211,7 +215,7 @@ namespace WindowsFormsApplication1 {
 			// numericUpDown7
 			// 
 			this->numericUpDown7->Location = System::Drawing::Point(412, 148);
-			this->numericUpDown7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numericUpDown7->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown7->Name = L"numericUpDown7";
 			this->numericUpDown7->Size = System::Drawing::Size(127, 30);
 			this->numericUpDown7->TabIndex = 14;
@@ -219,7 +223,7 @@ namespace WindowsFormsApplication1 {
 			// numericUpDown8
 			// 
 			this->numericUpDown8->Location = System::Drawing::Point(223, 148);
-			this->numericUpDown8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numericUpDown8->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown8->Name = L"numericUpDown8";
 			this->numericUpDown8->Size = System::Drawing::Size(127, 30);
 			this->numericUpDown8->TabIndex = 13;
@@ -227,7 +231,7 @@ namespace WindowsFormsApplication1 {
 			// numericUpDown4
 			// 
 			this->numericUpDown4->Location = System::Drawing::Point(764, 79);
-			this->numericUpDown4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numericUpDown4->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown4->Name = L"numericUpDown4";
 			this->numericUpDown4->Size = System::Drawing::Size(127, 30);
 			this->numericUpDown4->TabIndex = 12;
@@ -245,7 +249,7 @@ namespace WindowsFormsApplication1 {
 			// numericUpDown3
 			// 
 			this->numericUpDown3->Location = System::Drawing::Point(591, 79);
-			this->numericUpDown3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numericUpDown3->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown3->Name = L"numericUpDown3";
 			this->numericUpDown3->Size = System::Drawing::Size(127, 30);
 			this->numericUpDown3->TabIndex = 10;
@@ -263,7 +267,7 @@ namespace WindowsFormsApplication1 {
 			// numericUpDown2
 			// 
 			this->numericUpDown2->Location = System::Drawing::Point(412, 79);
-			this->numericUpDown2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numericUpDown2->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown2->Name = L"numericUpDown2";
 			this->numericUpDown2->Size = System::Drawing::Size(127, 30);
 			this->numericUpDown2->TabIndex = 8;
@@ -281,7 +285,7 @@ namespace WindowsFormsApplication1 {
 			// numericUpDown1
 			// 
 			this->numericUpDown1->Location = System::Drawing::Point(223, 79);
-			this->numericUpDown1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numericUpDown1->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(127, 30);
 			this->numericUpDown1->TabIndex = 6;
@@ -328,18 +332,6 @@ namespace WindowsFormsApplication1 {
 			this->menuStrip1->TabIndex = 1;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
-			// 帮助ToolStripMenuItem
-			// 
-			this->帮助ToolStripMenuItem->Name = L"帮助ToolStripMenuItem";
-			this->帮助ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
-			this->帮助ToolStripMenuItem->Text = L"帮助";
-			// 
-			// 发多少ToolStripMenuItem
-			// 
-			this->发多少ToolStripMenuItem->Name = L"发多少ToolStripMenuItem";
-			this->发多少ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
-			this->发多少ToolStripMenuItem->Text = L"历史查询";
-			// 
 			// 开始ToolStripMenuItem
 			// 
 			this->开始ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
@@ -353,24 +345,44 @@ namespace WindowsFormsApplication1 {
 			// 重置ToolStripMenuItem
 			// 
 			this->重置ToolStripMenuItem->Name = L"重置ToolStripMenuItem";
-			this->重置ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->重置ToolStripMenuItem->Size = System::Drawing::Size(108, 24);
 			this->重置ToolStripMenuItem->Text = L"重置";
 			// 
 			// 退出ToolStripMenuItem
 			// 
 			this->退出ToolStripMenuItem->Name = L"退出ToolStripMenuItem";
-			this->退出ToolStripMenuItem->Size = System::Drawing::Size(175, 24);
+			this->退出ToolStripMenuItem->Size = System::Drawing::Size(108, 24);
 			this->退出ToolStripMenuItem->Text = L"退出";
+			// 
+			// 发多少ToolStripMenuItem
+			// 
+			this->发多少ToolStripMenuItem->Name = L"发多少ToolStripMenuItem";
+			this->发多少ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->发多少ToolStripMenuItem->Text = L"历史查询";
+			// 
+			// 帮助ToolStripMenuItem
+			// 
+			this->帮助ToolStripMenuItem->Name = L"帮助ToolStripMenuItem";
+			this->帮助ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->帮助ToolStripMenuItem->Text = L"帮助";
+			// 
+			// skinEngine1
+			// 
+			this->skinEngine1->SerialNumber = L"";
+			this->skinEngine1->SkinFile = L"C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplic"
+				L"ation1\\Debug\\MSN.ssk";
+			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
 			// 
 			// EnviromentSET
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1370, 555);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"EnviromentSET";
 			this->Text = L"EnviromentSET";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->EndInit();

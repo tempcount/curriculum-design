@@ -58,6 +58,7 @@ namespace WindowsFormsApplication1 {
 	private: System::Data::OleDb::OleDbDataAdapter^  oleDbDataAdapter1;
 	private: System::Data::OleDb::OleDbCommand^  oleDbInsertCommand;
 	private: System::Windows::Forms::Label^  label1;
+	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
 
 	private:
 		/// <summary>
@@ -72,6 +73,7 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(transfer::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->beginToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->comToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -86,12 +88,15 @@ namespace WindowsFormsApplication1 {
 			this->oleDbDataAdapter1 = (gcnew System::Data::OleDb::OleDbDataAdapter());
 			this->oleDbInsertCommand = (gcnew System::Data::OleDb::OleDbCommand());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
 			this->menuStrip1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->beginToolStripMenuItem,
 					this->comToolStripMenuItem, this->仓库点ToolStripMenuItem, this->helpToolStripMenuItem
@@ -99,7 +104,7 @@ namespace WindowsFormsApplication1 {
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(1225, 28);
+			this->menuStrip1->Size = System::Drawing::Size(1225, 29);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -150,23 +155,23 @@ namespace WindowsFormsApplication1 {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(33, 104);
+			this->dataGridView1->Location = System::Drawing::Point(78, 112);
 			this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowTemplate->Height = 27;
-			this->dataGridView1->Size = System::Drawing::Size(1180, 356);
+			this->dataGridView1->Size = System::Drawing::Size(1068, 303);
 			this->dataGridView1->TabIndex = 1;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &transfer::dataGridView1_CellContentClick);
 			// 
 			// comboBox1
 			// 
-			this->comboBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->comboBox1->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Location = System::Drawing::Point(512, 57);
 			this->comboBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(251, 28);
+			this->comboBox1->Size = System::Drawing::Size(251, 31);
 			this->comboBox1->TabIndex = 4;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &transfer::comboBox1_SelectedIndexChanged);
 			// 
@@ -210,19 +215,29 @@ namespace WindowsFormsApplication1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"华文新魏", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->label1->Location = System::Drawing::Point(371, 60);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(109, 20);
+			this->label1->Size = System::Drawing::Size(137, 26);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"数据表选择";
+			// 
+			// skinEngine1
+			// 
+			this->skinEngine1->SerialNumber = L"";
+			this->skinEngine1->SkinFile = L"C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplic"
+				L"ation1\\Debug\\MSN.ssk";
+			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
 			// 
 			// transfer
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1225, 518);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1225, 473);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->dataGridView1);

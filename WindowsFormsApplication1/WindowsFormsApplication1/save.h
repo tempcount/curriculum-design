@@ -83,6 +83,7 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::TextBox^  textBox6;
 	private: System::Windows::Forms::TextBox^  textBox5;
 	private: System::Windows::Forms::GroupBox^  groupBox2;
+	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
 
 	private:
 		/// <summary>
@@ -97,6 +98,7 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(save::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->beginToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->environmentToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -140,6 +142,7 @@ namespace WindowsFormsApplication1 {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
 			this->menuStrip1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->groupBox3->SuspendLayout();
@@ -329,6 +332,7 @@ namespace WindowsFormsApplication1 {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
 			this->groupBox1->Controls->Add(this->button5);
 			this->groupBox1->Controls->Add(this->groupBox3);
 			this->groupBox1->Controls->Add(this->groupBox2);
@@ -497,10 +501,18 @@ namespace WindowsFormsApplication1 {
 			this->textBox1->Size = System::Drawing::Size(66, 30);
 			this->textBox1->TabIndex = 0;
 			// 
+			// skinEngine1
+			// 
+			this->skinEngine1->SerialNumber = L"";
+			this->skinEngine1->SkinFile = L"C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplic"
+				L"ation1\\Debug\\MSN.ssk";
+			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
+			// 
 			// save
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1207, 606);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->menuStrip1);

@@ -49,6 +49,7 @@ namespace WindowsFormsApplication1 {
 	public: System::Windows::Forms::TextBox^  textBox1;
 	public: System::Windows::Forms::WebBrowser^  webBrowser1;
 	private: System::Windows::Forms::Timer^  timer1;
+	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
 	public:
 	private: System::ComponentModel::IContainer^  components;
 
@@ -66,6 +67,7 @@ namespace WindowsFormsApplication1 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Map::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -75,6 +77,7 @@ namespace WindowsFormsApplication1 {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->webBrowser1 = (gcnew System::Windows::Forms::WebBrowser());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
 			this->SuspendLayout();
 			// 
 			// button1
@@ -163,10 +166,18 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->timer1->Interval = 1000;
 			// 
+			// skinEngine1
+			// 
+			this->skinEngine1->SerialNumber = L"";
+			this->skinEngine1->SkinFile = L"C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplic"
+				L"ation1\\Debug\\MSN.ssk";
+			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
+			// 
 			// Map
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1101, 394);
 			this->Controls->Add(this->webBrowser1);
 			this->Controls->Add(this->button1);

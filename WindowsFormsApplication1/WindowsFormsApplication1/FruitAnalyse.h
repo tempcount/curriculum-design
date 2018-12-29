@@ -46,6 +46,7 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::TextBox^  textBox4;
+	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
 
 	protected:
 
@@ -74,17 +75,19 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(FruitAnalyse::typeid));
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -104,115 +107,120 @@ namespace WindowsFormsApplication1 {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"华文新魏", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->label4->Location = System::Drawing::Point(172, 54);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(58, 24);
+			this->label4->Size = System::Drawing::Size(62, 26);
 			this->label4->TabIndex = 8;
 			this->label4->Text = L"选择";
 			this->label4->Click += gcnew System::EventHandler(this, &FruitAnalyse::label4_Click);
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->BackColor = System::Drawing::Color::Transparent;
 			this->groupBox2->Controls->Add(this->label3);
 			this->groupBox2->Controls->Add(this->textBox3);
 			this->groupBox2->Controls->Add(this->label2);
 			this->groupBox2->Controls->Add(this->textBox2);
 			this->groupBox2->Controls->Add(this->label1);
 			this->groupBox2->Controls->Add(this->textBox1);
-			this->groupBox2->Location = System::Drawing::Point(92, 98);
+			this->groupBox2->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->groupBox2->Location = System::Drawing::Point(82, 98);
 			this->groupBox2->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox2->Name = L"groupBox2";
 			this->groupBox2->Padding = System::Windows::Forms::Padding(4);
-			this->groupBox2->Size = System::Drawing::Size(352, 239);
+			this->groupBox2->Size = System::Drawing::Size(382, 239);
 			this->groupBox2->TabIndex = 9;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L" ";
 			// 
-			// textBox1
+			// label3
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox1->Location = System::Drawing::Point(221, 46);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(111, 30);
-			this->textBox1->TabIndex = 0;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label1->Location = System::Drawing::Point(80, 50);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(99, 20);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"库存(kg):";
-			// 
-			// textBox2
-			// 
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->textBox2->Location = System::Drawing::Point(221, 108);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(111, 30);
-			this->textBox2->TabIndex = 2;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label2->Location = System::Drawing::Point(24, 111);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(179, 20);
-			this->label2->TabIndex = 3;
-			this->label2->Text = L"历史当月销量(kg):";
+			this->label3->Location = System::Drawing::Point(10, 171);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(203, 25);
+			this->label3->TabIndex = 5;
+			this->label3->Text = L"当月截止销量(kg):";
 			// 
 			// textBox3
 			// 
 			this->textBox3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox3->Location = System::Drawing::Point(221, 166);
+			this->textBox3->Location = System::Drawing::Point(244, 166);
 			this->textBox3->Margin = System::Windows::Forms::Padding(4);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(111, 30);
 			this->textBox3->TabIndex = 4;
 			// 
-			// label3
+			// label2
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(24, 173);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(179, 20);
-			this->label3->TabIndex = 5;
-			this->label3->Text = L"当月截止销量(kg):";
+			this->label2->Location = System::Drawing::Point(10, 110);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(203, 25);
+			this->label2->TabIndex = 3;
+			this->label2->Text = L"历史当月销量(kg):";
+			// 
+			// textBox2
+			// 
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox2->Location = System::Drawing::Point(244, 108);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(111, 30);
+			this->textBox2->TabIndex = 2;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label1->Location = System::Drawing::Point(80, 50);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(107, 25);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"库存(kg):";
+			// 
+			// textBox1
+			// 
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox1->Location = System::Drawing::Point(244, 46);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(111, 30);
+			this->textBox1->TabIndex = 0;
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->BackColor = System::Drawing::Color::Transparent;
+			this->label5->Font = (gcnew System::Drawing::Font(L"华文新魏", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->label5->Location = System::Drawing::Point(789, 46);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(130, 24);
+			this->label5->Size = System::Drawing::Size(137, 26);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"分析与建议";
 			this->label5->Click += gcnew System::EventHandler(this, &FruitAnalyse::label5_Click);
 			// 
 			// textBox4
 			// 
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->textBox4->Location = System::Drawing::Point(509, 98);
 			this->textBox4->Margin = System::Windows::Forms::Padding(4);
@@ -222,17 +230,25 @@ namespace WindowsFormsApplication1 {
 			this->textBox4->TabIndex = 11;
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &FruitAnalyse::textBox4_TextChanged);
 			// 
+			// skinEngine1
+			// 
+			this->skinEngine1->SerialNumber = L"";
+			this->skinEngine1->SkinFile = L"C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplic"
+				L"ation1\\Debug\\MSN.ssk";
+			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
+			// 
 			// FruitAnalyse
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1309, 411);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label4);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"FruitAnalyse";
 			this->Text = L"FruitAnalyse";
 			this->groupBox2->ResumeLayout(false);

@@ -47,6 +47,7 @@ namespace WindowsFormsApplication1 {
 	public:
 	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
 
 	private:
 		/// <summary>
@@ -61,6 +62,7 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(SerialForm::typeid));
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
@@ -71,6 +73,7 @@ namespace WindowsFormsApplication1 {
 			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
 			this->SuspendLayout();
 			// 
 			// button2
@@ -189,10 +192,19 @@ namespace WindowsFormsApplication1 {
 			this->comboBox1->TabIndex = 10;
 			this->comboBox1->Text = L"1";
 			// 
+			// skinEngine1
+			// 
+			this->skinEngine1->SerialNumber = L"";
+			this->skinEngine1->SkinFile = L"C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplic"
+				L"ation1\\Debug\\MSN.ssk";
+			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
+			// 
 			// SerialForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(720, 489);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);

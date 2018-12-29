@@ -72,6 +72,7 @@ namespace WindowsFormsApplication1 {
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::Label^  label8;
+	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
 
 
 
@@ -120,6 +121,7 @@ namespace WindowsFormsApplication1 {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
 			this->groupBox2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->SuspendLayout();
@@ -127,20 +129,24 @@ namespace WindowsFormsApplication1 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(756, 5);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label2->Location = System::Drawing::Point(884, 9);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(53, 12);
+			this->label2->Size = System::Drawing::Size(90, 21);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"结束时间";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(342, 12);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label3->Location = System::Drawing::Point(456, 15);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(53, 12);
+			this->label3->Size = System::Drawing::Size(90, 21);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"开始时间";
 			// 
@@ -148,30 +154,32 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->dateTimePicker2->CustomFormat = L"yyyy/MM/dd HH:mm:ss";
 			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker2->Location = System::Drawing::Point(704, 33);
-			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(2);
+			this->dateTimePicker2->Location = System::Drawing::Point(939, 41);
+			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dateTimePicker2->Name = L"dateTimePicker2";
-			this->dateTimePicker2->Size = System::Drawing::Size(162, 21);
+			this->dateTimePicker2->Size = System::Drawing::Size(215, 25);
 			this->dateTimePicker2->TabIndex = 5;
 			// 
 			// dateTimePicker1
 			// 
 			this->dateTimePicker1->CustomFormat = L"yyyy/MM/dd HH:mm:ss";
 			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker1->Location = System::Drawing::Point(394, 33);
-			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(2);
+			this->dateTimePicker1->Location = System::Drawing::Point(525, 41);
+			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(204, 21);
+			this->dateTimePicker1->Size = System::Drawing::Size(271, 25);
 			this->dateTimePicker1->TabIndex = 4;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label1->Location = System::Drawing::Point(56, 12);
+			this->label1->Location = System::Drawing::Point(75, 15);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(136, 16);
+			this->label1->Size = System::Drawing::Size(170, 21);
 			this->label1->TabIndex = 13;
 			this->label1->Text = L"选择异常数据类型";
 			// 
@@ -179,9 +187,10 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"异常数据表_温度", L"异常数据表_湿度", L"异常数据表_氧气浓度", L"异常数据表_乙烯浓度" });
-			this->comboBox1->Location = System::Drawing::Point(97, 36);
+			this->comboBox1->Location = System::Drawing::Point(129, 45);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(4);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 20);
+			this->comboBox1->Size = System::Drawing::Size(160, 23);
 			this->comboBox1->TabIndex = 12;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &SingleAnalyse::comboBox1_SelectedIndexChanged);
 			// 
@@ -192,11 +201,11 @@ namespace WindowsFormsApplication1 {
 			this->listView1->FullRowSelect = true;
 			this->listView1->GridLines = true;
 			this->listView1->HideSelection = false;
-			this->listView1->Location = System::Drawing::Point(27, 72);
-			this->listView1->Margin = System::Windows::Forms::Padding(2);
+			this->listView1->Location = System::Drawing::Point(36, 90);
+			this->listView1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->listView1->MultiSelect = false;
 			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(466, 230);
+			this->listView1->Size = System::Drawing::Size(620, 286);
 			this->listView1->TabIndex = 11;
 			this->listView1->UseCompatibleStateImageBehavior = false;
 			this->listView1->View = System::Windows::Forms::View::Details;
@@ -206,20 +215,23 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->groupBox2->Controls->Add(this->button2);
 			this->groupBox2->Controls->Add(this->button1);
-			this->groupBox2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->groupBox2->Font = (gcnew System::Drawing::Font(L"华文新魏", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox2->Location = System::Drawing::Point(42, 336);
+			this->groupBox2->Location = System::Drawing::Point(56, 420);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(425, 88);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(4);
+			this->groupBox2->Size = System::Drawing::Size(567, 110);
 			this->groupBox2->TabIndex = 23;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"报表生成";
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(199, 29);
+			this->button2->Location = System::Drawing::Point(327, 48);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->Size = System::Drawing::Size(100, 38);
 			this->button2->TabIndex = 17;
 			this->button2->Text = L"打印";
 			this->button2->UseVisualStyleBackColor = true;
@@ -227,9 +239,10 @@ namespace WindowsFormsApplication1 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(47, 29);
+			this->button1->Location = System::Drawing::Point(125, 48);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(86, 23);
+			this->button1->Size = System::Drawing::Size(150, 38);
 			this->button1->TabIndex = 16;
 			this->button1->Text = L"打印预览";
 			this->button1->UseVisualStyleBackColor = true;
@@ -240,17 +253,21 @@ namespace WindowsFormsApplication1 {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label4->Location = System::Drawing::Point(195, 390);
+			this->label4->Location = System::Drawing::Point(260, 488);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(16, 16);
+			this->label4->Size = System::Drawing::Size(19, 20);
 			this->label4->TabIndex = 20;
 			this->label4->Text = L" ";
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(548, 385);
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox1->Location = System::Drawing::Point(761, 484);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(76, 21);
+			this->textBox1->Size = System::Drawing::Size(94, 31);
 			this->textBox1->TabIndex = 19;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &SingleAnalyse::textBox1_TextChanged);
 			// 
@@ -259,9 +276,10 @@ namespace WindowsFormsApplication1 {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label9->Location = System::Drawing::Point(411, 354);
+			this->label9->Location = System::Drawing::Point(548, 442);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(16, 16);
+			this->label9->Size = System::Drawing::Size(19, 20);
 			this->label9->TabIndex = 25;
 			this->label9->Text = L" ";
 			// 
@@ -356,91 +374,122 @@ namespace WindowsFormsApplication1 {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(743, 385);
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox3->Location = System::Drawing::Point(1015, 484);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(71, 21);
+			this->textBox3->Size = System::Drawing::Size(93, 31);
 			this->textBox3->TabIndex = 27;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(843, 385);
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox4->Location = System::Drawing::Point(1148, 484);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(74, 21);
+			this->textBox4->Size = System::Drawing::Size(97, 31);
 			this->textBox4->TabIndex = 28;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(648, 385);
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox2->Location = System::Drawing::Point(888, 484);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(76, 21);
+			this->textBox2->Size = System::Drawing::Size(100, 31);
 			this->textBox2->TabIndex = 29;
 			// 
 			// chart1
 			// 
+			this->chart1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->chart1->BackSecondaryColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			chartArea1->Name = L"ChartArea1";
 			this->chart1->ChartAreas->Add(chartArea1);
 			legend1->Name = L"Legend1";
 			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(548, 72);
+			this->chart1->Location = System::Drawing::Point(731, 90);
+			this->chart1->Margin = System::Windows::Forms::Padding(4);
 			this->chart1->Name = L"chart1";
 			series1->ChartArea = L"ChartArea1";
 			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
 			series1->Legend = L"Legend1";
 			series1->Name = L"Series1";
 			this->chart1->Series->Add(series1);
-			this->chart1->Size = System::Drawing::Size(403, 250);
+			this->chart1->Size = System::Drawing::Size(537, 312);
 			this->chart1->TabIndex = 30;
 			this->chart1->Text = L"chart1";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->BackColor = System::Drawing::Color::Transparent;
+			this->label5->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label5->Location = System::Drawing::Point(560, 356);
+			this->label5->Location = System::Drawing::Point(777, 442);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(40, 16);
+			this->label5->Size = System::Drawing::Size(60, 25);
 			this->label5->TabIndex = 31;
 			this->label5->Text = L"总数";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label6->BackColor = System::Drawing::Color::Transparent;
+			this->label6->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(663, 356);
+			this->label6->Location = System::Drawing::Point(904, 442);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(48, 16);
+			this->label6->Size = System::Drawing::Size(70, 25);
 			this->label6->TabIndex = 32;
 			this->label6->Text = L"仓库1";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label7->BackColor = System::Drawing::Color::Transparent;
+			this->label7->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label7->Location = System::Drawing::Point(754, 356);
+			this->label7->Location = System::Drawing::Point(1034, 445);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(48, 16);
+			this->label7->Size = System::Drawing::Size(74, 25);
 			this->label7->TabIndex = 33;
 			this->label7->Text = L"仓库2";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label8->BackColor = System::Drawing::Color::Transparent;
+			this->label8->Font = (gcnew System::Drawing::Font(L"华文新魏", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label8->Location = System::Drawing::Point(857, 356);
+			this->label8->Location = System::Drawing::Point(1157, 445);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(48, 16);
+			this->label8->Size = System::Drawing::Size(74, 25);
 			this->label8->TabIndex = 34;
 			this->label8->Text = L"仓库3";
 			// 
+			// skinEngine1
+			// 
+			this->skinEngine1->SerialNumber = L"";
+			this->skinEngine1->SkinFile = L"C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplic"
+				L"ation1\\Debug\\MSN.ssk";
+			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
+			// 
 			// SingleAnalyse
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1001, 485);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1335, 606);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -460,7 +509,7 @@ namespace WindowsFormsApplication1 {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->dateTimePicker2);
 			this->Controls->Add(this->dateTimePicker1);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"SingleAnalyse";
 			this->Text = L"SingleAnalyse";
 			this->Load += gcnew System::EventHandler(this, &SingleAnalyse::SingleAnalyse_Load);
