@@ -93,8 +93,8 @@ namespace WindowsFormsApplication1 {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1ºÅ³µÁ¾", L"2ºÅ³µÁ¾", L"3ºÅ³µÁ¾" });
-			this->comboBox1->Location = System::Drawing::Point(127, 40);
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1ºÅ²Ö¿â", L"2ºÅ²Ö¿â", L"3ºÅ²Ö¿â" });
+			this->comboBox1->Location = System::Drawing::Point(118, 40);
 			this->comboBox1->Margin = System::Windows::Forms::Padding(4);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(160, 23);
@@ -105,12 +105,12 @@ namespace WindowsFormsApplication1 {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"ËÎÌå", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(17, 45);
+			this->label3->Location = System::Drawing::Point(30, 40);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(69, 20);
+			this->label3->Size = System::Drawing::Size(49, 20);
 			this->label3->TabIndex = 9;
-			this->label3->Text = L"³µÅÆºÅ";
+			this->label3->Text = L"²Ö¿â";
 			// 
 			// label2
 			// 
@@ -161,6 +161,7 @@ namespace WindowsFormsApplication1 {
 			this->webBrowser1->Name = L"webBrowser1";
 			this->webBrowser1->Size = System::Drawing::Size(806, 394);
 			this->webBrowser1->TabIndex = 12;
+			this->webBrowser1->DocumentCompleted += gcnew System::Windows::Forms::WebBrowserDocumentCompletedEventHandler(this, &Map::webBrowser1_DocumentCompleted);
 			// 
 			// timer1
 			// 
@@ -196,7 +197,9 @@ namespace WindowsFormsApplication1 {
 		}
 #pragma endregion
 	private: System::Void Map_Load(System::Object^  sender, System::EventArgs^  e) {
-				 this->webBrowser1->Url = gcnew Uri(Path::Combine(Application::StartupPath, "MapPage.htm"));
+				 this->webBrowser1->Url = gcnew Uri(Path::Combine(Application::StartupPath, "C:\\Users\\ASUS\\Desktop\\vc++ curriculum design\\curriculum-design\\WindowsFormsApplication1\\WindowsFormsApplication1\\MapPage.htm"));
 	}
+private: System::Void webBrowser1_DocumentCompleted(System::Object^  sender, System::Windows::Forms::WebBrowserDocumentCompletedEventArgs^  e) {
+}
 };
 }

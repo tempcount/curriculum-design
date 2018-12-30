@@ -5,6 +5,7 @@
 #include"SetForm.h"
 #include"EnvHistory.h"
 #include"SingleAnalyse.h"
+#include"admin.h"
 namespace WindowsFormsApplication1 {
 	using namespace System::IO::Ports;
 	using namespace System;
@@ -305,6 +306,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  »·¾³ÉèÖÃToolStripMenuItem;
 			this->¼à¿ØToolStripMenuItem->Name = L"¼à¿ØToolStripMenuItem";
 			this->¼à¿ØToolStripMenuItem->Size = System::Drawing::Size(51, 24);
 			this->¼à¿ØToolStripMenuItem->Text = L"¼à¿Ø";
+			this->¼à¿ØToolStripMenuItem->Click += gcnew System::EventHandler(this, &EnvDetail::¼à¿ØToolStripMenuItem_Click);
 			// 
 			// »·¾³ÉèÖÃToolStripMenuItem
 			// 
@@ -1413,6 +1415,10 @@ private: System::Void Í³¼ÆÓë·ÖÎöToolStripMenuItem_Click(System::Object^  sender,
 }
 private: System::Void »·¾³ÉèÖÃToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			 SetForm^dlg = gcnew SetForm();
+			 dlg->ShowDialog();
+}
+private: System::Void ¼à¿ØToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 admin^dlg = gcnew admin();
 			 dlg->ShowDialog();
 }
 };

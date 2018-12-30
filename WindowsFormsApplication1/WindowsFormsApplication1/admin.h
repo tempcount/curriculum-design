@@ -35,6 +35,7 @@ namespace WindowsFormsApplication1 {
 			}
 		}
 	private: Sunisoft::IrisSkin::SkinEngine^  skinEngine1;
+	private: AxWMPLib::AxWindowsMediaPlayer^  axWindowsMediaPlayer1;
 	protected:
 
 	private:
@@ -52,6 +53,8 @@ namespace WindowsFormsApplication1 {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(admin::typeid));
 			this->skinEngine1 = (gcnew Sunisoft::IrisSkin::SkinEngine((cli::safe_cast<System::ComponentModel::Component^>(this))));
+			this->axWindowsMediaPlayer1 = (gcnew AxWMPLib::AxWindowsMediaPlayer());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->axWindowsMediaPlayer1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// skinEngine1
@@ -61,13 +64,26 @@ namespace WindowsFormsApplication1 {
 				L"ation1\\Debug\\MSN.ssk";
 			this->skinEngine1->SkinStreamMain = (cli::safe_cast<System::IO::Stream^>(resources->GetObject(L"skinEngine1.SkinStreamMain")));
 			// 
+			// axWindowsMediaPlayer1
+			// 
+			this->axWindowsMediaPlayer1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->axWindowsMediaPlayer1->Enabled = true;
+			this->axWindowsMediaPlayer1->Location = System::Drawing::Point(0, 0);
+			this->axWindowsMediaPlayer1->Name = L"axWindowsMediaPlayer1";
+			this->axWindowsMediaPlayer1->OcxState = (cli::safe_cast<System::Windows::Forms::AxHost::State^>(resources->GetObject(L"axWindowsMediaPlayer1.OcxState")));
+			this->axWindowsMediaPlayer1->Size = System::Drawing::Size(855, 305);
+			this->axWindowsMediaPlayer1->TabIndex = 1;
+			// 
 			// admin
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(459, 305);
+			this->ClientSize = System::Drawing::Size(855, 305);
+			this->Controls->Add(this->axWindowsMediaPlayer1);
 			this->Name = L"admin";
-			this->Text = L"admin";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"¼à¿Ø";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->axWindowsMediaPlayer1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
