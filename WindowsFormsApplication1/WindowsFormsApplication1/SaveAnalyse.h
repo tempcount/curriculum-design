@@ -622,13 +622,13 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1083, 882);
+			this->ClientSize = System::Drawing::Size(1083, 806);
 			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"SaveAnalyse";
-			this->Text = L"SaveAnalyse";
+			this->Text = L"²Ö¿â¿â´æ·ÖÎö";
 			this->Load += gcnew System::EventHandler(this, &SaveAnalyse::SaveAnalyse_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();

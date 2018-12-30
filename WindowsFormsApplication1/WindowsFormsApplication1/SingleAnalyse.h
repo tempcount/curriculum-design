@@ -511,7 +511,7 @@ namespace WindowsFormsApplication1 {
 			this->Controls->Add(this->dateTimePicker1);
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"SingleAnalyse";
-			this->Text = L"SingleAnalyse";
+			this->Text = L"异常数据分析";
 			this->Load += gcnew System::EventHandler(this, &SingleAnalyse::SingleAnalyse_Load);
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &SingleAnalyse::SingleAnalyse_Paint);
 			this->groupBox2->ResumeLayout(false);
@@ -868,7 +868,7 @@ private: System::Void printDocument1_PrintPage(System::Object^  sender, System::
 
 				 gcnew Drawing::Font(L"宋体", 20, FontStyle::Regular);
 
-			 g->DrawString(L"中通快递运输异常报表", headerFont, Brushes::Black, left + 150, top);
+			 g->DrawString(L"仓库异常报表", headerFont, Brushes::Black, left + 150, top);
 
 			 // 打印标题(背景灰色,宋体,12号)
 
@@ -877,7 +877,7 @@ private: System::Void printDocument1_PrintPage(System::Object^  sender, System::
 			 Drawing::Pen^  tablesPen = gcnew Drawing::Pen(Color::Black);
 
 			 // g->FillRectangle(Brushes::LightGray, Rectangle(left, top, width, 30));
-			 g->DrawImage(gcnew Bitmap("..\\Debug\\1.jpg"), 650, -15, 160, top + 10);
+			// g->DrawImage(gcnew Bitmap("..\\Debug\\1.jpg"), 650, -15, 160, top + 10);
 			 g->DrawLine(tablesPen, left, top + 30, left + width, top + 30);
 
 			 Drawing::Font^titlesFont = gcnew Drawing::Font(L"宋体", 12, FontStyle::Bold);

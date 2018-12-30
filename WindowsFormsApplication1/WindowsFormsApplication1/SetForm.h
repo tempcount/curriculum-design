@@ -76,7 +76,6 @@ namespace WindowsFormsApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(SetForm::typeid));
 			this->numericUpDown12 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown11 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown10 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -403,7 +402,6 @@ namespace WindowsFormsApplication1 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			//this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(627, 508);
 			this->Controls->Add(this->numericUpDown13);
 			this->Controls->Add(this->numericUpDown14);
@@ -432,7 +430,7 @@ namespace WindowsFormsApplication1 {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"SetForm";
-			this->Text = L"SetForm";
+			this->Text = L"环境期望值设置";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown12))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown11))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->EndInit();

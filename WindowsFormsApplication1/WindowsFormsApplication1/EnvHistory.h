@@ -253,7 +253,7 @@ namespace WindowsFormsApplication1 {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"EnvHistory";
-			this->Text = L"EnvHistory";
+			this->Text = L"环境数据查询";
 			this->Load += gcnew System::EventHandler(this, &EnvHistory::EnvHistory_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();

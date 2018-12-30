@@ -217,7 +217,7 @@ namespace WindowsFormsApplication1 {
 			this->Controls->Add(this->comboBox2);
 			this->Controls->Add(this->comboBox1);
 			this->Name = L"SerialForm";
-			this->Text = L"SerialForm";
+			this->Text = L"´®¿ÚÉèÖÃ";
 			this->Load += gcnew System::EventHandler(this, &SerialForm::SerialForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

@@ -250,7 +250,7 @@ namespace WindowsFormsApplication1 {
 			this->Controls->Add(this->label4);
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"FruitAnalyse";
-			this->Text = L"FruitAnalyse";
+			this->Text = L"ÏúÁ¿·ÖÎö";
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
 			this->ResumeLayout(false);

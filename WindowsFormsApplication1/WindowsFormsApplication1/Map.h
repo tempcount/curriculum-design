@@ -188,7 +188,7 @@ namespace WindowsFormsApplication1 {
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Name = L"Map";
-			this->Text = L"Map";
+			this->Text = L"²Ö¿âµØµã";
 			this->Load += gcnew System::EventHandler(this, &Map::Map_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

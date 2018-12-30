@@ -315,29 +315,29 @@ private: System::Windows::Forms::ToolStripMenuItem^  环境设置ToolStripMenuItem;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox1->Location = System::Drawing::Point(126, 47);
+			this->textBox1->Location = System::Drawing::Point(110, 45);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(218, 34);
+			this->textBox1->Size = System::Drawing::Size(340, 28);
 			this->textBox1->TabIndex = 10;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox2->Location = System::Drawing::Point(126, 105);
+			this->textBox2->Location = System::Drawing::Point(110, 103);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(218, 34);
+			this->textBox2->Size = System::Drawing::Size(340, 28);
 			this->textBox2->TabIndex = 11;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox3->Location = System::Drawing::Point(126, 169);
+			this->textBox3->Location = System::Drawing::Point(110, 167);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(218, 34);
+			this->textBox3->Size = System::Drawing::Size(340, 28);
 			this->textBox3->TabIndex = 12;
 			// 
 			// statusStrip1
@@ -657,11 +657,11 @@ private: System::Windows::Forms::ToolStripMenuItem^  环境设置ToolStripMenuItem;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox4->Location = System::Drawing::Point(126, 233);
+			this->textBox4->Location = System::Drawing::Point(110, 231);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(218, 34);
+			this->textBox4->Size = System::Drawing::Size(340, 28);
 			this->textBox4->TabIndex = 16;
 			// 
 			// groupBox1
@@ -677,9 +677,9 @@ private: System::Windows::Forms::ToolStripMenuItem^  环境设置ToolStripMenuItem;
 			this->groupBox1->Controls->Add(this->textBox3);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"华文新魏", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox1->Location = System::Drawing::Point(56, 327);
+			this->groupBox1->Location = System::Drawing::Point(25, 328);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(388, 291);
+			this->groupBox1->Size = System::Drawing::Size(492, 291);
 			this->groupBox1->TabIndex = 17;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"评价与建议";
@@ -687,7 +687,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  环境设置ToolStripMenuItem;
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(27, 238);
+			this->label9->Location = System::Drawing::Point(11, 236);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(90, 21);
 			this->label9->TabIndex = 20;
@@ -696,7 +696,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  环境设置ToolStripMenuItem;
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(27, 175);
+			this->label8->Location = System::Drawing::Point(11, 173);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(90, 21);
 			this->label8->TabIndex = 19;
@@ -705,7 +705,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  环境设置ToolStripMenuItem;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(42, 111);
+			this->label7->Location = System::Drawing::Point(26, 109);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(50, 21);
 			this->label7->TabIndex = 18;
@@ -714,7 +714,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  环境设置ToolStripMenuItem;
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(42, 52);
+			this->label6->Location = System::Drawing::Point(26, 50);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(50, 21);
 			this->label6->TabIndex = 17;
@@ -760,7 +760,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  环境设置ToolStripMenuItem;
 			this->MainMenuStrip = this->menuStrip1;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"EnvDetail";
-			this->Text = L"EnvDetail";
+			this->Text = L"环境实时监控";
 			this->Load += gcnew System::EventHandler(this, &EnvDetail::EnvDetail_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
@@ -925,15 +925,15 @@ public: void data_receivce()//接收串口数据
 									valuechange::纬度3 = split[17];*/
 
 									con1->Open();    // 打开连接
-									sql1 = "INSERT INTO 1号车数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[0] + " , " + split[1] + " , " + split[2] + ", " + split[3] + ",Now() , '1号' )";
+									sql1 = "INSERT INTO 1号仓库数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[0] + " , " + split[1] + " , " + split[2] + ", " + split[3] + ",Now() , '1号' )";
 									OleDbCommand^ comm1 = gcnew OleDbCommand(sql1, con1);
 									comm1->ExecuteNonQuery();
-									sql2 = "INSERT INTO 2号车数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[6] + " , " + split[7] + " , " + split[8] + ", " + split[9] + ",Now() , '2号' )";
+									sql2 = "INSERT INTO 2号仓库数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[6] + " , " + split[7] + " , " + split[8] + ", " + split[9] + ",Now() , '2号' )";
 									OleDbCommand^ comm2 = gcnew OleDbCommand(sql2, con1);
 									comm2->ExecuteNonQuery();
 									//con1->Close();
 									//con1->Open();    // 打开连接
-									sql3 = "INSERT INTO 3号车数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[12] + " , " + split[13] + " , " + split[14] + ", " + split[15] + ",Now() , '3号' )";
+									sql3 = "INSERT INTO 3号仓库数据表([温度],[湿度],[氧气浓度],[乙烯浓度],[日期时间],[对应仓库]) VALUES( " + split[12] + " , " + split[13] + " , " + split[14] + ", " + split[15] + ",Now() , '3号' )";
 									OleDbCommand^ comm3 = gcnew OleDbCommand(sql3, con1);
 									comm3->ExecuteNonQuery();
 									con1->Close();
@@ -1036,21 +1036,21 @@ public: void data_receivce()//接收串口数据
 											}
 
 											//分析
-											if ((float::Parse(split[2]) > 10 && float::Parse(split[2]) < 30)) this->textBox1->Text = "仓库氧气浓度较大";
-											else if (float::Parse(split[2]) < 10) this->textBox1->Text = "仓库氧气浓度偏低";
-											else if (float::Parse(split[2]) > 30) this->textBox1->Text = "仓库氧气浓度偏高";
+											if ((float::Parse(split[2]) > 10 && float::Parse(split[2]) < 30)) this->textBox1->Text = "仓库氧气浓度正常";
+											else if (float::Parse(split[2]) < 10) this->textBox1->Text = "仓库氧气浓度偏低，建议增强光照";
+											else if (float::Parse(split[2]) > 30) this->textBox1->Text = "仓库氧气浓度偏高，建议减小光照";
 
 											if ((float::Parse(split[1]) > 10&& float::Parse(split[1]) < 20)) this->textBox2->Text = "仓库湿度正常";
-											else if (float::Parse(split[1]) < 10) this->textBox2->Text = "仓库湿度偏低";
-											else if (float::Parse(split[1]) > 20) this->textBox2->Text = "仓库湿度偏高";
+											else if (float::Parse(split[1]) < 10) this->textBox2->Text = "仓库湿度偏低，建议减小除湿设备功率";
+											else if (float::Parse(split[1]) > 20) this->textBox2->Text = "仓库湿度偏高，建议增大除湿设备功率";
 
 											if ((float::Parse(split[0]) > 0 && float::Parse(split[0]) < 5)) this->textBox3->Text = "仓库温度适宜";
-											else if (float::Parse(split[0]) < 0) this->textBox3->Text = "仓库温度偏低";
-											else if (float::Parse(split[0]) > 5) this->textBox3->Text = "仓库温度偏高";
+											else if (float::Parse(split[0]) < 0) this->textBox3->Text = "仓库温度偏低，建议减小制冷设备功率";
+											else if (float::Parse(split[0]) > 5) this->textBox3->Text = "仓库温度偏高，建议增大制冷设备功率";
 
 											if ((float::Parse(split[3]) > 26 && float::Parse(split[3]) < 28)) this->textBox4->Text = "仓库乙烯浓度正常";
-											else if (float::Parse(split[3]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低";
-											else if (float::Parse(split[3]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高";
+											else if (float::Parse(split[3]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低，建议增减小换气设备功率";
+											else if (float::Parse(split[3]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高，建议增大换气设备功率";
 								
 										}
 									}
@@ -1149,21 +1149,21 @@ public: void data_receivce()//接收串口数据
 											}
 
 											//分析
-											if ((float::Parse(split[2+6]) > 10 && float::Parse(split[2+6]) < 30)) this->textBox1->Text = "仓库氧气浓度较大";
-											else if (float::Parse(split[2+6]) < 10) this->textBox1->Text = "仓库氧气浓度偏低";
-											else if (float::Parse(split[2+6]) > 30) this->textBox1->Text = "仓库氧气浓度偏高";
+											if ((float::Parse(split[2+6]) > 10 && float::Parse(split[2+6]) < 30)) this->textBox1->Text = "仓库氧气浓度正常";
+											else if (float::Parse(split[2+6]) < 10) this->textBox1->Text = "仓库氧气浓度偏低，增强光照";
+											else if (float::Parse(split[2+6]) > 30) this->textBox1->Text = "仓库氧气浓度偏高，减小光照";
 
 											if ((float::Parse(split[1+6]) > 10 && float::Parse(split[1]) < 20)) this->textBox2->Text = "仓库湿度正常";
-											else if (float::Parse(split[1+6]) < 10) this->textBox2->Text = "仓库湿度偏低";
-											else if (float::Parse(split[1+6]) > 20) this->textBox2->Text = "仓库湿度偏高";
+											else if (float::Parse(split[1+6]) < 10) this->textBox2->Text = "仓库湿度偏低，建议减小除湿设备功率";
+											else if (float::Parse(split[1+6]) > 20) this->textBox2->Text = "仓库湿度偏高，建议增大除湿设备功率";
 
 											if ((float::Parse(split[0+6]) > 0 && float::Parse(split[0]) < 5)) this->textBox3->Text = "仓库温度适宜";
-											else if (float::Parse(split[0+6]) < 0) this->textBox3->Text = "仓库温度偏低";
-											else if (float::Parse(split[0+6]) > 5) this->textBox3->Text = "仓库温度偏高";
+											else if (float::Parse(split[0+6]) < 0) this->textBox3->Text = "仓库温度偏低，建议减小制冷设备功率";
+											else if (float::Parse(split[0+6]) > 5) this->textBox3->Text = "仓库温度偏高，建议增大制冷设备功率";
 
 											if ((float::Parse(split[3+6]) > 26 && float::Parse(split[3]) < 28)) this->textBox4->Text = "仓库乙烯浓度正常";
-											else if (float::Parse(split[3+6]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低";
-											else if (float::Parse(split[3+6]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高";
+											else if (float::Parse(split[3+6]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低，建议减小换气设备功率";
+											else if (float::Parse(split[3+6]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高，建议增大换气设备功率";
 
 									
 										}
@@ -1259,21 +1259,21 @@ public: void data_receivce()//接收串口数据
 											}
 
 											//分析
-											if ((float::Parse(split[2 + 12]) > 10 && float::Parse(split[2 + 12]) < 30)) this->textBox1->Text = "仓库氧气浓度较大";
-											else if (float::Parse(split[2 + 12]) < 10) this->textBox1->Text = "仓库氧气浓度偏低";
-											else if (float::Parse(split[2 + 12]) > 30) this->textBox1->Text = "仓库氧气浓度偏高";
+											if ((float::Parse(split[2 + 12]) > 10 && float::Parse(split[2 + 12]) < 30)) this->textBox1->Text = "仓库氧气浓度正常";
+											else if (float::Parse(split[2 + 12]) < 10) this->textBox1->Text = "仓库氧气浓度偏低，增大光照";
+											else if (float::Parse(split[2 + 12]) > 30) this->textBox1->Text = "仓库氧气浓度偏高，减小光照";
 
 											if ((float::Parse(split[1 + 12]) > 10 && float::Parse(split[1 + 12]) < 20)) this->textBox2->Text = "仓库湿度正常";
-											else if (float::Parse(split[1 + 12]) < 10) this->textBox2->Text = "仓库湿度偏低";
-											else if (float::Parse(split[1 + 12]) > 20) this->textBox2->Text = "仓库湿度偏高";
+											else if (float::Parse(split[1 + 12]) < 10) this->textBox2->Text = "仓库湿度偏低，减小除湿设备功率";
+											else if (float::Parse(split[1 + 12]) > 20) this->textBox2->Text = "仓库湿度偏高，增大除湿设备功率";
 
 											if ((float::Parse(split[0 + 12]) > 0 && float::Parse(split[0 + 12]) < 5)) this->textBox3->Text = "仓库温度适宜";
-											else if (float::Parse(split[0 + 12]) < 0) this->textBox3->Text = "仓库温度偏低";
-											else if (float::Parse(split[0 + 12]) > 5) this->textBox3->Text = "仓库温度偏高";
+											else if (float::Parse(split[0 + 12]) < 0) this->textBox3->Text = "仓库温度偏低，减小制冷设备功率";
+											else if (float::Parse(split[0 + 12]) > 5) this->textBox3->Text = "仓库温度偏高，增大制冷设备功率";
 
 											if ((float::Parse(split[3 + 12]) > 26 && float::Parse(split[3 + 12]) < 28)) this->textBox4->Text = "仓库乙烯浓度正常";
-											else if (float::Parse(split[3 + 12]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低";
-											else if (float::Parse(split[3 + 12]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高";
+											else if (float::Parse(split[3 + 12]) < 26) this->textBox4->Text = "仓库乙烯浓度偏低，建议减小换气设备功率";
+											else if (float::Parse(split[3 + 12]) > 28) this->textBox4->Text = "仓库乙烯浓度偏高，建议加大换气设备功率";
 
 						
 										}

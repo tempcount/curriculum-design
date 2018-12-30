@@ -250,7 +250,7 @@ namespace WindowsFormsApplication1 {
 				static_cast<System::Byte>(134)));
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Form1";
-			this->Text = L"login";
+			this->Text = L"µÇÂ¼";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
